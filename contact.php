@@ -54,7 +54,7 @@ include 'include/navbar.php';
                         <h5 class="mb-3">Travel & Accommodation </h5>
                         <h4 class="mb-3">Dr. K Manobalan</h4>
                         <p class="mb-2">+91 9488351988</p>
-                        <!-- <p class="mb-4">  mano.jipmer@gmail.com</p> -->
+                        <p class="mb-4">  mano.jipmer@gmail.com</p>
                         <!-- <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a> -->
                     </div>
                 </div>
@@ -62,12 +62,12 @@ include 'include/navbar.php';
             <div class="row mb-5">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                     <iframe class="w-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.4917166796045!2d79.79140818539904!3d11.940419406464471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53610f4234e05d%3A0xd8214c15dbb8d241!2sIndira%20Gandhi%20Medical%20College%20and%20Research%20Institute!5e0!3m2!1sen!2sbd!4v1689136635979!5m2!1sen!2sbd"
                     frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
                 </div>
             </div>
-            <div class="row g-5">
+            <div class="row g-5" style="display:none">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
                     <h1 class="display-5 mb-4">If You Have Any Queries, Please Feel Free To Contact Us</h1>
