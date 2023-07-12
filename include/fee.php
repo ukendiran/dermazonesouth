@@ -1,90 +1,119 @@
-<div class="bg-dark price-container">
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
-                <div class="card h-100 shadow-lg">
-                    <div class="card-body">
-                        <div class="text-center p-3">
-                            <h5 class="card-title">Early bird</h5>
-                            <small>Individual</small>
-                            <br><br>
-                            <span class="h2">$8</span>/month
-                            <br><br>
-                        </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Cras justo odio</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Dapibus ac facilisis in</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
-                    </div>
+<div class="rs-pricing style2 pb-120 pt-50 md-pb-80">
+            <div class="container">
+                <div class="sec-title text-center mb-30">
+                    <h2 class="title pb-35"> Registration Fee Details </h2>
+                    <div class="heading-border-line"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-12 mb-4">
-                <div class="card h-100 shadow-lg">
-                    <div class="card-body">
-                        <div class="text-center p-3">
-                            <h5 class="card-title">Regular </h5>
-                            <small>Small Business</small>
-                            <br><br>
-                            <span class="h2">$20</span>/month
-                            <br><br>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="rs-price-table">
+                            <div class="rs-pricing-table-price">
+                                <div class="pricing-table-price-tag"> <span class="table-price-text">Early Bird</span>
+                                    <span class="table-period">Till 30th April 2023</span> </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>IADVL Members</h4>
+                                    <p>Rs.7,000</p>
+                                </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Post Graduates (IADVL PLM Pg Residents)</h4>
+                                    <p>Rs.5000</p>
+                                </div>
+                            </div>
+                        
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Accompanying Person</h4>
+                                    <p>Rs.5,000</p>
+                                </div>
+                            </div>
+                         
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Workshop</h4>
+                                    <p>Rs.2,000</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Cras justo odio</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Dapibus ac facilisis in</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 mb-4">
-                <div class="card h-100 shadow-lg">
-                    <div class="card-body">
-                        <div class="text-center p-3">
-                            <h5 class="card-title">Spot</h5>
-                            <small>Large Companies</small>
-                            <br><br>
-                            <span class="h2">$40</span>/month
-                            <br><br>
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="rs-price-table">
+                            <div class="rs-pricing-table-price">
+                                <div class="pricing-table-price-tag"> <span class="table-price-text">Regular
+                                       (upto 15 Sep 2023)</span> </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>IADVL Members</h4>
+                                    <p>Rs.8,200</p>
+                                </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Post Graduates (IADVL PLM Pg Residents)</h4>
+                                    <p>Rs.5,300</p>
+                                </div>
+                            </div>
+
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Accompanying Person</h4>
+                                    <p>Rs.6,000</p>
+                                </div>
+                            </div>
+                         
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Workshop</h4>
+                                    <p>Rs.2,500</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Cras justo odio</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Dapibus ac facilisis in</li>
-                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body text-center">
-                        <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="rs-price-table">
+                            <div class="rs-pricing-table-price">
+                                <div class="pricing-table-price-tag"> <span class="table-price-text">Spot
+                                        (from 16 Sept onwards)</span> </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>IADVL Members</h4>
+                                    <p>Rs.11,000</p>
+                                </div>
+                            </div>
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Post Graduates (IADVL PLM Pg Residents)</h4>
+                                    <p>Rs.8,000</p>
+                                </div>
+                            </div>
+                          
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Accompanying Person</h4>
+                                    <p>Rs.7,000</p>
+                                </div>
+                            </div>
+                          
+                            <div class="rs-pricing-table-body">
+                                <div class="price-details">
+                                    <h4>Workshop</h4>
+                                    <p>Rs.3,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="text-center mt-10">
+                            <p>Fee inclusive of GST</p>
+                            <div class="btn-part"> <a class="readon btn-text buy-big" href="registration.html">
+                                    <span>Register Now</span> </a> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>

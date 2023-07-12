@@ -784,3 +784,344 @@ h6,
 .committee i{
     font-size: 14px;
 }
+
+
+.rs-pricing.main-home .price-list-item .price-list {
+    overflow: hidden
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px 30px 40px;
+    background: #FFFFFFA8;
+    border: 2px solid #E1E1E1;
+    border-color: #E8ECF8;
+    position: relative
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .top-shape {
+    position: absolute;
+    top: -22px;
+    right: 29%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #E1E1E1;
+    border-color: #E8ECF8;
+    background: #FAF4FE;
+    z-index: 1
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-text {
+    flex: 1;
+    min-width: 1px
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-text .price-list-header .price-list-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0a0a0a;
+    display: block
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-text .price-list {
+    color: #605E5E;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-text .event-date {
+    color: #333;
+    font-size: 15px;
+    font-weight: 400
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-price {
+    padding-left: 30px;
+    border-left: 1px solid #e1e1e1;
+    border-color: #E8ECF8;
+    padding-top: 9px;
+    padding-bottom: 9px
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .price-list-price span {
+    color: #151748;
+    background-color: #14ABF400;
+    border-radius: 38px;
+    width: 33px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .btn-part {
+    margin-left: 40px;
+    padding-left: 30px;
+    border-left: 1px solid #e1e1e1;
+    border-color: #E8ECF8
+}
+
+.rs-pricing.main-home .price-list-item .price-list .price-grid-item .bottom-shape {
+    position: absolute;
+    top: auto;
+    bottom: -22px;
+    right: 29%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 2px solid #E1E1E1;
+    border-color: #E8ECF8;
+    background: #FAF4FE
+}
+
+.rs-pricing.main-home.pricing-plan-style2 .price-list-item .price-list {
+    max-width: 790px;
+    margin: 0 auto 30px
+}
+
+.rs-pricing.main-home.pricing-plan-style2 .price-list-item .price-list:last-child {
+    margin: 0 auto 0
+}
+
+.rs-pricing.main-home.pricing-plan-style2 .price-list-item .price-list .price-grid-item {
+    border: 2px solid #F6EBF2;
+    border-color: #F6EBF2
+}
+
+.rs-pricing.main-home.pricing-plan-style2 .price-list-item .price-list .price-grid-item .bottom-shape,
+.rs-pricing.main-home.pricing-plan-style2 .price-list-item .price-list .price-grid-item .top-shape {
+    border: 2px solid #E1E1E1;
+    border-color: #F3EFF2;
+    background: #F3EFF2
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .pricing-img {
+    margin: 0 -23px 0 -300px
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item {
+    background: #170390;
+    border: 2px solid #180578;
+    border-color: #180578
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .price-list-price span,
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .price-list-text .event-date,
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .price-list-text .price-list,
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .price-list-text .price-list-header .price-list-title {
+    color: #fff
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .price-list-price {
+    border-left: 1px solid #e1e1e1;
+    border-color: #180578
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .btn-part {
+    border-left: 1px solid #e1e1e1;
+    border-color: #180578
+}
+
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .bottom-shape,
+.rs-pricing.main-home.pricing-plan-style3 .price-list-item .price-list .price-grid-item .top-shape {
+    border: 2px solid #180578;
+    border-color: #180578;
+    background: #180578
+}
+
+.rs-pricing.style2 {
+    position: relative
+}
+
+.rs-pricing.style2 .rs-price-table {
+    position: relative;
+    padding: 2px 0 27px 0;
+    box-shadow: 0 0 10px 0 #fff;
+    margin: 0 6px 0 0;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 10px 0 #eee;
+    text-align: center;
+    margin: 0 0 15px;
+    border-radius: 30px;
+    border: 2px solid #4fae3b
+}
+
+.rs-pricing.style2 .rs-price-table .pricing-table-header .table-title {
+    font-size: 15px;
+    line-height: 25px;
+    color: #4fae3b;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price {
+    margin-bottom: 20px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag {
+    border-style: dashed;
+    border-width: 0 0 1px 0;
+    border-color: #4eae3e;
+    margin-bottom: .5rem;
+    color: #242424;
+    font-weight: 700;
+    line-height: 27px;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 19px;
+    min-height: 84px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 17px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag .table-currency {
+    font-size: 52px;
+    font-weight: 600;
+    color: #151748;
+    letter-spacing: -12px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag .table-price-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f0f0f;
+    line-height: 25px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag .table-price-text sup {
+    font-size: 16px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag .table-period {
+    color: #000;
+    font-size: 16px;
+    display: block
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-body {
+    margin-bottom: 0;
+    padding: 0 30px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-body .pricing-table-features-list {
+    text-align: left;
+    padding: 0% 22% 0% 22%
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-body .pricing-table-features-list li {
+    color: #44455B;
+    font-size: 15px;
+    margin-bottom: 8px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-body .pricing-table-features-list li i {
+    margin-right: 10px;
+    min-width: 15px;
+    font-size: 16px
+}
+
+.rs-pricing.style2 .rs-price-table .rs-pricing-table-body .pricing-table-features-list li .feature-text {
+    color: #44455B;
+    font-size: 15px
+}
+
+.rs-pricing.style2 .price-animation .price-animate {
+    position: absolute;
+    bottom: 0
+}
+
+.rs-pricing.style2 .price-animation .price-animate img {
+    width: 69px;
+    opacity: .7
+}
+
+.rs-pricing.style2 .price-animation .price-animate.one {
+    left: 9%;
+    top: 22%
+}
+
+.rs-pricing.style2 .price-animation .price-animate.one img {
+    width: 69px;
+    opacity: .7
+}
+
+.rs-pricing.style2 .price-animation .price-animate.two {
+    left: 6%;
+    bottom: 7%
+}
+
+.rs-pricing.style2 .price-animation .price-animate.two img {
+    width: 100px;
+    opacity: .6
+}
+
+.rs-pricing.style2 .price-animation .price-animate.three {
+    right: 10%;
+    bottom: 40%
+}
+
+.rs-pricing.style2 .price-animation .price-animate.three img {
+    width: 70px;
+    opacity: .7
+}
+
+.rs-pricing.style2.pricing-plan-style .rs-pricing-table-price .pricing-table-price-tag:after,
+.rs-pricing.style2.pricing-plan-style .rs-pricing-table-price .pricing-table-price-tag:before {
+    background: #f7f7f7
+}
+
+.rs-pricing.style2.home3-pricing-style .rs-price-table {
+    box-shadow: unset;
+    background-color: #180a7f
+}
+
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-price .pricing-table-price-tag:after,
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-price .pricing-table-price-tag:before {
+    background: #1a0b8c
+}
+
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-price .pricing-table-price-tag {
+    border-color: #1a0b8c
+}
+
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-body .pricing-table-features-list li,
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-body .pricing-table-features-list li .feature-text,
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-price .pricing-table-price-tag .table-price-text,
+.rs-pricing.style2.home3-pricing-style .rs-pricing-table-price .pricing-table-price-tag .table-currency {
+    color: #fff
+}
+
+.rs-pricing.style2.pricing-home6-style .rs-price-table .pricing-table-header .table-title {
+    color: #eb3f0f
+}
+
+.price-details {
+    border-radius: 0;
+    padding: 12px 0;
+    background: #ededed;
+    margin: 0 0 18px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+.price-details h4 {
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 500
+}
+
+.price-details p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px
+}
