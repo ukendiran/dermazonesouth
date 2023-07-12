@@ -5,7 +5,7 @@
                 <div class="card h-100 shadow-lg">
                     <div class="card-body">
                         <div class="text-center p-3">
-                            <h5 class="card-title">Basic</h5>
+                            <h5 class="card-title">Early bird</h5>
                             <small>Individual</small>
                             <br><br>
                             <span class="h2">$8</span>/month
@@ -33,7 +33,7 @@
                 <div class="card h-100 shadow-lg">
                     <div class="card-body">
                         <div class="text-center p-3">
-                            <h5 class="card-title">Standard</h5>
+                            <h5 class="card-title">Regular </h5>
                             <small>Small Business</small>
                             <br><br>
                             <span class="h2">$20</span>/month
@@ -61,7 +61,7 @@
                 <div class="card h-100 shadow-lg">
                     <div class="card-body">
                         <div class="text-center p-3">
-                            <h5 class="card-title">Premium</h5>
+                            <h5 class="card-title">Spot</h5>
                             <small>Large Companies</small>
                             <br><br>
                             <span class="h2">$40</span>/month
