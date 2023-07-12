@@ -22,7 +22,10 @@ include 'include/navbar.php';
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
+
             <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
+
+
                 <p class="fw-medium text-uppercase text-primary mb-2">General Guidelines</p>
                 <p class="mb-4"> <i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Abstract submission is open to all registered delegates. </p>
                 <p class="mb-4"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Abstracts should be submitted only online through the "Abstract submission portal" on the official site www.dermazonesouth2023.com </p>
@@ -38,13 +41,14 @@ include 'include/navbar.php';
 
                 </br>
                 <p class="fw-medium text-uppercase text-primary mb-2">Submission Categories </p>
-                <div class="row">
-                    <!-- <div class="col-3"><img class="img-fluid m-3" src="img/guideline-cat.jpg" width="100%">  </div> -->
-                    <div class="col-12">
-                        <h5 class="mt-4 "> We welcome submissions related to one of the following sub-themes, and we would be glad if you could mention the sub-theme in which you would like your abstract to be considered. </h5>
-                    </div>
-                </div>
-                </br>
+<div class="row">
+    <div class="col-3"><img class="img-fluid m-3" src="img/guideline-cat.jpg" width="100%">  </div>
+    <div class="col-5"> <h5 class="mt-4 "> We welcome submissions related to one of the following sub-themes, and we would be glad if you could mention the sub-theme in which you would like your abstract to be considered. </h5>
+            </div>
+</div>
+                                        
+                 
+                   </br>
 
                 <div class="row">
                     <div class="col-4">
