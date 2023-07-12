@@ -31,7 +31,7 @@ include 'include/navbar.php';
                         <h4 class="mb-3">Dr. Remya Raj R</h4>
                         <p class="mb-2">+91 9489148228</p>
                         <p class="mb-4">drremyarajr@gmail.com</p>
-                        <a class="btn btn-primary px-4" href="tel:+0123456789">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
+                        <!-- <a class="btn btn-primary px-4" href="tel:+0123456789">Call Now <i class="fa fa-arrow-right ms-2"></i></a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -43,7 +43,7 @@ include 'include/navbar.php';
                         <h4 class="mb-3">Dr. P Vijayasankar</h4>
                         <p class="mb-2">+91 9442567116</p>
                         <p class="mb-4"> vijayasankarpalaniappan@gmail.com</p>
-                        <a class="btn btn-primary px-4" href="mailto:info@example.com">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
+                        <!-- <a class="btn btn-primary px-4" href="mailto:info@example.com">Call Now <i class="fa fa-arrow-right ms-2"></i></a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -54,8 +54,8 @@ include 'include/navbar.php';
                         <h5 class="mb-3">Travel & Accommodation </h5>
                         <h4 class="mb-3">Dr. K Manobalan</h4>
                         <p class="mb-2">+91 9488351988</p>
-                        <p class="mb-4">  mano.jipmer@gmail.com</p>
-                        <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
+                        <!-- <p class="mb-4">  mano.jipmer@gmail.com</p> -->
+                        <!-- <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a> -->
                     </div>
                 </div>
             </div>
