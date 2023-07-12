@@ -768,11 +768,11 @@ h6,
     background: #007bff;
 }
 
-.mt-20{
+.mt-20 {
     margin-top: 20px;
 }
 
-.container p{
+.container p {
     line-height: 2.0 !important;
 }
 
@@ -781,7 +781,8 @@ h6,
     margin-bottom: 0px;
     margin-top: 0px;
 }
-.committee i{
+
+.committee i {
     font-size: 14px;
 }
 
