@@ -35,7 +35,7 @@
                     <a href="about.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Abstract</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="guideline.php" class="dropdown-item">Guidelines</a>
-                        <a href="#" class="dropdown-item">Abstract Submission</a>  
+                        <a href="login.php" class="dropdown-item">Abstract Submission</a>  
                                 
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <a href="about.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Venue</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="places.php" class="dropdown-item">About Puducherry</a>
-                        <a href="#" class="dropdown-item">Conference Venue</a>  
+                        <a href="conference-venue.php" class="dropdown-item">Conference Venue</a>  
                                 
                     </div>
                 </div>
