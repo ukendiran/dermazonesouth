@@ -19,21 +19,21 @@ include 'include/slider.php';
             </div> -->
             <div class="col-lg-12 wow fadeIn about" data-wow-delay="0.5s">
                 <p class="fw-medium text-uppercase text-primary mb-2">Welcome to Puducherry</p>
-                <!-- <h1 class="display-5 mb-4">Welcome to Puducherry</h1> -->
-                <p class="mb-4"> It gives us immense pleasure to invite you to DERMAZONE SOUTH 2023, the 25th South Zonal Conference of IADVL along with annual state conference CUTICON Puducherry to be held on October 12th -15th 2023, in Pondicherry, a city of peace, heritage, spirituality and exotic beaches, popularly known as “The little French town in India”. The conference is being hosted by IADVL Puducherry and will be conducted at Indira Gandhi Medical College & Research Institute, Puducherry.
+                <!-- <h1 class="display-5 mb-2">Welcome to Puducherry</h1> -->
+                <p class="mb-2"> It gives us immense pleasure to invite you to DERMAZONE SOUTH 2023, the 25th South Zonal Conference of IADVL along with annual state conference CUTICON Puducherry to be held on October 12th -15th 2023, in Pondicherry, a city of peace, heritage, spirituality and exotic beaches, popularly known as “The little French town in India”. The conference is being hosted by IADVL Puducherry and will be conducted at Indira Gandhi Medical College & Research Institute, Puducherry.
                 </p>
-                <p class="mb-4"> The programme is well arranged and intend to discuss the most recent innovations, trends, and concerns as well as practical challenges encountered, and solutions adopted in the diversified field of Dermatology. The ‘knowledge’ which gets crystallized into ‘wisdom’ at meetings like this is the way forward for the future generation. The Organizing Committee is working hard to put together an educational and scientific program for what will be an academic extravaganza. We are also planning exciting cultural events for entertainment of delegates and their family members. Our aim is to provide you a memorable experience at an affordable rate.
+                <p class="mb-2"> The programme is well arranged and intend to discuss the most recent innovations, trends, and concerns as well as practical challenges encountered, and solutions adopted in the diversified field of Dermatology. The ‘knowledge’ which gets crystallized into ‘wisdom’ at meetings like this is the way forward for the future generation. The Organizing Committee is working hard to put together an educational and scientific program for what will be an academic extravaganza. We are also planning exciting cultural events for entertainment of delegates and their family members. Our aim is to provide you a memorable experience at an affordable rate.
                 </p>
-                <p class="mb-4"> On behalf of the Organising Committee of the IADVL Puducherry, it is our proud privilege to extend our cordial welcome to all and look forward to your active participation in making 25th DERMAZONE SOUTH 2023 at Puducherry a successful and enriching experience.
+                <p class="mb-2"> On behalf of the Organising Committee of the IADVL Puducherry, it is our proud privilege to extend our cordial welcome to all and look forward to your active participation in making 25th DERMAZONE SOUTH 2023 at Puducherry a successful and enriching experience.
                 </p>
 
                 <?php include 'include/program_highlight.php'; ?>
 
 
                 <!-- <div class="row pt-2">
-                        <p class="mb-4">Places to visit in Pondicherry.</p>
+                        <p class="mb-2">Places to visit in Pondicherry.</p>
                         <div class="col-sm-6">  
-                            <div class="d-flex align-items-center mb-4">                     
+                            <div class="d-flex align-items-center mb-2">                     
                                 <div class="ms-4">
                                     <p>Manakula Vinayagar Temple</p>
                                     <p>Sri Aurobindo Ashram </p>
@@ -117,8 +117,8 @@ include 'include/fee.php';
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <p class="fw-medium text-uppercase text-primary mb-2">Why Choosing Us!</p>
-                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="display-5 mb-2">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     <div class="row gy-4">
                         <div class="col-12">
                             <div class="d-flex">
@@ -187,7 +187,7 @@ include 'include/fee.php';
         <div class="container">
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
-                <h1 class="display-5 mb-4">We Provide Best Industrial Services</h1>
+                <h1 class="display-5 mb-2">We Provide Best Industrial Services</h1>
             </div>
             <div class="row gy-5 gx-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">

@@ -767,3 +767,20 @@ h6,
     color: white;
     background: #007bff;
 }
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.container p{
+    line-height: 2.0 !important;
+}
+
+.committee p {
+    line-height: 1.5;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.committee i{
+    font-size: 14px;
+}
