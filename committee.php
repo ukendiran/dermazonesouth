@@ -40,10 +40,10 @@ include 'include/navbar.php';
 
                 <div class="row g-4">
                     <div class="row justify-content-center text-center">
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Vijay Zarwar.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/vijay-zawar.jpg" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -55,10 +55,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item ">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Manjunath Shenoy.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/manjunath-shenoy.png" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -70,10 +70,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Rashmi Sarkar.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/rashmi-sarkar.jpg" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -85,10 +85,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Shashi Kumar B.M..png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/shashikumar-bm.png" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -100,10 +100,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Vinay Singh.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/Dr-Vinay-Singh.jpeg" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -115,10 +115,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Dinesh Kumar Devaraj.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/DineshKumar.jpg" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -131,10 +131,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Savitha A.S..png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/savitha-as.png" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -146,10 +146,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Sudhavani D..png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/sudhavani.png" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -161,10 +161,10 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
-                                    <div class="images-wrap"> <a href="#"><img src="img/Dr Prashant Jadhav.png" alt="Team" width="180px"></a> </div>
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/prashant-jadhav.png" alt="Team" width="180px"></a> </div>
                                     <div class="team-content">
                                         <div class="rs-arrow">
                                             <div class="curve"></div>
@@ -185,7 +185,7 @@ include 'include/navbar.php';
             <div class="tab-pane fade" id="pills-Puducherry" role="tabpanel" aria-labelledby="pills-Puducherry-tab">
                 <div class="row g-4">
                     <div class="row justify-content-center">
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -202,7 +202,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -219,7 +219,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -236,11 +236,11 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/team-3.jpg" alt="Team" width="170px"></a>
+                                        <a href="#"><img src="img/contact/Rangaraj.jpeg" alt="Team" width="170px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -253,11 +253,11 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/team-3.jpg" alt="Team" width="170px"></a>
+                                        <a href="#"><img src="img/contact/Vijayashankar.jpeg" alt="Team" width="170px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -270,7 +270,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -287,11 +287,11 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mt-5 mb-20">
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/team-3.jpg" alt="Team" width="170px"></a>
+                                        <a href="#"><img src="img/contact/Jude-Ernest.jpeg" alt="Team" width="170px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -305,8 +305,8 @@ include 'include/navbar.php';
                             </div>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-4"></div>
-                            <div class="col-4 text-left">
+                            <div class="col-md-4 col-sm-6"></div>
+                            <div class="col-md-4 col-sm-6 text-left">
                                 <span class="text-center mb-5 mx-5">Central Council Members</span>
                                 <h5 class="title-name mx-5"><a href="#">Dr. Oudeacoumar P </a></h5>
                                 <h5 class="title-name mx-5"><a href="#">Dr. Karthikeyan K </a></h5>
@@ -315,7 +315,7 @@ include 'include/navbar.php';
                                 <h5 class="title-name mx-5"><a href="#">Dr. Roshni Menon </a></h5>
 
                             </div>
-                            <div class="col-4"></div>
+                            <div class="col-md-4 col-sm-6"></div>
 
                         </div>
 
@@ -328,7 +328,7 @@ include 'include/navbar.php';
             <!-- start 3rd tab  -->
             <div class="tab-pane fade" id="pills-Organizing" role="tabpanel" aria-labelledby="pills-Organizing-tab">
                 <div class="row g-4">
-                    <div class="col-md-4 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -346,7 +346,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-4 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -364,11 +364,11 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-4 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
-                                    <a href="#"><img src="img/team-3.jpg" alt="Team" width="170px"></a>
+                                    <a href="#"><img src="img/contact/Rangaraj.jpeg" alt="Team" width="170px"></a>
                                 </div>
                                 <div class="team-content  mt-2">
                                     <div class="rs-arrow">
@@ -386,7 +386,7 @@ include 'include/navbar.php';
 
                 <div class="row committee">
 
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Organising Joint Secretaries</h5>
@@ -399,7 +399,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Patrons</h5>
@@ -412,7 +412,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Advisors</h5>
@@ -423,7 +423,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4  mt-5">
+                    <div class="col-md-4 col-sm-6  mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Zonal Organising Committee</h5>
@@ -441,7 +441,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4  mt-5">
+                    <div class="col-md-4 col-sm-6  mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Conference Coordinators </h5>
@@ -454,12 +454,12 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <div class="row">
                                     <h5>SCIENTIFIC COMMITTEE </h5>
-                                    <div class="col-6">
+                                    <div class="col-md-6">
 
                                         <p class="text-primary">Dr. K Karthikeyan</p>
                                         <i>Chairperson </i>
@@ -475,7 +475,7 @@ include 'include/navbar.php';
                                         <i>Postgraduate papers </i>
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6">
 
                                         <p class="text-primary">Dr. S Shanmathi </p>
                                         <p class="text-primary">Dr. R Suganya</p>
@@ -488,7 +488,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>WORKSHOP COMMITTEE</h5>
@@ -501,7 +501,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>FINANCE COMMITTEE</h5>
@@ -514,7 +514,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>REGISTRATION COMMITTEE</h5>
@@ -527,7 +527,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>RECEPTION COMMITTEE</h5>
@@ -540,7 +540,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>EXHIBITION AND SPONSORSHIP COMMITTEE</h5>
@@ -553,7 +553,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>ACCOMMODATION COMMITTEE</h5>
@@ -566,7 +566,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>CATERING COMMITTEE</h5>
@@ -579,7 +579,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>TRANSPORTATION COMMITTEE</h5>
@@ -591,7 +591,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>WEBSITE/IT COMMITTEE</h5>
@@ -603,7 +603,7 @@ include 'include/navbar.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>CULTURAL COMMITTEE</h5>

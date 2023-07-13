@@ -13,42 +13,42 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                   <div class="nav-item dropdown">
-                    <a href="index.php" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Home</a>
+                    <a href="index.php" class="nav-link dropdown-toggle <?= ($activePage == 'index' || $activePage == '' || $activePage == 'highlight' || $activePage == 'scientific' ) ? 'active':''; ?>" data-bs-toggle="dropdown">Home</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="highlight.php" class="dropdown-item">Highlights </a>
-                        <a href="scientific.php" class="dropdown-item">Scientific program </a>                   
+                        <a href="highlight.php" class="dropdown-item <?= ($activePage == 'highlight') ? 'active':''; ?>">Highlights </a>
+                        <a href="scientific.php" class="dropdown-item <?= ($activePage == 'scientific') ? 'active':''; ?>">Scientific program </a>                   
                     </div>
                 </div>
 
                 <!-- <div class="nav-item dropdown"> -->
-                    <a href="committee.php" class="nav-item nav-link" >Committee</a>
+                    <a href="committee.php" class="nav-item nav-link <?= ($activePage == 'committee') ? 'active':''; ?>" >Committee</a>
                     <!-- <div class="dropdown-menu bg-light m-0">
                         <a href="committee.php" class="dropdown-item">National Office Bearers</a>
                         <a href="#" class="dropdown-item">IADVL Puducherry</a>  
                         <a href="#" class="dropdown-item"> Executive Organising Committee</a>                    
                     </div> 
                 </div>-->
-                <a href="#" class="nav-item nav-link ">Downloads</a>
+                <a href="#" class="nav-item nav-link <?= ($activePage == 'downloads') ? 'active':''; ?>">Downloads</a>
                 
                    
                 <div class="nav-item dropdown">
-                    <a href="about.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Abstract</a>
+                    <a href="about.php" class="nav-link dropdown-toggle <?= ($activePage == 'guideline' || $activePage == 'login') ? 'active':''; ?>" data-bs-toggle="dropdown">Abstract</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="guideline.php" class="dropdown-item">Guidelines</a>
-                        <a href="login.php" class="dropdown-item">Abstract Submission</a>  
+                        <a href="guideline.php" class="dropdown-item <?= ($activePage == 'guideline') ? 'active':''; ?>">Guidelines</a>
+                        <a href="login.php" class="dropdown-item <?= ($activePage == 'login') ? 'active':''; ?>">Abstract Submission</a>  
                                 
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="about.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Venue</a>
+                    <a href="about.php" class="nav-link dropdown-toggle <?= ($activePage == 'places' || $activePage == 'conference-venue') ? 'active':''; ?>" data-bs-toggle="dropdown">Venue</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="places.php" class="dropdown-item">About Puducherry</a>
-                        <a href="conference-venue.php" class="dropdown-item">Conference Venue</a>  
+                        <a href="places.php" class="dropdown-item <?= ($activePage == 'places') ? 'active':''; ?>">About Puducherry</a>
+                        <a href="conference-venue.php" class="dropdown-item <?= ($activePage == 'conference-venue') ? 'active':''; ?>">Conference Venue</a>  
                                 
                     </div>
                 </div>
                 <!-- <a href="places.php" class="nav-item nav-link">Places</a> -->
-                <a href="contact.php" class="nav-item nav-link">Contact us</a>
+                <a href="contact.php" class="nav-item nav-link <?= ($activePage == 'contact') ? 'active':''; ?>">Contact us</a>
             </div>
             <a href="register.php" class="btn btn-primary px-3 d-none d-lg-block">Registration</a>
         </div>
