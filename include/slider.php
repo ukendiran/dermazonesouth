@@ -13,7 +13,7 @@
                                     <!-- <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">DERMAZONE SOUTH 12 to 15 October 2023y</p> -->
                                     <h1 class="display-1 text-white mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
                                     <!-- <h1 class="display-1 text-white mb-5 animated slideInRight">12 to 15 October 2023 </h1> -->
-                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight mytext">12th to 15th October 2023</p>
+                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight mytext">12<span>th</span> to 15<span>th</span> October 2023</p>
                                     <a href="register.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                                 </div>
                             </div>

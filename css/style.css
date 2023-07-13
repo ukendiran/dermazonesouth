@@ -724,6 +724,10 @@ h6,
     margin-top: 0px;
 }
 
+.mytext span {
+    text-transform: lowercase;
+}
+
 .about strong {
     color: var(--dark)
 }
