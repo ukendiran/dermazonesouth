@@ -38,9 +38,9 @@ include 'include/navbar.php';
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-National" role="tabpanel" aria-labelledby="pills-National-tab">
 
-                <div class="row g-4 mt-5">
+                <div class="row g-4">
                     <div class="row justify-content-center text-center">
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Vijay Zarwar.png" alt="Team" width="180px"></a> </div>
@@ -55,7 +55,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item ">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Manjunath Shenoy.png" alt="Team" width="180px"></a> </div>
@@ -70,7 +70,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Rashmi Sarkar.png" alt="Team" width="180px"></a> </div>
@@ -85,7 +85,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Shashi Kumar B.M..png" alt="Team" width="180px"></a> </div>
@@ -100,7 +100,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Vinay Singh.png" alt="Team" width="180px"></a> </div>
@@ -115,7 +115,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Dinesh Kumar Devaraj.png" alt="Team" width="180px"></a> </div>
@@ -131,7 +131,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Savitha A.S..png" alt="Team" width="180px"></a> </div>
@@ -146,7 +146,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Sudhavani D..png" alt="Team" width="180px"></a> </div>
@@ -161,7 +161,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item mt-3">
                                 <div class="team-inner-wrap">
                                     <div class="images-wrap"> <a href="#"><img src="img/Dr Prashant Jadhav.png" alt="Team" width="180px"></a> </div>
@@ -183,9 +183,9 @@ include 'include/navbar.php';
             <!-- end 1st tab  -->
             <!-- start 2nd tab  -->
             <div class="tab-pane fade" id="pills-Puducherry" role="tabpanel" aria-labelledby="pills-Puducherry-tab">
-                <div class="row g-4 mt-5">
+                <div class="row g-4">
                     <div class="row justify-content-center">
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -202,7 +202,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -219,7 +219,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -236,7 +236,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -253,7 +253,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -270,7 +270,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -287,7 +287,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-20">
+                        <div class="col-md-4 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -327,8 +327,8 @@ include 'include/navbar.php';
             <!-- end 2nd tab  -->
             <!-- start 3rd tab  -->
             <div class="tab-pane fade" id="pills-Organizing" role="tabpanel" aria-labelledby="pills-Organizing-tab">
-                <div class="row g-4 mt-5">
-                    <div class="col-md-4 mb-20">
+                <div class="row g-4">
+                    <div class="col-md-4 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -346,7 +346,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-20">
+                    <div class="col-md-4 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -364,7 +364,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-20">
+                    <div class="col-md-4 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
