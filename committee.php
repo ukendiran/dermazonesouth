@@ -230,7 +230,7 @@ include 'include/navbar.php';
                                             <div class="curve"></div>
                                             <div class="point"></div>
                                         </div>
-                                        <h5 class="title-name"><a href="#">trishna-vaishali.jpeg</a></h5>
+                                        <h5 class="title-name"><a href="#">Dr.Trishna Vaishali M</a></h5>
                                         <span>Vice-President</span>
                                     </div>
                                 </div>
@@ -509,7 +509,7 @@ include 'include/navbar.php';
                                 <i>Chairperson</i>
                                 <p class="text-primary">Dr. M Rangaraj</p>
                                 <p class="text-primary">Dr. Remya Raj R</p>
-                                <p class="text-primary">trishna-vaishali.jpeg</p>
+                                <p class="text-primary">Dr. Trishna Vaishali M</p>
                                 <i>Convenors</i>
                             </div>
                         </div>
@@ -610,7 +610,7 @@ include 'include/navbar.php';
                                 <p class="text-primary">Dr. P Oudeacoumar</p>
                                 <i>Chairperson</i>
                                 <p class="text-primary"> Dr. Brinda G David</p>
-                                <p class="text-primary"> trishna-vaishali.jpeg</p>
+                                <p class="text-primary"> Dr. Trishna Vaishali M</p>
                                 <i>Convenors</i>
                             </div>
                         </div>
