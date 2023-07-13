@@ -189,7 +189,7 @@ include 'include/navbar.php';
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/dr1.jpeg" alt="Team" width="160px"></a>
+                                        <a href="#"><img src="img/contact/udaya-shankar.jpeg" alt="Team" width="160px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -206,7 +206,7 @@ include 'include/navbar.php';
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/dr4.jpeg" alt="Team" width="160px"></a>
+                                        <a href="#"><img src="img/contact/remya-raj.jpeg" alt="Team" width="160px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -274,7 +274,7 @@ include 'include/navbar.php';
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
-                                        <a href="#"><img src="img/dr2.jpeg" alt="Team" width="170px"></a>
+                                        <a href="#"><img src="img/contact/yogindher-singh.jpeg" alt="Team" width="170px"></a>
                                     </div>
                                     <div class="team-content  mt-2">
                                         <div class="rs-arrow">
@@ -332,7 +332,7 @@ include 'include/navbar.php';
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
-                                    <a href="#"><img src="img/dr1.jpeg" alt="Team" width="160px"></a>
+                                    <a href="#"><img src="img/contact/udaya-shankar.jpeg" alt="Team" width="160px"></a>
                                 </div>
                                 <div class="team-content  mt-2">
                                     <div class="rs-arrow">
@@ -350,7 +350,7 @@ include 'include/navbar.php';
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
-                                    <a href="#"><img src="img/dr4.jpeg" alt="Team" width="160px"></a>
+                                    <a href="#"><img src="img/contact/remya-raj.jpeg" alt="Team" width="160px"></a>
                                 </div>
                                 <div class="team-content  mt-2">
                                     <div class="rs-arrow">
