@@ -41,14 +41,15 @@ include 'include/navbar.php';
 
                 </br>
                 <p class="fw-medium text-uppercase text-primary mb-2">Submission Categories </p>
-<div class="row">
-    <div class="col-3"><img class="img-fluid m-3" src="img/guideline-cat.jpg" width="100%">  </div>
-    <div class="col-5"> <h5 class="mt-4 "> We welcome submissions related to one of the following sub-themes, and we would be glad if you could mention the sub-theme in which you would like your abstract to be considered. </h5>
-            </div>
-</div>
-                                        
-                 
-                   </br>
+                <div class="row">
+                    <!-- <div class="col-3"><img class="img-fluid m-3" src="img/guideline-cat.jpg" width="100%">  </div> -->
+                    <div class="col-12">
+                        <h5 class="mt-4 "> We welcome submissions related to one of the following sub-themes, and we would be glad if you could mention the sub-theme in which you would like your abstract to be considered. </h5>
+                    </div>
+                </div>
+
+
+                </br>
 
                 <div class="row">
                     <div class="col-4">
