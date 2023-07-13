@@ -23,7 +23,7 @@ include 'include/navbar.php';
     <div class="container">
         <div class="row g-2">
             <div class="col-md-9">
-                <h2 class="mb-4">DermaZone South 2023 Registration</h2>
+                <h2 class="mb-4">Dermazone South 2023 Registration</h2>
                 <div class="form-s1">
                     <form id="registation-form" method="post">
                         <div class="form-group row">

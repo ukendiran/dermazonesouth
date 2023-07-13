@@ -443,7 +443,6 @@ include 'include/navbar.php';
                                 <h5>Zonal Organising Committee</h5>
                                 <p class="text-primary">Dr. C Udayashankar</p>
                                 <p class="text-primary">Dr. A V Kaleeswaran</p>
-                                <p class="text-primary">A V Kaleeswaran</p>
                                 <p class="text-primary">Dr. G Annie Flora</p>
                                 <p class="text-primary">Dr. Nirupama Bhagya Lakshmi.T</p>
                                 <p class="text-primary">Dr. D. Subbarao</p>
