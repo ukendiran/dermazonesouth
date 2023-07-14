@@ -9,7 +9,7 @@
                 <div class="rs-price-table">
                     <div class="rs-pricing-table-price">
                         <div class="pricing-table-price-tag"> <span class="table-price-text">Early Bird</span>
-                            <span class="table-period">Till 30th April 2023</span>
+                            <span class="table-period">till August 15th 2023</span>
                         </div>
                     </div>
                     <div class="rs-pricing-table-body">

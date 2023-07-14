@@ -724,6 +724,10 @@ h6,
     margin-top: 0px;
 }
 
+.mytext span {
+    text-transform: lowercase;
+}
+
 .about strong {
     color: var(--dark)
 }
@@ -1125,4 +1129,17 @@ h6,
     margin: 0;
     font-weight: 600;
     font-size: 14px
+}
+
+.team-item img {
+    border: 4px solid #ccc;
+    border-radius: 50%;
+    border-color: var(--primary);
+    padding: 3px;
+    width: 180px;
+    height: 180px;
+}
+
+.highlights p strong {
+    color: var(--dark) !important;
 }
