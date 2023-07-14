@@ -29,7 +29,7 @@ include 'include/slider.php';
 
                 <?php include 'include/program_highlight.php'; ?>
 
-   </div>
+            </div>
         </div>
     </div>
 </div>
@@ -44,37 +44,37 @@ include 'include/slider.php';
     </div>
     <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/7.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/pondicherry-light-house.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Pondy Marina</h5>
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/9.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/botanical-garden.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Botanical Garden</h5>
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/8.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/manakula-vinayagar-temple.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Sacred Heart Basilica</h5>
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/4.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/aurovile-globe.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Auroville – City of Dawn</h5>
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/5.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/pondicherry-boat-house.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Chunnambar Boat House</h5>
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/6.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/villianour-temple.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Thirukameswarar Temple</h5>
             </div>
