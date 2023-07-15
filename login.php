@@ -22,24 +22,19 @@ include 'include/navbar.php';
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <h2 class="mb-4">Registered members login</h2>
-                <div class="form-s1">
-                    <form id="login-form" method="post">
+                <form id="myForm" method="POST">
+                    <div class="form-s1">
                         <div class="form-group row">
-                            <div class="col-sm-6"> <label class="small">IADVL Number</label> <input type="text" class="form-control registration-mem-no" name="iadvl_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number"> </div>
-                        </div> <a href="javascript: void(0)" class="btn btn-dark mt-3 px-4" id="otp-btn">Proceed</a>
-                        <div class="d-none member-auto-fill">
-                            <div class="form-group mt-3 row">
-                                <div class="col-sm-6"> <label>OTP</label> <input type="text" class="form-control otp" name="otp" required="" minlength="3" maxlength="100" placeholder="Enter OTP"> </div>
-                            </div> <button type="submit" class="btn btn-dark submit-btn mt-3">Submit</button>
+                            <div class="col-sm-6"> <label class="small">IADVL Number</label>
+                                <input data-url="http://<?php echo $_SERVER['HTTP_HOST']; ?>/dev/check.php" type="text" class="form-control registration-mem-no" id="iadvl_no" name="iadvl_no" placeholder="Enter IADVL Number">
+                            </div>
                         </div>
-                        <div id="message"></div>
-                    </form>
-                </div>
+                        <button class="btn btn-dark mt-3 px-4" id="btn-submit">Proceed</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <?php include 'include/footer.php'; ?>

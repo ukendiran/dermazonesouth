@@ -1143,3 +1143,8 @@ h6,
 .highlights p strong {
     color: var(--dark) !important;
 }
+
+.places img{
+    height:200px !important;
+    margin-bottom: 30px;
+}

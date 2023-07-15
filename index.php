@@ -56,7 +56,7 @@ include 'include/slider.php';
             </div>
         </a>
         <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/manakula-vinayagar-temple.png" alt="" height="100%">
+            <img class="img-fluid" src="img/places/pondicherry-church.png" alt="" height="100%">
             <div class="project-title">
                 <h5 class="text-primary mb-0">Sacred Heart Basilica</h5>
             </div>
