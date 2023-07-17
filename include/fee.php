@@ -20,7 +20,7 @@
                     </div>
                     <div class="rs-pricing-table-body">
                         <div class="price-details">
-                            <h4>Post Graduates (IADVL PLM members/PG Residents)</h4>
+                            <h4>IADVL PLM members/PG Residents</h4>
                             <p>Rs.5000</p>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="rs-pricing-table-body">
                         <div class="price-details">
-                            <h4>Post Graduates (IADVL PLM members/PG Residents)</h4>
+                            <h4>IADVL PLM members/PG Residents</h4>
                             <p>Rs.5,300</p>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="rs-pricing-table-body">
                         <div class="price-details">
-                            <h4>Post Graduates (IADVL PLM members/PG Residents)</h4>
+                            <h4>IADVL PLM members/PG Residents</h4>
                             <p>Rs.8,000</p>
                         </div>
                     </div>
