@@ -42,6 +42,7 @@
 
     // Modal Video
     var $videoSrc;
+
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
@@ -155,6 +156,12 @@
         }
     });
 
+
+    $(".custom-checkbox").on("click", function() {
+        // Toggle the checkbox when the label is clicked
+        var checkbox = $(this).find(".hidden-checkbox");
+        checkbox.prop("checked", !checkbox.prop("checked"));
+    });
 
 
 })(jQuery);

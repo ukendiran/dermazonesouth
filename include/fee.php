@@ -111,7 +111,7 @@
             <div class="col-lg-12">
                 <div class="text-center mt-10">
                     <p>Fee inclusive of GST</p>
-                    <div class="btn-part"> <a class="readon btn-text buy-big" href="registration.html">
+                    <div class="btn-part"> <a class="readon btn-text buy-big" href="login.php">
                             <span>Register Now</span> </a> </div>
                 </div>
             </div>

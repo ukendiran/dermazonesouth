@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
+    $age = $_POST['age'];
     $registration_no = $_POST['registration_no'];
     $has_workshop = $_POST['has_workshop'];
     $food = $_POST['food'];
@@ -35,13 +36,17 @@ if (isset($_POST['submit'])) {
     $state = $_POST['state'];
     $sql = "UPDATE users "
         . " SET id = '$id', membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
-        . "email = '$email', mobile = '$mobile', registration_no = '$registration_no',"
+        . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', age = $age,"
         . "has_workshop = '$has_workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
-        . "member_type = '$member_type', designation = '$designation', gender	 = '$gender	', address_line1 = '$address_line1',"
-        . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city	', state = '$state'"
+        . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
+        . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state'"
         . " WHERE id = '$id'";
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+?>
+        <script>
+            // $.notify("Access granted", "success");
+        </script>
+<?php
     } else {
         echo "Error updating record: " . $conn->error;
     }
@@ -72,16 +77,16 @@ if (isset($_POST['submit'])) {
                 <h2 class="mb-4">
                     Dermazone South 2023 Registration</h2>
                 <div class="form-s1">
-                    <form id="registation-form" method="post" action="register.php">
+                    <form id="registation-form" method="post" action="register.php?id=<?= $id ?>">
                         <div class="form-group row">
                             <div class="col-sm-6"> <label class="small">IADVL Number (Eg. LM/K/99999)</label>
                                 <input type="text" readonly value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="membership_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
                             </div>
                             <div class="col-sm-6 mt-3 mt-sm-0 member-auto-fill"> <label>Registration Type</label>
-                                <select class="form-control member_type" value="<?= (isset($data['member_type'])) ? $data['member_type'] : '' ?>" required="" name="member_type">
-                                    <option value="">Select</option>
-                                    <option value="PLM">Provisional Life Membership</option>
-                                    <option value="IADVL_MEMBER">IADVL Life Member</option>
+                                <select class="form-control member_type" required="" name="member_type">
+                                    <option value="" <?= (isset($data['member_type']) && $data['member_type']  == "") ? 'selected' : '' ?>>Select</option>
+                                    <option value="PLM" <?= (isset($data['member_type']) && $data['member_type'] == "PLM") ? 'selected' : '' ?>>Provisional Life Membership</option>
+                                    <option value="IADVL_MEMBER" <?= (isset($data['member_type']) && $data['member_type'] == "IADVL_MEMBER") ? 'selected' : '' ?>>IADVL Life Member</option>
                                 </select>
                             </div>
                         </div> <a href="javascript: void(0)" class="btn btn-dark mt-3 px-4 d-none" id="fetch-btn">Proceed</a>
@@ -95,12 +100,14 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </div>
                             <div class="form-group mt-3 row">
-                                <div class="col-lg-6"> <label>Designation</label> <input type="text" class="form-control designation" name="designation" required="" minlength="3" maxlength="100" placeholder="Enter designation"> </div>
+                                <div class="col-lg-6"> <label>Designation</label>
+                                    <input type="text" value="<?= (isset($data['designation'])) ? $data['designation'] : '' ?>" class="form-control designation" name="designation" required="" minlength="3" maxlength="100" placeholder="Enter designation">
+                                </div>
                                 <div class="col-6 col-lg-3 mt-3 mt-lg-0"> <label>Gender</label>
-                                    <select class="form-control" value="<?= (isset($data['gender'])) ? $data['gender'] : '' ?>" required="" name="gender">
-                                        <option value="">Select</option>
-                                        <option>Female</option>
-                                        <option>Male</option>
+                                    <select class="form-control" required="" name="gender">
+                                        <option value="" <?= (isset($data['gender']) && $data['gender']  == "") ? 'selected' : '' ?>>Select</option>
+                                        <option value="Female" <?= (isset($data['gender']) && $data['gender']  == "Female") ? 'selected' : '' ?>>Female</option>
+                                        <option value="Male" <?= (isset($data['gender']) && $data['gender']  == "Male") ? 'selected' : '' ?>>Male</option>
                                     </select>
                                 </div>
                                 <div class="col-6 col-lg-3 mt-3 mt-lg-0"> <label>Age</label>
@@ -140,35 +147,28 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="form-group mt-3 row">
                                 <div class="col-sm-6"> <label>No. of co-delegates</label>
-                                    <select class="form-control" required="" name="co_delegates">
-                                        <option value="">Select</option>
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
+                                    <select class="form-control" required="" name="co_delegates" value="<?= (isset($data['co_delegates'])) ? $data['co_delegates'] : '' ?>">
+                                        <option value="" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "") ? 'selected' : '' ?>>Select</option>
+                                        <option value="0" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "0") ? 'selected' : '' ?>>0</option>
+                                        <option value="1" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "1") ? 'selected' : '' ?>>1</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6 mt-3 mt-sm-0"> <label>Meal preference</label>
                                     <select class="form-control" required="" value="<?= (isset($data['food'])) ? $data['food'] : '' ?>" value="<?php echo (isset($data['food'])) ?  $data['food'] : '' ?>" name="food">
-                                        <option value="">Select</option>
-                                        <option>Veg</option>
-                                        <option>Non Veg</option>
+                                        <option value="" <?= (isset($data['food']) && $data['food']  == "0") ? 'selected' : '' ?>>Select</option>
+                                        <option value="Veg" <?= (isset($data['food']) && $data['food']  == "Veg") ? 'selected' : '' ?>>Veg</option>
+                                        <option value="Non Veg" <?= (isset($data['food']) && $data['food']  == "Non Veg") ? 'selected' : '' ?>>Non Veg</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group mt-3 row">
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input name="has_workshop" type="hidden" value="0">
-                                        <input class="form-check-input" name="has_workshop" type="checkbox" value="1" id="workshopCheck" value="<?php echo (isset($data['has_workshop']) ?  'checked' : '') ?>">
-                                        <label class="form-check-label" for="workshopCheck"> Workshop </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" class="hidden-checkbox" name="has_workshop">
+                                            <span class="custom-checkmark"></span>
+                                            Check me!
+                                        </label>
                                     </div>
                                 </div>
                             </div>

@@ -73,6 +73,7 @@
 <script src="lib/waypoints/waypoints.min.js"></script>
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/notify/notify.min.js"></script>
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
