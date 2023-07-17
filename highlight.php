@@ -8,7 +8,7 @@ include 'include/navbar.php';
             <h1 class="display-3 text-white animated slideInRight">Highlight</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                     <li class="breadcrumb-item active" aria-current="page">Highlight</li>
                 </ol>

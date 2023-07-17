@@ -2,6 +2,7 @@
 include 'include/navbar.php';
 include_once('./include/connection.php');
 $data = array();
+$id = '';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -12,6 +13,39 @@ if (isset($_GET['id'])) {
         $data = $result->fetch_assoc();
     }
 }
+if (isset($_POST['submit'])) {
+    $id = $_POST['id'];
+    $membership_no = $_POST['membership_no'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $registration_no = $_POST['registration_no'];
+    $has_workshop = $_POST['has_workshop'];
+    $food = $_POST['food'];
+    $co_delegates = $_POST['co_delegates'];
+    $institution = $_POST['institution'];
+    $member_type = $_POST['member_type'];
+    $designation = $_POST['designation'];
+    $gender = $_POST['gender'];
+    $address_line1 = $_POST['address_line1'];
+    $address_line2 = $_POST['address_line2'];
+    $pincode = $_POST['pincode'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $sql = "UPDATE users "
+        . " SET id = '$id', membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
+        . "email = '$email', mobile = '$mobile', registration_no = '$registration_no',"
+        . "has_workshop = '$has_workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
+        . "member_type = '$member_type', designation = '$designation', gender	 = '$gender	', address_line1 = '$address_line1',"
+        . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city	', state = '$state'"
+        . " WHERE id = '$id'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+}
 ?>
 
 <!-- Page Header Start -->
@@ -20,7 +54,7 @@ if (isset($_GET['id'])) {
         <h1 class="display-3 text-white animated slideInRight">Registration</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb animated slideInRight mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                 <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                 <li class="breadcrumb-item active" aria-current="page">Registration</li>
             </ol>
@@ -35,12 +69,13 @@ if (isset($_GET['id'])) {
     <div class="container">
         <div class="row g-2">
             <div class="col-md-9">
-                <h2 class="mb-4">Dermazone South 2023 Registration</h2>
+                <h2 class="mb-4">
+                    Dermazone South 2023 Registration</h2>
                 <div class="form-s1">
-                    <form id="registation-form" method="post">
+                    <form id="registation-form" method="post" action="register.php">
                         <div class="form-group row">
                             <div class="col-sm-6"> <label class="small">IADVL Number (Eg. LM/K/99999)</label>
-                                <input type="text" readonly value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="iadvl_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
+                                <input type="text" readonly value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="membership_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
                             </div>
                             <div class="col-sm-6 mt-3 mt-sm-0 member-auto-fill"> <label>Registration Type</label>
                                 <select class="form-control member_type" value="<?= (isset($data['member_type'])) ? $data['member_type'] : '' ?>" required="" name="member_type">
@@ -136,13 +171,17 @@ if (isset($_GET['id'])) {
                                         <label class="form-check-label" for="workshopCheck"> Workshop </label>
                                     </div>
                                 </div>
-                            </div> <button type="submit" class="btn btn-dark submit-btn mt-3">Submit</button>
+                            </div>
+                            <button type="submit" class="btn btn-dark submit-btn mt-3" name="submit">Submit</button>
+                            <input type="hidden" name="id" value="<?= $id ?>" />
                         </div>
                         <div id="message"></div>
                     </form>
-                    <div class="alert alert-info mt-10" role="alert"> Dear Doctor, At the time of registration for
+                    <div class="alert alert-info mt-10" role="alert">
+                        Dear Doctor, At the time of registration for
                         Dermazone South 2023 please submit to us a declaration from the Head of Department that you are
-                        a postgraduate student.<br> Mail ID: <a href="mailto:dermazonesouth2023@gmail.com"> dermazonesouth2023@gmail.com</a> </div>
+                        a postgraduate student.<br> Mail ID: <a href="mailto:dermazonesouth2023@gmail.com"> dermazonesouth2023@gmail.com</a>
+                    </div>
                 </div>
             </div>
         </div>
