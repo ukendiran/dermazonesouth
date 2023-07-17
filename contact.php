@@ -39,7 +39,7 @@ include 'include/navbar.php';
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                             <i class="fa fa-book fa-2x text-primary"></i>
                         </div>          
-                        <h6 class="mb-3">Postgraduate Paper Presentations </h6>
+                        <h5 class="mb-3">Postgraduate Paper Presentations </h5>
                         <h4 class="mb-3">Dr. P Vijayasankar</h4>
                         <p class="mb-2">+91 9442567116</p>
                         <p class="mb-4"> vijayasankarpalaniappan@gmail.com</p>

@@ -253,13 +253,19 @@ include 'include/navbar.php';
                 <!-- right  -->
                 <div class="row g-5 mt-2 border">
                     <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
-                        <h4 class=" mb-4">Coromandel Cafe</h4>
-                        <p class="mb-4">Beautifully restored , pink-walled and white-colonnaded colonial villa with a palm filled courtyard which is just the spot for a curry-leaf Martini at dusk. </p>
+                        <h4 class=" mb-4">Pichavaram -Mangrove forest</h4>
+                        <p class="mb-4">
+                        Nestled along the shimmering shores of the Bay of Bengal, Pichavaram invites you to a world of pure enchantment
+                         and mesmerising beauty. A 30-minute drive from the holy temple town of Chidambaram, this coastal village is 
+                         home to the world's second-largest mangrove forest, the Pichavaram Mangrove. With the Vellar 
+                         River and Coleroon River embracing its borders,
+                         the backwaters of Pichavaram are a wonderland of exotic birdlife and mesmerising wilderness.
+                        </p>
                     </div>
                     <div class="col-lg-4">
                         <div class="row gx-3">
                             <div class="align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                                <img class="" width="100%" height="150px" src="img/places/14.png">
+                                <img class="" width="100%" height="150px" src="img/places/16.png">
                             </div>
                         </div>
                     </div>
@@ -271,13 +277,17 @@ include 'include/navbar.php';
                     <div class="col-lg-4">
                         <div class="row gx-3">
                             <div class="align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                                <img class="" width="100%" src="img/places/15.png">
+                                <img class="" width="100%" src="img/places/17.png">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
-                        <h4 class=" mb-4">Surguru’s Hot spot</h4>
-                        <p class="mb-4">One of the finest Vegetarian dining spots spotted in the Serene White town of Puducherry with Authentic South Indian and North Indian cuisine making it the right spot to fill your tummy right after visiting Manakula Vinayagar Temple leaving your taste buds with the scintillating taste of Puducherry for years to come! </p>
+                        <h4 class=" mb-4">Ruins of Alamparai fort</h4>
+                        <p class="mb-4">
+                        Built as a fortress to keep away sea invaders, the Alamparai was once a thriving port and mint, 
+                        commissioned by the Nawab of Carnatic—Dost Ali Khan—in the mid-1700s. A walk around the grounds will 
+                        reveal crumbling edifices, intricate steps and watchtowers that nature has claimed as its own.
+                        </p>
                     </div>
                 </div>
 
