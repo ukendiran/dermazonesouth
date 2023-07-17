@@ -14,7 +14,7 @@
                     </div>
                     <div class="rs-pricing-table-body">
                         <div class="price-details">
-                            <h4>IADVL Members</h4>
+                            <h4>IADVLM Members</h4>
                             <p>Rs.7,000</p>
                         </div>
                     </div>
