@@ -236,7 +236,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                        <div class="col-md-3 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -253,7 +253,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                        <div class="col-md-3 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -270,7 +270,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                        <div class="col-md-3 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -287,7 +287,7 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                        <div class="col-md-3 col-sm-6 mt-5 mb-20">
                             <div class="team-item">
                                 <div class="team-inner-wrap text-center">
                                     <div class="images-wrap">
@@ -304,23 +304,74 @@ include 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-5">
-                            <div class="col-md-4 col-sm-6"></div>
-                            <div class="col-md-4 col-sm-6 text-left">
-                                <span class="text-center mb-5 mx-5">Central Council Members</span>
-                                <h5 class="title-name mx-5"><a href="#">Dr. Oudeacoumar P </a></h5>
-                                <h5 class="title-name mx-5"><a href="#">Dr. Karthikeyan K </a></h5>
-                                <h5 class="title-name mx-5"><a href="#">Dr. Sivaraman V </a></h5>
-                                <h5 class="title-name mx-5"><a href="#">Dr. Sheela Kuruvila </a></h5>
-                                <h5 class="title-name mx-5"><a href="#">Dr. Roshni Menon </a></h5>
-
+                        <div class="row mt-2">
+                            <h4 class="title">Central Council Members</h4>
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                                <div class="team-item">
+                                    <div class="team-inner-wrap text-center">
+                                        <div class="images-wrap">
+                                            <a href="#"><img src="img/contact/Karthikeyan.jpeg" alt="Team" width="170px"></a>
+                                        </div>
+                                        <div class="team-content  mt-2">
+                                            <div class="rs-arrow">
+                                                <div class="curve"></div>
+                                                <div class="point"></div>
+                                            </div>
+                                            <h5 class="title-name"><a href="#">Dr. Karthikeyan K </a></h5>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-4 col-sm-6"></div>
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                                <div class="team-item">
+                                    <div class="team-inner-wrap text-center">
+                                        <div class="images-wrap">
+                                            <a href="#"><img src="img/contact/Sivaraman.jpeg" alt="Team" width="170px"></a>
+                                        </div>
+                                        <div class="team-content  mt-2">
+                                            <div class="rs-arrow">
+                                                <div class="curve"></div>
+                                                <div class="point"></div>
+                                            </div>
+                                            <h5 class="title-name"><a href="#">Dr. Sivaraman V </a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                                <div class="team-item">
+                                    <div class="team-inner-wrap text-center">
+                                        <div class="images-wrap">
+                                            <a href="#"><img src="img/contact/Sheela-Kuruvila.jpeg" alt="Team" width="170px"></a>
+                                        </div>
+                                        <div class="team-content  mt-2">
+                                            <div class="rs-arrow">
+                                                <div class="curve"></div>
+                                                <div class="point"></div>
+                                            </div>
+                                            <h5 class="title-name"><a href="#">Dr. Sheela Kuruvila </a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                                <div class="team-item">
+                                    <div class="team-inner-wrap text-center">
+                                        <div class="images-wrap">
+                                            <a href="#"><img src="img/contact/Roshni Menon.jpeg" alt="Team" width="170px"></a>
+                                        </div>
+                                        <div class="team-content  mt-2">
+                                            <div class="rs-arrow">
+                                                <div class="curve"></div>
+                                                <div class="point"></div>
+                                            </div>
+                                            <h5 class="title-name"><a href="#">Dr. Roshni Menon </a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -455,8 +506,8 @@ include 'include/navbar.php';
                     </div>
 
                 </div>
-                <div class="row g-4">              
-                        <h4 class="title">Patrons</h4>             
+                <div class="row g-4">
+                    <h4 class="title">Patrons</h4>
                     <div class="col-md-3 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
@@ -550,7 +601,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 mt-5"  style="display: none;">
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Patrons</h5>
