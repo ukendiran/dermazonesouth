@@ -4,7 +4,7 @@ include 'include/slider.php';
 ?>
 <!-- testing -->
 <!-- About Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-1">
     <div class="container">
         <div class="row g-5">
             <!-- <div class="col-lg-2">
@@ -33,11 +33,15 @@ include 'include/slider.php';
         </div>
     </div>
 </div>
+
+<?php include 'include/places.php'; ?>
 <!-- About End -->
 <?php include 'include/fee.php'; ?>
 
+
+
 <!-- Project Start -->
-<div class="container-fluid bg-dark pt-5 my-5 px-0 places-carousel">
+<!-- <div class="container-fluid bg-dark pt-5 my-5 px-0 places-carousel">
     <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
         <p class="fw-medium text-uppercase text-primary mb-2">Puducherry</p>
         <h1 class="display-5 text-white mb-5">Places to visit</h1>
@@ -80,7 +84,7 @@ include 'include/slider.php';
             </div>
         </a>
     </div>
-</div>
+</div> -->
 <!-- Project End -->
 
 <?php include 'include/footer.php'; ?>

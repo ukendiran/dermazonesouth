@@ -3,9 +3,9 @@ include 'include/navbar.php';
 ?>
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white animated slideInRight">Abstract</h1>
+            <h1 class="display-5 text-white animated slideInRight">Abstract</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -47,34 +47,6 @@ include 'include/navbar.php';
                      </div>                       
                     </div>
                    
-
-
-                    <!-- <div class="row pt-2">
-                        <p class="mb-4">Places to visit in Pondicherry.</p>
-                        <div class="col-sm-6">  
-                            <div class="d-flex align-items-center mb-4">                     
-                                <div class="ms-4">
-                                    <p>Manakula Vinayagar Temple</p>
-                                    <p>Sri Aurobindo Ashram </p>
-                                    <p>Rock beach</p>
-                                    <p>Auroville – City of Dawn</p>
-                                    <p>Chunnambar Boat House</p>
-                                    <p>Thirukameswarar Temple</p>
-                                    <p> Pondy Marina</p>             
-                                </div>                       
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <p>Sacred Heart Basilica Church</p>
-                                    <p> Botanical Garden</p>
-                                    <p> Arikamedu Archaeological Site</p>
-                                    <p>White Town – FRENCH COLONY</p>
-                                    <p>Nehru Street</p>
-                                    <p> Eden Beach</p>
-                                    <p> Coromandel Cafe</p>
-                                    <p>Surguru’s Hot spot</p>    
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

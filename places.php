@@ -3,9 +3,9 @@ include 'include/navbar.php';
 ?>
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
-        <h4 class="display-3 text-white animated slideInRight">About</h4>
+        <h4 class="display-5 text-white animated slideInRight">About</h4>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb animated slideInRight mb-0">
                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -19,7 +19,7 @@ include 'include/navbar.php';
 
 
 <!-- About Start -->
-<div class="container-xxl py-5 places">
+<div class="container-xxl py-1 places">
     <div class="container">
         <div class="row g-2">
             <div class="col-lg-12 wow fadeIn " data-wow-delay="0.5s">
@@ -299,52 +299,6 @@ include 'include/navbar.php';
 <!-- About End -->
 
 
-<!-- Project Start -->
-<div class="container-fluid bg-dark pt-5 my-5 px-0">
-    <!-- <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-            <p class="fw-medium text-uppercase text-primary mb-2">Puducherry</p>
-            <h4 class=" text-white mb-5">Places to visit</h4>
-        </div> -->
-    <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/7.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Pondy Marina</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/9.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Botanical Garden</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/8.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Sacred Heart Basilica</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/4.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Auroville – City of Dawn</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/5.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Chunnambar Boat House</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="img/places/6.png" alt="" height="100%">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Thirukameswarar Temple</h5>
-            </div>
-        </a>
-    </div>
-</div>
-<!-- Project End -->
 
 
 <?php include 'include/footer.php'; ?>

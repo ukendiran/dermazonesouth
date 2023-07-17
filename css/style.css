@@ -1184,6 +1184,10 @@ h6,
     color: var(--primary);
 }
 
+.fw-medium{
+    font-size: 30px !important;
+}
+
 
 @media (max-width: 576px) {
     .slide h3 {
