@@ -12,9 +12,9 @@
                                 <!-- <p class="fs-5 fw-medium text-primary  animated slideInRight">DERMAZONE SOUTH 12 to 15 October 2023y</p> -->
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
 
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">13<sup>th</sup> to 15<sup>th</sup> October 2023</p>
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> October</p>
-                                <a href="register.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">13<sup>th</sup> - 15<sup>th</sup> Oct 2023</p>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> Oct 2023</p>
+                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>
@@ -30,9 +30,9 @@
                                 <!-- <p class="fs-5 fw-medium text-primary  animated slideInRight">DERMAZONE SOUTH 12 to 15 October 2023y</p> -->
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
                                 <!-- <h1 class="display-1 text-white mb-5 animated slideInRight">12 to 15 October 2023 </h1> -->
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">13<sup>th</sup> to 15<sup>th</sup> October 2023</p>
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> October</p>
-                                <a href="register.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">13<sup>th</sup> - 15<sup>th</sup> Oct 2023</p>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> Oct 2023</p>
+                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>
@@ -48,9 +48,9 @@
                                 <!-- <p class="fs-5 fw-medium text-primary  animated slideInRight">DERMAZONE SOUTH 12 to 15 October 2023y</p> -->
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
                                 <!-- <h1 class="display-1 text-white mb-5 animated slideInRight">12 to 15 October 2023 </h1> -->
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">13<sup>th</sup> to 15<sup>th</sup> October 2023</p>
-                                <p class="fs-5 fw-medium text-primary  animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> October</p>
-                                <a href="register.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">13<sup>th</sup> - 15<sup>th</sup> Oct 2023</p>
+                                <p class="fs-5 fw-medium animated slideInRight mytext">Pre-conference workshops on 12<sup>th</sup> Oct 2023</p>
+                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>
