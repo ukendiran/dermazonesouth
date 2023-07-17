@@ -1,5 +1,6 @@
 <?php include 'include/header.php';
 include 'include/navbar.php';
+print_r($hostname);
 ?>
 
 <!-- Page Header Start -->
@@ -26,7 +27,8 @@ include 'include/navbar.php';
                     <div class="form-s1">
                         <div class="form-group row">
                             <div class="col-sm-6"> <label class="small">IADVL Number</label>
-                                <input data-url="http://<?php echo $_SERVER['HTTP_HOST']; ?>/dev/check.php" type="text" class="form-control registration-mem-no" id="iadvl_no" name="iadvl_no" placeholder="Enter IADVL Number">
+                                <input data-url="<?php echo $base_url; ?>check.php" type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number">
+                                <p id="membership_noError"></p>
                             </div>
                         </div>
                         <button class="btn btn-dark mt-3 px-4" id="btn-submit">Proceed</button>

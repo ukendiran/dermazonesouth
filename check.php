@@ -1,33 +1,27 @@
 <?php
-session_start();
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "dermazone";
-$port = "3307";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database, $port);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include_once('./include/connection.php');
 // Process login form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $iadvl_no = $_POST["iadvl_no"];
+    $membership_no = $_POST["membership_no"];
 
     // Prepare SQL statement
-    $sql = "SELECT * FROM users WHERE iadvl_no = '$iadvl_no'";
+    $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        echo json_encode($row);
+        $data = array(
+            'result' => $row,
+            'status' => 1,
+            'msg' => 'Success',
+        );
     } else {
-        echo "Invalid";
+        $data = array(
+            'result' => [],
+            'status' => 0,
+            'msg' => 'Invalid',
+        );
     }
+    echo json_encode($data);
 }
 
 $conn->close();

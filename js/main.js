@@ -120,30 +120,32 @@
         event.preventDefault(); // Prevent form submission
 
         // Validate form fields
-        var iadvl_no = $('#iadvl_no').val();
+        var membership_no = $('#membership_no').val();
         var password = $('#password').val();
         var valid = true;
 
         // Perform client-side validation
-        if (iadvl_no === '') {
-            $('#iadvl_noError').text('Please enter a iadvl_no.');
+        if (membership_no === '') {
+            $('#membership_noError').html('Please Enter IADVL Number.');
             valid = false;
         } else {
-            $('#iadvl_noError').text('');
-        }     
+            $('#membership_noError').html('');
+        }
 
         // If client-side validation passes, perform AJAX request
         if (valid) {
             $.ajax({
                 url: 'check.php', // PHP script to handle validation and database operations
                 method: 'POST',
-                data: { iadvl_no: iadvl_no },
+                data: { membership_no: membership_no },
                 success: function (response) {
-                    // Handle response from server
-                    if (response === 'success') {
-                        // Validation passed, do something (e.g., redirect to another page)
+                    console.log(response);
+                    var result = JSON.parse(response);
+                    if (result.status === 1) {
+                        window.location.href = 'register.php?id=' + result.result.id;
+
                     } else {
-                        // Display an error message (e.g., invalid credentials)
+                        $('#membership_noError').html('Invalid IADVL Number.');
                     }
                 },
                 error: function () {

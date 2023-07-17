@@ -1148,3 +1148,12 @@ h6,
     height:200px !important;
     margin-bottom: 30px;
 }
+
+#membership_noError{
+    color:red;
+}
+
+.title{
+    margin-top: 40px;
+    text-align: center;
+}

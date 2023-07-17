@@ -382,24 +382,175 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/Manobalan.jpeg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. Manobalan K</a></h5>
+                                    <span>Organising Joint Secretaries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/Vijayashankar.jpeg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. P Vijayasankar</a></h5>
+                                    <span>Organising Joint Secretaries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/yogindher-singh.jpeg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. R Yogindher Singh</a></h5>
+                                    <span>Organising Joint Secretaries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/Karthikeyan.jpeg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. K Karthikeyan</a></h5>
+                                    <span>Scientific Committee Chairperson</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row g-4">              
+                        <h4 class="title">Patrons</h4>             
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/rangasamy.png" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Thiru. N. Rangasamy</a></h5>
+                                    <span>Honourable Chief Minister of Puducherry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/contact/udayakumarias.jpg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Thiru. C. Udaya Kumar, I.A.S</a></h5>
+                                    <span>Secretary to Government (Health), Puducherry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/team-3.jpg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. Ramachandra V Bhat</a></h5>
+                                    <span>Dean, IGMC&RI, Puducherry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                        <div class="team-item">
+                            <div class="team-inner-wrap text-center">
+                                <div class="images-wrap">
+                                    <a href="#"><img src="img/team-3.jpg" alt="Team" width="160px"></a>
+                                </div>
+                                <div class="team-content  mt-2">
+                                    <div class="rs-arrow">
+                                        <div class="curve"></div>
+                                        <div class="point"></div>
+                                    </div>
+                                    <h5 class="title-name"><a href="#">Dr. Joseph Raajesh</a></h5>
+                                    <span>Medical Superintendent, IGMC&RI, Puducherry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="row committee">
 
-                    <div class="col-md-4 col-sm-6 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Organising Joint Secretaries</h5>
                                 <p class="text-primary">Dr. Manobalan K</p>
                                 <p class="text-primary">Dr. P Vijayasankar</p>
                                 <p class="text-primary">Dr. R Yogindher Singh</p>
-                                <p class="text-primary">Scientific Committee Chairperson</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
+                        <div class="d-flex">
+                            <div class="ms-4">
+                                <h5>Scientific Committee Chairperson</h5>
                                 <p class="text-primary">Dr. K Karthikeyan</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 mt-5">
+                    <div class="col-md-4 col-sm-6 mt-5"  style="display: none;">
                         <div class="d-flex">
                             <div class="ms-4">
                                 <h5>Patrons</h5>
