@@ -1155,28 +1155,28 @@ h6,
     max-height: 40px;
 }
 
-.slide h3 {
 
-    font-size: 35px !important;
+
+
+.slide h3 {
+    font-size: 32px !important;
     font-family: 'Rubik';
     letter-spacing: 10px;
     text-shadow: 2px 2px 8px #000000;
-    text-align: center;
 }
 
 #header-carousel .display-1 {
     text-shadow: 2px 5px 5px #000000;
     margin-top: 30px;
-    text-align: center;
 }
 
 .mytext {
-    font-size: 25px !important;
+    font-size: 22px !important;
     margin-top: 0px;
     font-style: italic;
     text-shadow: 3px 3px 6px var(--dark);
     color: #EEE;
-    text-align: center;
+
 }
 
 .mytext span {
@@ -1187,25 +1187,37 @@ h6,
 
 @media (max-width: 576px) {
     .slide h3 {
-        font-size: 22px !important;
+        font-size: 18px !important;
+        font-weight: 800;
     }
+
     #header-carousel .display-1 {
         font-size: 44px;
     }
 
     .mytext {
         font-size: 18px !important;
-        text-align: center;
+
     }
 }
 
-/* @media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
+    .slide h3 {
+        font-size: 18px !important;
+        font-weight: 800;
+    }
+
     #header-carousel .display-1 {
         font-size: 44px;
     }
+
+    .mytext {
+        font-size: 18px !important;
+
+    }
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
     #header-carousel .display-1 {
         font-size: 44px;
     }

@@ -7,9 +7,9 @@
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-10 text-start">
+                            <div class="col-lg-10">
                                 <h3 class="fs-5 fw-medium text-white  animated slideInRight">Welcome to Puducherry</h3>
-                                <h1 class="display-1 text-primary mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
+                                <h1 class="display-1 text-primary mb-4 animated slideInRight">DERMAZONE SOUTH </h1>
                                 <p class="animated slideInRight mytext">
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
@@ -25,9 +25,9 @@
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-10 text-start">
+                            <div class="col-lg-10">
                                 <h3 class="fs-5 fw-medium text-white  animated slideInRight">Welcome to Puducherry</h3>
-                                <h1 class="display-1 text-primary mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
+                                <h1 class="display-1 text-primary mb-4 animated slideInRight">DERMAZONE SOUTH </h1>
                                 <p class="animated slideInRight mytext">
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
@@ -43,9 +43,9 @@
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-10 text-start">
+                            <div class="col-lg-10">
                                 <h3 class="fs-5 fw-medium text-white  animated slideInRight">Welcome to Puducherry</h3>
-                                <h1 class="display-1 text-primary mb-5 animated slideInRight">DERMAZONE SOUTH </h1>
+                                <h1 class="display-1 text-primary mb-4 animated slideInRight">DERMAZONE SOUTH </h1>
                                 <p class="animated slideInRight mytext">
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
