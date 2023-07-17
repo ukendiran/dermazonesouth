@@ -157,10 +157,15 @@
     });
 
 
-    $(".custom-checkbox").on("click", function() {
+    $("#workshopCheck").on("change", function () {
         // Toggle the checkbox when the label is clicked
-        var checkbox = $(this).find(".hidden-checkbox");
-        checkbox.prop("checked", !checkbox.prop("checked"));
+        var checkbox = $(this);
+        var isChecked = checkbox.prop("checked");
+        checkbox.prop("checked", checkbox.prop("checked"));
+        if (isChecked)
+            $('#has_workshop').val('1');
+        else
+            $('#has_workshop').val('0');
     });
 
 

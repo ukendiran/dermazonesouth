@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="form-group mt-3 row">
                                 <div class="col-sm-6"> <label>No. of co-delegates</label>
-                                    <select class="form-control" required="" name="co_delegates" value="<?= (isset($data['co_delegates'])) ? $data['co_delegates'] : '' ?>">
+                                    <select class="form-control" required="" name="co_delegates">
                                         <option value="" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "") ? 'selected' : '' ?>>Select</option>
                                         <option value="0" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "0") ? 'selected' : '' ?>>0</option>
                                         <option value="1" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "1") ? 'selected' : '' ?>>1</option>
@@ -164,11 +164,9 @@ if (isset($_POST['submit'])) {
                             <div class="form-group mt-3 row">
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox" class="hidden-checkbox" name="has_workshop">
-                                            <span class="custom-checkmark"></span>
-                                            Check me!
-                                        </label>
+                                        <input id="has_workshop" name="has_workshop" type="hidden" value="<?= (isset($data['has_workshop'])) ? $data['has_workshop'] : '' ?>">
+                                        <input class="form-check-input" <?= (isset($data['has_workshop']) && $data['has_workshop'] == '1') ? 'checked' : '' ?> name="has_workshop" type="checkbox" value="1" id="workshopCheck">
+                                        <label class="form-check-label" for="workshopCheck"> Workshop </label>
                                     </div>
                                 </div>
                             </div>
