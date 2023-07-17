@@ -1138,7 +1138,8 @@ h6,
 }
 
 .places img {
-    height: 200px !important;
+    width: 100% !important;
+    height: 250px !important;
     margin-bottom: 30px;
 }
 

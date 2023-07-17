@@ -2,7 +2,7 @@
  <div class="container-fluid py-5 my-5 px-0 places  bg-dark">
      <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
          <!-- <p class="fw-medium text-uppercase text-white mb-2">Places to Visit</p> -->
-         <h1 class="display-5 mb-5 text-white">Places to visit in Puducherry</h1>
+         <h1 class=" mb-5 text-white">Places to visit in Puducherry</h1>
      </div>
      <div class="owl-carousel project-carousel bg-dark wow fadeIn" data-wow-delay="0.1s">
          <a class="project-item" href="">
