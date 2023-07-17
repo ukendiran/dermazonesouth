@@ -40,7 +40,7 @@ if (isset($_GET['id'])) {
                     <form id="registation-form" method="post">
                         <div class="form-group row">
                             <div class="col-sm-6"> <label class="small">IADVL Number (Eg. LM/K/99999)</label>
-                                <input type="text" value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="iadvl_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
+                                <input type="text" readonly value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="iadvl_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
                             </div>
                             <div class="col-sm-6 mt-3 mt-sm-0 member-auto-fill"> <label>Registration Type</label>
                                 <select class="form-control member_type" value="<?= (isset($data['member_type'])) ? $data['member_type'] : '' ?>" required="" name="member_type">

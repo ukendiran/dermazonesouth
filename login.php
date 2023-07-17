@@ -1,6 +1,6 @@
 <?php include 'include/header.php';
 include 'include/navbar.php';
-print_r($hostname);
+
 ?>
 
 <!-- Page Header Start -->

@@ -1,6 +1,6 @@
 <?php
 
-if ($hostname == "localhost") {
+if ($_SERVER['HTTP_HOST'] == "localhost") {
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -11,7 +11,7 @@ if ($hostname == "localhost") {
     $username = "u709996704_dermazone";
     $password = "Dermazone@123";
     $database = "u709996704_dermazone";
-    $port = "3306";
+    $port = "3306";    
 }
 
 // Create connection
