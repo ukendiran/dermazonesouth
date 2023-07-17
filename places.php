@@ -277,7 +277,7 @@ include 'include/navbar.php';
                     <div class="col-lg-4">
                         <div class="row gx-3">
                             <div class="align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                                <img class="" width="100%" src="img/places/17.png">
+                                <img class="" width="100%" src="img/places/17.jpg">
                             </div>
                         </div>
                     </div>

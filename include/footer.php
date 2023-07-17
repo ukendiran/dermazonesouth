@@ -23,9 +23,9 @@
                 <h5 class="text-white mb-4">Quick Links</h5>
                 <a class="btn btn-link" href="about.php">About Us</a>
                 <a class="btn btn-link" href="contact.php">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
+                <a class="btn btn-link" href="committee.php">Committee</a>
+                <a class="btn btn-link" href="conference-venue.php">Venue</a>
+                <a class="btn btn-link" href="#">Support</a>
             </div>
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white mb-4">Conference Secretariat</h5>
