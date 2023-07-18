@@ -13,11 +13,17 @@
                                 <span class="table-period">till August 15th 2023</span>
                             </div>
                         </div>
+
                         <div class="rs-pricing-table-body">
                             <div class="price-details">
                                 <h4>IADVL LM/ALM Members</h4>
                                 <p>Rs.7,000</p>
                             </div>
+                    </div>
+                    <div class="rs-pricing-table-body">
+                        <div class="price-details">
+                            <h4>IADVLM Members</h4>
+                            <p>Rs.7,000</p>
                         </div>
                         <div class="rs-pricing-table-body">
                             <div class="price-details">
