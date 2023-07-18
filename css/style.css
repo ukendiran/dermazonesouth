@@ -1228,7 +1228,7 @@ h6,
     }
 } */
 
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
    .navbar {
     flex-wrap: nowrap;
    }
@@ -1237,4 +1237,4 @@ h6,
     padding-left: 30px !important;
     padding-right: 31px;
    }
-}
+} */
