@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,17 +35,18 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
 
     // Modal Video
     var $videoSrc;
+
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    console.log($videoSrc);
+
     $('#videoModal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     })
@@ -69,25 +70,25 @@
         center: true,
         dots: false,
         nav: true,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ],
         responsive: {
-            0:{
-                items:2
+            0: {
+                items: 2
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             },
-            992:{
-                items:4
+            992: {
+                items: 4
             },
-            1200:{
-                items:5
+            1200: {
+                items: 5
             }
         }
     });
@@ -100,21 +101,73 @@
         center: true,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             }
         }
     });
 
-    
+
+    $('#myForm').submit(function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate form fields
+        var membership_no = $('#membership_no').val();
+        var password = $('#password').val();
+        var valid = true;
+
+        // Perform client-side validation
+        if (membership_no === '') {
+            $('#membership_noError').html('Please Enter IADVL Number.');
+            valid = false;
+        } else {
+            $('#membership_noError').html('');
+        }
+
+        // If client-side validation passes, perform AJAX request
+        if (valid) {
+            $.ajax({
+                url: 'check.php', // PHP script to handle validation and database operations
+                method: 'POST',
+                data: { membership_no: membership_no },
+                success: function (response) {
+                    console.log(response);
+                    var result = JSON.parse(response);
+                    if (result.status === 1) {
+                        window.location.href = 'register.php?id=' + result.result.id;
+
+                    } else {
+                        $('#membership_noError').html('Invalid IADVL Number.');
+                    }
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        }
+    });
+
+
+    $("#workshopCheck").on("change", function () {
+        // Toggle the checkbox when the label is clicked
+        var checkbox = $(this);
+        var isChecked = checkbox.prop("checked");
+        checkbox.prop("checked", checkbox.prop("checked"));
+        if (isChecked)
+            $('#has_workshop').val('1');
+        else
+            $('#has_workshop').val('0');
+    });
+
+
 })(jQuery);
 

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
+<?php $activePage = basename($_SERVER['PHP_SELF'], ".php");
+$hostname = $_SERVER['HTTP_HOST'];
+$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/dev/';
+
+?>
 
 <head>
     <meta charset="utf-8">

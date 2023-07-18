@@ -719,14 +719,7 @@ h6,
     color: #FF5E14 !important;
 }
 
-.mytext {
-    font-size: 32px !important;
-    margin-top: 0px;
-}
 
-.mytext span {
-    text-transform: lowercase;
-}
 
 .about strong {
     color: var(--dark)
@@ -953,13 +946,13 @@ h6,
     text-align: center;
     margin: 0 0 15px;
     border-radius: 30px;
-    border: 2px solid #4fae3b
+    border: 2px solid #eb3f0f
 }
 
 .rs-pricing.style2 .rs-price-table .pricing-table-header .table-title {
     font-size: 15px;
     line-height: 25px;
-    color: #4fae3b;
+    color: #eb3f0f;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 4px
@@ -972,7 +965,7 @@ h6,
 .rs-pricing.style2 .rs-price-table .rs-pricing-table-price .pricing-table-price-tag {
     border-style: dashed;
     border-width: 0 0 1px 0;
-    border-color: #4eae3e;
+    border-color: #eb3f0f;
     margin-bottom: .5rem;
     color: #242424;
     font-weight: 700;
@@ -1142,4 +1135,106 @@ h6,
 
 .highlights p strong {
     color: var(--dark) !important;
+}
+
+.places img {
+    width: 100% !important;
+    height: 250px !important;
+    margin-bottom: 30px;
+}
+
+#membership_noError {
+    color: #eb3f0f;
+}
+
+.title {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.places-carousel img {
+    max-height: 40px;
+}
+
+
+
+
+.slide h3 {
+    font-size: 32px !important;
+    font-family: 'Rubik';
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+#header-carousel .display-1 {
+    text-shadow: 2px 5px 5px #000000;
+    margin-top: 30px;
+}
+
+.mytext {
+    font-size: 22px !important;
+    margin-top: 0px;
+    font-style: italic;
+    text-shadow: 3px 3px 6px var(--dark);
+    color: #EEE;
+
+}
+
+.mytext span {
+    text-transform: lowercase;
+    color: var(--primary);
+}
+
+.fw-medium{
+    font-size: 30px !important;
+}
+
+
+@media (max-width: 576px) {
+    .slide h3 {
+        font-size: 18px !important;
+        font-weight: 800;
+    }
+
+    #header-carousel .display-1 {
+        font-size: 44px;
+    }
+
+    .mytext {
+        font-size: 18px !important;
+
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .slide h3 {
+        font-size: 18px !important;
+        font-weight: 800;
+    }
+
+    #header-carousel .display-1 {
+        font-size: 44px;
+    }
+
+    .mytext {
+        font-size: 18px !important;
+
+    }
+}
+
+/* @media (min-width: 769px) {
+    #header-carousel .display-1 {
+        font-size: 44px;
+    }
+} */
+
+@media (max-width: 420px) {
+   .navbar {
+    flex-wrap: nowrap;
+   }
+   .navbar .navbar-brand {
+    position: relative;
+    padding-left: 30px !important;
+    padding-right: 31px;
+   }
 }
