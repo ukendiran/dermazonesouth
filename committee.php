@@ -425,7 +425,7 @@ include 'include/navbar.php';
                                         <div class="point"></div>
                                     </div>
                                     <h5 class="title-name"><a href="#">Dr. Remya Raj R</a></h5>
-                                    <span>Organising Joint Secretaries</span>
+                                    <span>Organising Joint Secretary</span>
                                 </div>
                             </div>
                         </div>
@@ -479,7 +479,7 @@ include 'include/navbar.php';
                                         <div class="point"></div>
                                     </div>
                                     <h5 class="title-name"><a href="#">Dr. Manobalan K</a></h5>
-                                    <span>Organising Joint Secretaries</span>
+                                    <span>Organising Joint Secretary</span>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +497,7 @@ include 'include/navbar.php';
                                         <div class="point"></div>
                                     </div>
                                     <h5 class="title-name"><a href="#">Dr. P Vijayasankar</a></h5>
-                                    <span>Organising Joint Secretaries</span>
+                                    <span>Organising Joint Secretary</span>
                                 </div>
                             </div>
                         </div>
@@ -515,7 +515,7 @@ include 'include/navbar.php';
                                         <div class="point"></div>
                                     </div>
                                     <h5 class="title-name"><a href="#">Dr. R Yogindher Singh</a></h5>
-                                    <span>Organising Joint Secretaries</span>
+                                    <span>Organising Joint Secretary</span>
                                 </div>
                             </div>
                         </div>
