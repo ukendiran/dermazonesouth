@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
     <a href="index.php" class="navbar-brand ps-5 me-0">
         <!-- <img class="sticky-logo" src="img/logo-light.svg" alt="Mid Dermacon"> -->
-        <h5 class="text-white m-0">DERMAZONE SOUTH 2023</h5>
+        <h5 class="text-white m-0 logo">DERMAZONE SOUTH 2023</h5>
     </a>
     <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
