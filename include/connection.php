@@ -21,3 +21,22 @@ $conn = new mysqli($servername, $username, $password, $database, $port);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+
+// Function to encrypt the ID
+function encryptID($id, $key) {
+    $keyInt = intval(crc32($key)); // Convert the key to an integer value
+    $encrypted = base64_encode($id ^ $keyInt);
+    return $encrypted;
+}
+
+// Function to decrypt the encrypted ID
+function decryptID($encryptedID, $key) {
+    $keyInt = intval(crc32($key)); // Convert the key to an integer value
+    $decrypted = base64_decode($encryptedID);
+    $id = $decrypted ^ $keyInt;
+    return $id;
+}
+
+// Example usage
+$yourSecretKey = "dermazone"; // Replace this with your secret key

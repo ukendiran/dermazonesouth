@@ -467,7 +467,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -485,7 +485,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -503,7 +503,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6 mt-5 mb-20">
+                    <div class="col-md-4 col-sm-6 mt-5 mb-20">
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
@@ -581,7 +581,7 @@ include 'include/navbar.php';
                         <div class="team-item">
                             <div class="team-inner-wrap text-center">
                                 <div class="images-wrap">
-                                    <a href="#"><img src="img/team-3.jpg" alt="Team" width="160px"></a>
+                                    <a href="#"><img src="img/contact/joshep.jpg" alt="Team" width="160px"></a>
                                 </div>
                                 <div class="team-content  mt-2">
                                     <div class="rs-arrow">

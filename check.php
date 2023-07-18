@@ -9,10 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+        // Suppose you have an ID you want to encrypt
+        $idToEncrypt = $row['id'];
+        $encryptedID = encryptID($idToEncrypt, $yourSecretKey);
         $data = array(
             'result' => $row,
             'status' => 1,
             'msg' => 'Success',
+            'encryptedID' => $encryptedID,
         );
     } else {
         $data = array(

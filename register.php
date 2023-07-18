@@ -5,7 +5,8 @@ $data = array();
 $id = '';
 
 if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+    // To decrypt the ID back
+    $id = decryptID($_GET['id'], $yourSecretKey);
     // Prepare SQL statement
     $sql = "SELECT * FROM users WHERE id = '$id'";
     $result = $conn->query($sql);
@@ -15,6 +16,7 @@ if (isset($_GET['id'])) {
 }
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
+    // $id = decryptID($_POST['id'], $yourSecretKey);
     $membership_no = $_POST['membership_no'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
