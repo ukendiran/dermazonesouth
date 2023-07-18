@@ -1227,3 +1227,14 @@ h6,
         font-size: 44px;
     }
 } */
+
+@media (max-width: 420px) {
+   .navbar {
+    flex-wrap: nowrap;
+   }
+   .navbar .navbar-brand {
+    position: relative;
+    padding-left: 30px !important;
+    padding-right: 31px;
+   }
+}
