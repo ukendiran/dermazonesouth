@@ -53,7 +53,7 @@ include 'include/navbar.php';
                         </div> 
                         <h5 class="mb-3">Travel & Accommodation </h5>
                         <h4 class="mb-3">Dr. K Manobalan</h4>
-                        <p class="mb-2">+91 9488351988</p>
+                        <p class="mb-2">+91 7305979133</p>
                         <p class="mb-4">  mano.jipmer@gmail.com</p>
                         <!-- <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a> -->
                     </div>
