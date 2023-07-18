@@ -3,12 +3,12 @@ include 'include/navbar.php';
 ?>
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
-        <h1 class="display-3 text-white animated slideInRight">Venue</h1>
+        <h1 class="display-5 text-white animated slideInRight">Venue</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb animated slideInRight mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                 <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                 <li class="breadcrumb-item active" aria-current="page">Conference Venue</li>
             </ol>
@@ -19,14 +19,14 @@ include 'include/navbar.php';
 
 
 <!-- Contact Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-1">
     <div class="container">
 
         <div class="row g-5">
 
             <div class="col-lg-8">
-                <!-- <p class="fw-medium text-uppercase text-primary mb-2">About Us</p> -->
-                <h1 class="display-5 mb-4">IGMCRI</h1>
+            <p class="fw-medium text-uppercase text-primary mb-2">IGMCRI</p>
+                <!-- <h1 class="display-5 mb-4">IGMCRI</h1> -->
 
                 <img class="img-fluid" src="img/igmc.jpg" width="100%" style="height:400px;"> 
                 <p class="mb-4 mt-2">

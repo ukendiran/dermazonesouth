@@ -3,12 +3,12 @@ include 'include/navbar.php';
 ?>
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white animated slideInRight">Contact Us</h1>
+            <h1 class="display-5 text-white animated slideInRight">Contact Us</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                     <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                 </ol>
@@ -19,7 +19,7 @@ include 'include/navbar.php';
 
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-1">
         <div class="container">
             <div class="row g-5 justify-content-center mb-5">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -39,7 +39,7 @@ include 'include/navbar.php';
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                             <i class="fa fa-book fa-2x text-primary"></i>
                         </div>          
-                        <h6 class="mb-3">Postgraduate Paper Presentations </h6>
+                        <h5 class="mb-3">Postgraduate Paper Presentations </h5>
                         <h4 class="mb-3">Dr. P Vijayasankar</h4>
                         <p class="mb-2">+91 9442567116</p>
                         <p class="mb-4"> vijayasankarpalaniappan@gmail.com</p>
