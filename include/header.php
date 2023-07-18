@@ -2,8 +2,10 @@
 <html lang="en">
 <?php $activePage = basename($_SERVER['PHP_SELF'], ".php");
 $hostname = $_SERVER['HTTP_HOST'];
-$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/dev/';
-
+if ($hostname == "localhost")
+    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/dev/';
+else
+    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 ?>
 
 <head>
