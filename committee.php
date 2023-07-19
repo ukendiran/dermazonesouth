@@ -354,7 +354,7 @@ include 'include/navbar.php';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="col-md-6 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -370,7 +370,7 @@ include 'include/navbar.php';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="col-md-6 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
