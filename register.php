@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
     $mobile = $_POST['mobile'];
     $age = $_POST['age'];
     $registration_no = $_POST['registration_no'];
+    $council_state = $_POST['council_state'];
     $has_workshop = $_POST['has_workshop'];
     $food = $_POST['food'];
     $co_delegates = $_POST['co_delegates'];
@@ -38,7 +39,7 @@ if (isset($_POST['submit'])) {
     $state = $_POST['state'];
     $sql = "UPDATE users "
         . " SET id = '$id', membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
-        . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', age = $age,"
+        . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', council_state = '$council_state', age = $age,"
         . "has_workshop = '$has_workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
         . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state'"
@@ -116,11 +117,19 @@ if (isset($_POST['submit'])) {
                                     <input type="number" value="<?= (isset($data['age'])) ? $data['age'] : '' ?>" class="form-control age" name="age" required="" minlength="2" maxlength="2" min="18" placeholder="Enter age">
                                 </div>
                             </div>
-                            <div class="form-group mt-3"> <label>Medical Council No</label>
-                                <input type="text" value="<?= (isset($data['registration_no'])) ? $data['registration_no'] : '' ?>" class="form-control" name="registration_no" required="" maxlength="5" placeholder="Enter medical council no.">
+                            <div class="form-group mt-3 row">
+                                <div class="col-sm-6">
+                                    <label>Medical Council No</label>
+                                    <input type="text" value="<?= (isset($data['registration_no'])) ? $data['registration_no'] : '' ?>" class="form-control" name="registration_no" required="" maxlength="5" placeholder="Enter Medical Council Number.">
+                                </div>
+                                <div class="col-sm-6 mt-3 mt-sm-0">
+                                    <label>Medical Council State</label>
+                                    <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" required="" maxlength="5" placeholder="Enter Medical Council Stat.">
+                                </div>
                             </div>
                             <div class="form-group mt-3 row">
-                                <div class="col-sm-6"> <label>Email ID</label>
+                                <div class="col-sm-6">
+                                    <label>Email ID</label>
                                     <input type="email" value="<?= (isset($data['email'])) ? $data['email'] : '' ?>" class="form-control email" name="email" required="" placeholder="Enter email ID">
                                 </div>
                                 <div class="col-sm-6 mt-3 mt-sm-0"> <label>Mobile No</label>
