@@ -197,7 +197,9 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr.C.Udayashankar</a></h5>
-                                        <span>President</span>
+                                        <p>President</p>
+                                        <i>Professor & Head, IGMC&RI </i>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +216,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. Remya Raj R</a></h5>
-                                        <span>Hon. Secretary</span>
+                                        <p>Secretary</p>                                         
+                                        <i>Assistant Professor, IGMC&RI </i>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +234,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr.Trishna Vaishali M</a></h5>
-                                        <span>Vice-President</span>
+                                        <p>Vice-President</p>
+                                        <i>Associate Professor, PIMS</i>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +252,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. M Rangaraj</a></h5>
-                                        <span>Treasurer</span>
+                                        <p>Treasurer</p>
+                                        <i>Professor, PIMS </i>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +270,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. P Vijayasankar </a></h5>
-                                        <span>Joint Secretary</span>
+                                        <p>Joint Secretary</p>
+                                        <i>Assistant Professor, SMVMCH</i>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +288,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. Yogindher Singh </a></h5>
-                                        <span>Joint Secretary</span>
+                                        <p>Joint Secretary</p>
+                                        <i>Assistant Professor, SVMCHRC</i>
                                     </div>
                                 </div>
                             </div>
@@ -299,7 +306,8 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. Jude Ernest Dileep </a></h5>
-                                        <span>State council member</span>
+                                        <p>State council member</p>
+                                        <i>Assistant Professor, AVMCH</i>
                                     </div>
                                 </div>
                             </div>
@@ -521,7 +529,7 @@ include 'include/navbar.php';
                         </div>
                     </div>
 
-                    
+
 
                 </div>
                 <div class="row g-4">
@@ -597,7 +605,7 @@ include 'include/navbar.php';
 
                 </div>
 
-                <div class="row committee">          
+                <div class="row committee">
 
 
                     <div class="col-md-4 col-sm-6 mt-5">

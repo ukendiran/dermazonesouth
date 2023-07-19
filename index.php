@@ -26,9 +26,33 @@ include 'include/slider.php';
                 </p>
                 <p class="mb-2"> On behalf of the Organising Committee of the IADVL Puducherry, it is our proud privilege to extend our cordial welcome to all and look forward to your active participation in making 25th DERMAZONE SOUTH 2023 at Puducherry a successful and enriching experience.
                 </p>
-
                 <?php include 'include/program_highlight.php'; ?>
 
+                <p class="fw-medium text-uppercase text-primary mb-2 mt-20 ">IMPORTANT DATES TO NOTE</p>
+
+
+                <div class="d-flex align-items-center row text-center">
+                    <div class="flex-shrink-0 col-md-4  mt-2">
+                        <div class="col-md-12  p-4 bg-primary">
+                            <h5 class="text-white">Early bird registration closes on</h5>
+                            <h4 class="display-6">August 15<sup>th</sup></h4>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0   col-md-4  mt-2">
+                        <div class="col-md-12 p-4 bg-primary">
+                            <h5 class="text-white">Abstract submission closes on</h5>
+                            <h4 class="display-6">August 20<sup>th</sup></h4>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0  col-md-4  mt-2">
+                        <div class="col-md-12  p-4 bg-primary">
+                            <h5 class="text-white">Pre-conference Workshops on</h5>
+                            <h4 class="display-6">October 12<sup>th</sup></h4>
+                        </div>
+                    </div>
+
+                </div>
+                
             </div>
         </div>
     </div>
