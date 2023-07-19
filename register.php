@@ -4,14 +4,29 @@ include_once('./include/connection.php');
 $data = array();
 $id = '';
 
+
 if (isset($_GET['id'])) {
-    // To decrypt the ID back
-    $id = decryptID($_GET['id'], $yourSecretKey);
-    // Prepare SQL statement
-    $sql = "SELECT * FROM users WHERE id = '$id'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        $data = $result->fetch_assoc();
+    $id = decryptID($_GET['id'], $secretKey);
+    echo $id;
+    if ($id !== 0) {
+        $sql = "SELECT * FROM users WHERE id = '$id'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            $data = $result->fetch_assoc();
+        } else {
+
+?>
+            <script>
+                window.location.href = '<?php echo $base_url; ?>/login.php'
+            </script>
+        <?php
+        }
+    } else {
+        ?>
+        <script>
+            window.location.href = '<?php echo $base_url; ?>/login.php'
+        </script>
+    <?php
     }
 }
 if (isset($_POST['submit'])) {
@@ -45,7 +60,7 @@ if (isset($_POST['submit'])) {
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state'"
         . " WHERE id = '$id'";
     if ($conn->query($sql) === TRUE) {
-?>
+    ?>
         <script>
             // $.notify("Access granted", "success");
         </script>
@@ -124,7 +139,7 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="col-sm-6 mt-3 mt-sm-0">
                                     <label>Medical Council State</label>
-                                    <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" required="" maxlength="5" placeholder="Enter Medical Council Stat.">
+                                    <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" required="" maxlength="5" placeholder="Enter Medical Council State.">
                                 </div>
                             </div>
                             <div class="form-group mt-3 row">

@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         // Suppose you have an ID you want to encrypt
         $idToEncrypt = $row['id'];
-        $encryptedID = encryptID($idToEncrypt, $yourSecretKey);
+        $encryptedID = encryptID($idToEncrypt, $secretKey);
         $data = array(
             'result' => $row,
             'status' => 1,

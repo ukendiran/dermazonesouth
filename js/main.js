@@ -143,7 +143,8 @@
                     console.log(response);
                     var result = JSON.parse(response);
                     if (result.status === 1) {
-                        window.location.href = 'register.php?id=' + result.result.id;
+                        console.log(result)
+                        window.location.href = 'register.php?id=' + result.encryptedID;
 
                     } else {
                         $('#membership_noError').html('Invalid IADVL Number.');

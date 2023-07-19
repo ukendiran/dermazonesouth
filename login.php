@@ -18,14 +18,18 @@ include 'include/navbar.php';
 </div>
 <!-- Page Header End -->
 <!-- About Start -->
+
+<?php include_once('./include/fee.php') ?>
+
 <div class="container-xxl py-1">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center text-center">
             <div class="col-md-9">
                 <h2 class="mb-4">Registered members login</h2>
                 <form id="myForm" method="POST">
                     <div class="form-s1">
                         <div class="form-group row">
+                        <div class="col-sm-3"></div>
                             <div class="col-sm-6"> <label class="small">IADVL Number</label>
                                 <input data-url="<?php echo $base_url; ?>check.php" type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number">
                                 <p id="membership_noError"></p>

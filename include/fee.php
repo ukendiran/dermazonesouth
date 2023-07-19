@@ -112,8 +112,13 @@
                 <div class="col-lg-12">
                     <div class="text-center mt-10">
                         <p>Fee inclusive of GST</p>
-                        <div class="btn-part"> <a class="readon btn btn-primary buy-big" href="login.php">
-                                <span>Register Now</span> </a> </div>
+                        <?php if ($activePage !== "login") { ?>
+                            <div class="btn-part">
+                                <a class="readon btn btn-primary buy-big" href="login.php">
+                                    <span>Register Now</span>
+                                </a>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
