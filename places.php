@@ -31,7 +31,7 @@ include 'include/navbar.php';
                     <div class="ms-4">
                         <p><i class="fa fa-check text-primary me-2"></i>Puducherry airport:
                         Daily flights to and from Hyderabad and Bengaluru presently suspended but expected to 
-                        restarting of services by end of September 2023.</p>
+                        restart of services by end of September 2023.</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Major airport – Chennai (140 Km from Puducherry). </p>
                         <p class="mb-0"><i class="fa fa-check text-primary me-2"></i>Puducherry railway station – Train service from all major cities.</p>
                     </div>

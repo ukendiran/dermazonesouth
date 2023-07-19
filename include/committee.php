@@ -265,7 +265,7 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. P Vijayasankar </a></h5>
-                                        <span>Joint Secretary</span>
+                                        <span>Joint Highlights</span>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. Yogindher Singh </a></h5>
-                                        <span>Joint Secretary</span>
+                                        <span>Joint Highlights</span>
                                     </div>
                                 </div>
                             </div>
@@ -597,9 +597,41 @@ include 'include/navbar.php';
 
                 </div>
 
-                <div class="row committee">          
+                <div class="row committee">
 
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
+                        <div class="d-flex">
+                            <div class="ms-4">
+                                <h5>Organising Joint Highlights</h5>
+                                <p class="text-primary">Dr. Manobalan K</p>
+                                <p class="text-primary">Dr. P Vijayasankar</p>
+                                <p class="text-primary">Dr. R Yogindher Singh</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
+                        <div class="d-flex">
+                            <div class="ms-4">
+                                <h5>Scientific Committee Chairperson</h5>
+                                <p class="text-primary">Dr. K Karthikeyan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mt-5" style="display: none;">
+                        <div class="d-flex">
+                            <div class="ms-4">
+                                <h5>Patrons</h5>
+                                <p class="text-primary">Thiru. C. Udaya Kumar IAS,</p>
+                                <i class="">Secretary to Government (Health), Puducherry</i>
+                                <p class="text-primary">Dr. Ramachandra V Bhat,</p>
+                                <i class="">Dean, IGMC&RI, Puducherry</i>
+                                <p class="text-primary">Dr. Joseph Raajesh,</p>
+                                <i class="">Medical Superintendent, IGMC&RI, Puducherry</i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4 col-sm-6 mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
