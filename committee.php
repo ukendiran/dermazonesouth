@@ -199,7 +199,7 @@ include 'include/navbar.php';
                                         <h5 class="title-name"><a href="#">Dr.C.Udayashankar</a></h5>
                                         <p>President</p>
                                         <i>Professor & Head, IGMC&RI </i>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@ include 'include/navbar.php';
                                             <div class="point"></div>
                                         </div>
                                         <h5 class="title-name"><a href="#">Dr. Remya Raj R</a></h5>
-                                        <p>Secretary</p>                                         
+                                        <p>Secretary</p>
                                         <i>Assistant Professor, IGMC&RI </i>
                                     </div>
                                 </div>
@@ -313,8 +313,8 @@ include 'include/navbar.php';
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <h4 class="title">Central Council Members</h4>
-                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <!-- <h4 class="title">Central Council Members</h4> -->
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -326,11 +326,12 @@ include 'include/navbar.php';
                                                 <div class="point"></div>
                                             </div>
                                             <h5 class="title-name"><a href="#">Dr. Karthikeyan K </a></h5>
+                                            <span>Central Council Member</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -342,11 +343,12 @@ include 'include/navbar.php';
                                                 <div class="point"></div>
                                             </div>
                                             <h5 class="title-name"><a href="#">Dr. Sivaraman V </a></h5>
+                                            <span>Central Council Member</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -358,11 +360,13 @@ include 'include/navbar.php';
                                                 <div class="point"></div>
                                             </div>
                                             <h5 class="title-name"><a href="#">Dr. Sheela Kuruvila </a></h5>
+                                            <span>Central Council Member</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 mt-5 mb-20">
+
+                            <div class="col-md-3 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -374,11 +378,14 @@ include 'include/navbar.php';
                                                 <div class="point"></div>
                                             </div>
                                             <h5 class="title-name"><a href="#">Dr. Roshni Menon </a></h5>
+                                            <span>Central Council Member</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 mt-5 mb-20">
+                            <div class="col-md-4 d-block d-sm-block col-sm-6 mt-5 mb-20">
+                            </div>
+                            <div class="col-md-4 col-sm-6 mt-5 mb-20">
                                 <div class="team-item">
                                     <div class="team-inner-wrap text-center">
                                         <div class="images-wrap">
@@ -390,6 +397,7 @@ include 'include/navbar.php';
                                                 <div class="point"></div>
                                             </div>
                                             <h5 class="title-name"><a href="#">Dr. Oudeacoumar P </a></h5>
+                                            <span>Central Council Member</span>
                                         </div>
                                     </div>
                                 </div>
@@ -622,22 +630,29 @@ include 'include/navbar.php';
                     <div class="col-md-4 col-sm-6  mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
-                                <h5>Zonal Organising Committee</h5>
-                                <p class="text-primary">Dr. C Udayashankar</p>
-                                <p class="text-primary">Dr. Remya Raj R</p>
-                                <p class="text-primary">Dr. A V Kaleeswaran</p>
-                                <p class="text-primary">Dr. G Annie Flora</p>
-                                <p class="text-primary">Dr. Nirupama Bhagya Lakshmi.T</p>
-                                <p class="text-primary">Dr. D. Subbarao</p>
-                                <p class="text-primary">Dr. M. M. Faizal</p>
-                                <p class="text-primary">V. Anuradha K. B</p>
-                                <p class="text-primary">Dr. Anup Kumar Lahiry</p>
-                                <p class="text-primary">Dr. D. Indira</p>
-                                <p class="text-primary">Dr. Shruti.H.N</p>
-                                <p class="text-primary">Dr. D. Indira</p>
+                                <div class="row">
+                                    <h5>Zonal Organising Committee</h5>
+                                    <div class="col-md-6">
+                                        <p class="text-primary">Dr. C Udayashankar</p>
+                                        <p class="text-primary">Dr. Remya Raj R</p>
+                                        <p class="text-primary">Dr. A V Kaleeswaran</p>
+                                        <p class="text-primary">Dr. G Annie Flora</p>
+                                        <p class="text-primary">Dr. Nirupama Bhagya Lakshmi.T</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-primary">Dr. D. Subbarao</p>
+                                        <p class="text-primary">Dr. M. M. Faizal</p>
+                                        <p class="text-primary">V. Anuradha K. B</p>
+                                        <p class="text-primary">Dr. Anup Kumar Lahiry</p>
+                                        <p class="text-primary">Dr. D. Indira</p>
+                                        <p class="text-primary">Dr. Shruti.H.N</p>
+                                        <p class="text-primary">Dr. D. Indira</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4 col-sm-6  mt-5">
                         <div class="d-flex">
                             <div class="ms-4">
@@ -666,13 +681,13 @@ include 'include/navbar.php';
                                         <p class="text-primary">Dr. M Saritha </p>
                                         <p class="text-primary">Dr. M Malathi</p>
                                         <i>Sessions coordinators </i>
-                                        <p class="text-primary">Dr. R Sivaranjini </p>
-                                        <p class="text-primary">Dr. P Vijayasankar</p>
-                                        <i>Postgraduate papers </i>
+
 
                                     </div>
                                     <div class="col-md-6">
-
+                                        <p class="text-primary">Dr. R Sivaranjini </p>
+                                        <p class="text-primary">Dr. P Vijayasankar</p>
+                                        <i>Postgraduate papers </i>
                                         <p class="text-primary">Dr. S Shanmathi </p>
                                         <p class="text-primary">Dr. R Suganya</p>
                                         <p class="text-primary">Dr.  S Arun</p>
