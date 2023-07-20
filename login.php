@@ -19,7 +19,7 @@ include 'include/navbar.php';
 <!-- Page Header End -->
 <!-- About Start -->
 
-<?php include_once('./include/fee.php') ?>
+
 
 <div class="container-xxl py-1">
     <div class="container">
