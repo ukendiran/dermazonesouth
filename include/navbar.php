@@ -13,7 +13,7 @@
                 <a href="index.php" class="nav-link dropdown-toggle <?= ($activePage == 'index' || $activePage == '' || $activePage == 'highlights' || $activePage == 'scientific') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Home</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="index.php" class="dropdown-item <?= ($activePage == 'index') ? 'active' : ''; ?>">Home </a>
-                    <a href="highlight.php" class="dropdown-item <?= ($activePage == 'highlights') ? 'active' : ''; ?>">Highlights </a>
+                    <a href="highlights.php" class="dropdown-item <?= ($activePage == 'highlights') ? 'active' : ''; ?>">Highlights </a>
                     <a href="scientific.php" class="dropdown-item <?= ($activePage == 'scientific') ? 'active' : ''; ?>">Scientific program </a>
                 </div>
             </div>
