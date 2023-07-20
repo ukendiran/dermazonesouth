@@ -7,7 +7,7 @@ $id = '';
 
 if (isset($_GET['id'])) {
     $id = decryptID($_GET['id'], $secretKey);
-    echo $id;
+    
     if ($id !== 0) {
         $sql = "SELECT * FROM users WHERE id = '$id'";
         $result = $conn->query($sql);
