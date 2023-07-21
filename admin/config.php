@@ -1,16 +1,17 @@
 <?php
 // Database connection
-$hostname = $_SERVER['HTTP_HOST'];
-if ($hostname == "localhost") {
+if ($_SERVER['HTTP_HOST'] == "localhost") {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "dermazone";
+    $database = "dermazone";
+    $port = "3306";
 } else {
-    $servername = "u709996704_dermazone";
+    $servername = "localhost";
     $username = "u709996704_dermazone";
     $password = "Dermazone@123";
     $database = "u709996704_dermazone";
+    $port = "3306";
 }
 
 define('DB_HOST', $servername);
