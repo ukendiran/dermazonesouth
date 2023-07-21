@@ -1,9 +1,17 @@
 <?php
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dermazone";
+$hostname = $_SERVER['HTTP_HOST'];
+if ($hostname == "localhost") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "dermazone";
+} else {
+    $servername = "u709996704_dermazone";
+    $username = "u709996704_dermazone";
+    $password = "Dermazone@123";
+    $database = "u709996704_dermazone";
+}
 
 define('DB_HOST', $servername);
 define('DB_USER', $username);
