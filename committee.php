@@ -441,7 +441,7 @@ include 'include/navbar.php';
                                         <div class="point"></div>
                                     </div>
                                     <h5 class="title-name"><a href="#">Dr. Remya Raj R</a></h5>
-                                    <span>Organising Joint Secretary</span>
+                                    <span>Organising Secretary</span>
                                 </div>
                             </div>
                         </div>

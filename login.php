@@ -1,6 +1,5 @@
 <?php include 'include/header.php';
 include 'include/navbar.php';
-
 ?>
 
 <!-- Page Header Start -->

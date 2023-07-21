@@ -23,7 +23,7 @@ include 'include/navbar.php';
     <div class="container">
         <div class="row g-2">
             <div class="col-lg-12 wow fadeIn " data-wow-delay="0.5s">
-                <p class="fw-medium text-uppercase text-primary mb-2">Important Places</p>
+                <p class="fw-medium text-uppercase text-primary mb-2">Popular Places</p>
                 <!-- <h4 class=" mb-4">Welcome to Puducherry</h4> -->
                 <p class="mb-4">Puducherry is a popular tourist destination with its panoramic beaches and quaint French colonial buildings. The climate is expected to be pleasant in the month of October. The place is well connected with major cities via road, air and rail transport.
                 </p>
