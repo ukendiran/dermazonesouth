@@ -30,9 +30,23 @@ class Admin
         if ($this->db->query($sql) === TRUE) {
             return true;
         } else {
-       
+
             return false;
         }
+    }
+
+    public function checkLogin($username, $password)
+    {
+        $pass = md5($password);
+        $sql = "SELECT * FROM admin WHERE name = '$username' and password = '$pass'";
+        $result = $this->db->query($sql);
+        $users = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $users[] = $row;
+            }
+        }
+        return $users;
     }
 
 

@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['HTTP_HOST'] == "localhost") {
+if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
     $servername = "localhost";
     $username = "root";
     $password = "";

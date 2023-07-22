@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
                 <h2 class="mb-4">
                     Dermazone South 2023 Abstract Submission</h2>
                 <div class="form-s1">
-                    <form id="registation-form" method="post" action="register.php?id=<?= $id ?>">
+                    <form id="registation-form" method="post" action="registration.php?id=<?= $id ?>">
                         <div class="form-group row">
                             <div class="col-sm-6"> <label class="small">IADVL Number (Eg. LM/K/99999)</label>
                                 <input type="text" readonly value="<?= (isset($data['membership_no'])) ? $data['membership_no'] : '' ?>" class="form-control member-no" name="membership_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">

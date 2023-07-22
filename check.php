@@ -3,7 +3,6 @@ include_once('./include/connection.php');
 // Process login form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $membership_no = $_POST["membership_no"];
-
     // Prepare SQL statement
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);

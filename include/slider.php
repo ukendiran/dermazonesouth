@@ -14,7 +14,7 @@
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
                                 </p>
-                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <a href="registration.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
                                 </p>
-                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <a href="registration.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                                     13<sup>th</sup>- 15<sup>th</sup> Oct 2023.
                                     Pre-conference workshops on 12<sup>th</sup> Oct 2023
                                 </p>
-                                <a href="login.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
+                                <a href="registration.php" class="btn btn-primary py-3 px-5 animated slideInRight">Registration</a>
                             </div>
                         </div>
                     </div>

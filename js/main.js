@@ -116,15 +116,12 @@
         }
     });
 
-
-    $('#myForm').submit(function (event) {
+    $('#login-form').submit(function (event) {
         event.preventDefault(); // Prevent form submission
 
         // Validate form fields
         var membership_no = $('#membership_no').val();
-        var password = $('#password').val();
         var valid = true;
-
         // Perform client-side validation
         if (membership_no === '') {
             $('#membership_noError').html('Please Enter IADVL Number.');
@@ -140,14 +137,67 @@
                 method: 'POST',
                 data: { membership_no: membership_no },
                 success: function (response) {
-                    console.log(response);
                     var result = JSON.parse(response);
+                    // console.log(result);
                     if (result.status === 1) {
-                        console.log(result)
-                        window.location.href = 'register.php?id=' + result.encryptedID;
-
+                        var mobileNumber = result.result.mobile;
+                        var configuration = {
+                            widgetId: "336776706f44343133353038",
+                            tokenAuth: "401998T8dXEwkg64bbb368P1",
+                            // identifier: mobileNumber,
+                            identifier: "",
+                            success: (data) => {
+                                // get verified token in response
+                                // console.log('success response', data);
+                                if (data.type = "success") {
+                                    window.location.href = 'registration.php?id=' + result.encryptedID;
+                                }
+                            },
+                            failure: (error) => {
+                                // handle error
+                                console.log('failure reason', error);
+                            },
+                        };
+                        initSendOTP(configuration);
                     } else {
-                        $('#membership_noError').html('Invalid IADVL Number.');
+                        $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
+                    }
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        }
+    });
+
+
+    $('#login-registation-form').submit(function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate form fields
+        var membership_no = $('#membership_no').val();
+        var valid = true;
+        // Perform client-side validation
+        if (membership_no === '') {
+            $('#membership_noError').html('Please Enter IADVL Number.');
+            valid = false;
+        } else {
+            $('#membership_noError').html('');
+        }
+
+        // If client-side validation passes, perform AJAX request
+        if (valid) {
+            $.ajax({
+                url: 'check.php', // PHP script to handle validation and database operations
+                method: 'POST',
+                data: { membership_no: membership_no },
+                success: function (response) {
+                    var result = JSON.parse(response);
+                    console.log(result);
+                    if (result.status === 1) {
+                        window.location.href = 'registration.php?id=' + result.encryptedID;
+                    } else {
+                        $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
                     }
                 },
                 error: function () {
@@ -169,6 +219,4 @@
             $('#has_workshop').val('0');
     });
 
-
 })(jQuery);
-

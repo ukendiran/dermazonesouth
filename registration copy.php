@@ -5,12 +5,12 @@ include 'include/navbar.php';
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
-        <h1 class="display-5 text-white animated slideInRight">Abstract</h1>
+        <h1 class="display-5 text-white animated slideInRight">Registration</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb animated slideInRight mb-0">
                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                 <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
-                <li class="breadcrumb-item active" aria-current="page">Abstract Submission</li>
+                <li class="breadcrumb-item active" aria-current="page">Online Registration</li>
             </ol>
         </nav>
     </div>
@@ -22,8 +22,8 @@ include 'include/navbar.php';
     <div class="container">
         <div class="row justify-content-center text-center" id="regform">
             <div class="col-md-9">
-                <h2 class="mb-4">Registered members login</h2>
-                <form id="login-form" method="POST">
+                <h2 class="mb-4">Dermazone South 2023 Registration</h2>
+                <form id="registrationForm" method="POST">
                     <div class="form-s1">
                         <div class="form-group row">
                             <div class="col-sm-3"></div>
@@ -39,7 +39,9 @@ include 'include/navbar.php';
                 </form>
             </div>
         </div>
-    
+
     </div>
 </div>
+
+<?php include 'include/fee.php'; ?>
 <?php include 'include/footer.php'; ?>

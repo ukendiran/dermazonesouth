@@ -6,7 +6,7 @@ class User
     public function __construct()
     {
         $this->db = new Database();
-    }
+    }   
 
     public function getUserById($id = NULL)
     {
@@ -49,6 +49,31 @@ class User
         }
     }
 
+    public function getUsersByFilter($start, $length, $searchValue)
+    {
+
+        $whereClause = "";
+
+        // Apply search filter if searchValue is provided
+        if (!empty($searchValue)) {
+            $whereClause = "WHERE membership_no LIKE '%$searchValue%'";
+            $whereClause .= " OR first_name LIKE '%$searchValue%' OR last_name LIKE '%$searchValue%'";
+            $whereClause .= " OR email LIKE '%$searchValue%' OR mobile LIKE '%$searchValue%'";
+        }
+
+        $sql = "SELECT * FROM users $whereClause LIMIT $start, $length";
+        $result = $this->db->query($sql);
+
+        $users = array();
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $users[] = $row;
+            }
+        }
+
+        return $users;
+    }
+
     public function getUsers($start, $length)
     {
         $sql = "SELECT * FROM users LIMIT $start, $length";
@@ -64,6 +89,17 @@ class User
         return $users;
     }
 
+
+    public function updateUser($updates = array(), $id = NULL)
+    {
+        $sql = "UPDATE users SET " . implode(", ", $updates) . " WHERE id = $id";
+        if ($this->db->query($sql) === TRUE) {
+            return true;
+        } else {
+
+            return false;
+        }
+    }
 
 
 

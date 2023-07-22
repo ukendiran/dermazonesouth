@@ -37,7 +37,7 @@
             <!-- <a href="places.php" class="nav-item nav-link">Places</a> -->
             <a href="contact.php" class="nav-item nav-link <?= ($activePage == 'contact') ? 'active' : ''; ?>">Contact us</a>
         </div>
-        <a href="login.php" class="btn btn-primary px-3 d-none d-lg-block">Registration</a>
+        <a href="registration.php" class="btn btn-primary px-3 d-none d-lg-block">Registration</a>
     </div>
 </nav>
 <!-- Navbar End -->

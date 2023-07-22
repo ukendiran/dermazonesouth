@@ -1,6 +1,6 @@
 <?php
 // Database connection
-echo $_SERVER['HTTP_HOST'];
+
 if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
     $servername = "localhost";
     $username = "root";
