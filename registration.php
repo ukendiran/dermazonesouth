@@ -1,5 +1,6 @@
-<?php include 'include/header.php';
-include 'include/navbar.php';
+<?php
+include_once 'include/header.php';
+include_once 'include/navbar.php';
 include_once('./include/connection.php');
 $data = array();
 $id = '';
@@ -224,7 +225,7 @@ if (isset($_POST['submit'])) {
                         <div class="form-s1">
                             <div class="form-group row">
                                 <div class="col-sm-3"></div>
-                                <div class="col-sm-6"> 
+                                <div class="col-sm-6">
                                     <!-- <label class="">IADVL Number</label> -->
                                     <!-- <input data-url="<?php echo $base_url; ?>check.php" type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number"> -->
                                     <input type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number">
@@ -241,9 +242,9 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    <?php include 'include/fee.php'; ?>
+    <?php include_once 'include/fee.php'; ?>
 
 <?php } ?>
 
 
-<?php include 'include/footer.php'; ?>
+<?php include_once 'include/footer.php'; ?>

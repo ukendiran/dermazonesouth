@@ -1,5 +1,6 @@
-<?php include 'include/header.php';
-include 'include/navbar.php';
+<?php 
+include_once 'include/header.php';
+include_once 'include/navbar.php';
 ?>
 
 <!-- Page Header Start -->
@@ -301,5 +302,4 @@ include 'include/navbar.php';
 
 
 
-
-<?php include 'include/footer.php'; ?>
+<?php include_once 'include/footer.php'; ?>

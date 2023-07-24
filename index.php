@@ -1,6 +1,7 @@
-<?php include 'include/header.php';
-include 'include/navbar.php';
-include 'include/slider.php';
+<?php 
+include_once 'include/header.php';
+include_once 'include/navbar.php';
+include_once 'include/slider.php';
 ?>
 <!-- testing -->
 <!-- About Start -->
@@ -58,9 +59,9 @@ include 'include/slider.php';
     </div>
 </div>
 
-<?php include 'include/places.php'; ?>
+<?php include_once 'include/places.php'; ?>
 <!-- About End -->
-<?php include 'include/fee.php'; ?>
+<?php include_once 'include/fee.php'; ?>
 
 
 
@@ -111,4 +112,4 @@ include 'include/slider.php';
 </div> -->
 <!-- Project End -->
 
-<?php include 'include/footer.php'; ?>
+<?php include_once 'include/footer.php'; ?>

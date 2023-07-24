@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <div class="nav-item dropdown">
-                <a href="index.php" class="nav-link dropdown-toggle <?= ($activePage == 'index' || $activePage == '' || $activePage == 'highlights' || $activePage == 'scientific') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Home</a>
+                <a class="nav-link dropdown-toggle <?= ($activePage == 'index' || $activePage == '' || $activePage == 'highlights' || $activePage == 'scientific') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Home</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="index.php" class="dropdown-item <?= ($activePage == 'index') ? 'active' : ''; ?>">Home </a>
                     <a href="highlights.php" class="dropdown-item <?= ($activePage == 'highlights') ? 'active' : ''; ?>">Highlights </a>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="nav-item dropdown">
-                <a href="abstract.php" class="nav-link dropdown-toggle <?= ($activePage == 'places' || $activePage == 'conference-venue') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Venue</a>
+                <a class="nav-link dropdown-toggle <?= ($activePage == 'places' || $activePage == 'conference-venue') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Venue</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="places.php" class="dropdown-item <?= ($activePage == 'places') ? 'active' : ''; ?>">About Puducherry</a>
                     <a href="conference-venue.php" class="dropdown-item <?= ($activePage == 'conference-venue') ? 'active' : ''; ?>">Conference Venue</a>

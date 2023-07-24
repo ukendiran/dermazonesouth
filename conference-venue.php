@@ -1,5 +1,6 @@
-<?php include 'include/header.php';
-include 'include/navbar.php';
+<?php
+include_once 'include/header.php';
+include_once 'include/navbar.php';
 ?>
 
 <!-- Page Header Start -->
@@ -25,29 +26,30 @@ include 'include/navbar.php';
         <div class="row g-5">
 
             <div class="col-lg-8">
-            <p class="fw-medium text-uppercase text-primary mb-2">IGMCRI</p>
+                <p class="fw-medium text-uppercase text-primary mb-2">IGMCRI</p>
                 <!-- <h1 class="display-5 mb-4">IGMCRI</h1> -->
 
-                <img class="img-fluid" src="img/igmc.jpg" width="100%" style="height:400px;"> 
+                <img class="img-fluid" src="img/igmc.jpg" width="100%" style="height:400px;">
                 <p class="mb-4 mt-2">
                     <b>INDIRA GANDHI MEDICAL COLLEGE & RESEARCH INSTITUTE</b> was established by the Government of Puducherry in 2010. The College has a sprawling campus located centrally in the city of Puducherry. There are three auditoriums in college block with ample seating capacity and spacious parking facility.
                 </p>
-               
+
             </div>
 
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light text-center h-100 p-5">
-                        <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
-                        </div> 
-                        <h5 class="mb-3">Address </h5>
-                   
-                      
-                        <p>Indira Gandhi Medical College & Research Institute</p>
-                        <p>Vazhudavur Road,</p>
-                        <p>Kathirkamam,</p>
-                        <p>Puducherry - 605 009</p>            </div>
+                <div class="bg-light text-center h-100 p-5">
+                    <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Address </h5>
+
+
+                    <p>Indira Gandhi Medical College & Research Institute</p>
+                    <p>Vazhudavur Road,</p>
+                    <p>Kathirkamam,</p>
+                    <p>Puducherry - 605 009</p>
                 </div>
+            </div>
         </div>
 
 
@@ -56,11 +58,9 @@ include 'include/navbar.php';
                 <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.4917166796045!2d79.79140818539904!3d11.940419406464471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53610f4234e05d%3A0xd8214c15dbb8d241!2sIndira%20Gandhi%20Medical%20College%20and%20Research%20Institute!5e0!3m2!1sen!2sbd!4v1689136635979!5m2!1sen!2sbd" frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
-       
+
     </div>
 </div>
 <!-- Contact End -->
 
-<?php include 'include/footer.php';
-
-?>
+<?php include_once 'include/footer.php'; ?>

@@ -2,5 +2,5 @@ projectKey=dermazone
 serverUrl=http://localhost:9000
 serverVersion=10.1.0.73491
 dashboardUrl=http://localhost:9000/dashboard?id=dermazone
-ceTaskId=AYmHNNb-xmYC67TILPH1
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYmHNNb-xmYC67TILPH1
+ceTaskId=AYmHqHnUxmYC67TILPH3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYmHqHnUxmYC67TILPH3
