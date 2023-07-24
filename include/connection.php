@@ -1,21 +1,22 @@
 <?php
+include 'config.php';
+
+$dotenv->load();
 
 if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "dermazone";
-    $port = "3306";
+    $servername = $_ENV['LOCAL_SERVERNAME'];
+    $username = $_ENV['LOCAL_USERNAME'];
+    $password = $_ENV['LOCAL_PASSWORD'];
+    $database = $_ENV['LOCAL_DBNAME'];
 } else {
-    $servername = "localhost";
-    $username = "u709996704_dermazone";
-    $password = "Dermazone@123";
-    $database = "u709996704_dermazone";
-    $port = "3306";
+    $servername = $_ENV['REMOTE_SERVERNAME'];
+    $username = $_ENV['REMOTE_USERNAME'];
+    $password = $_ENV['REMOTE_PASSWORD'];
+    $database = $_ENV['REMOTE_DBNAME'];
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database, $port);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {

@@ -3,8 +3,10 @@
     "authors": [
         {
             "name": "Ukendiran",
-            "email": "ukeendiran@gmail.com"
+            "email": "ukendiran@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
 }
