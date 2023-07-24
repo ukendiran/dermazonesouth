@@ -6,7 +6,7 @@ include_once '../config.php';
 $dotenv->load();
 
 
-if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
+if ($_SERVER['HTTP_HOST'] == "localhost") {
     $servername = $_ENV['LOCAL_SERVERNAME'];
     $username = $_ENV['LOCAL_USERNAME'];
     $password = $_ENV['LOCAL_PASSWORD'];
