@@ -11,10 +11,10 @@
                      <a class="nav-link text-white " href="<?php echo $adminurl; ?>">Home</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link text-white" href="<?php echo $baseurl; ?>">Users</a>
+                     <a class="nav-link text-white" href="<?php echo $baseurl; ?>users.php">Users</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link text-white" href="<?php echo $baseurl; ?>users.php">Site</a>
+                     <a class="nav-link text-white" href="<?php echo $baseurl; ?>">Site</a>
                  </li>
                  <!-- Add more navigation items here if needed -->
                  <li class="nav-item dropdown">
