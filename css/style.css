@@ -1264,3 +1264,7 @@ h6,
 .about h4.display-6 {
     font-size: 24px;
 }
+
+input[type='radio'] {
+    margin-left: 20px !important;
+}

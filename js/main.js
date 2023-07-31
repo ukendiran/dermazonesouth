@@ -116,7 +116,7 @@
         }
     });
 
-    $('#login-form').submit(function (event) {
+    $('#login-form1').submit(function (event) {
         event.preventDefault(); // Prevent form submission
 
         // Validate form fields
@@ -138,30 +138,31 @@
                 data: { membership_no: membership_no },
                 success: function (response) {
                     var result = JSON.parse(response);
-                    // console.log(result);
-                    if (result.status === 1) {
-                        var mobileNumber = result.result.mobile;
-                        var configuration = {
-                            widgetId: "336776706f44343133353038",
-                            tokenAuth: "401998T8dXEwkg64bbb368P1",
-                            // identifier: mobileNumber,
-                            identifier: "",
-                            success: (data) => {
-                                // get verified token in response
-                                // console.log('success response', data);
-                                if (data.type = "success") {
-                                    window.location.href = 'registration.php?id=' + result.encryptedID;
-                                }
-                            },
-                            failure: (error) => {
-                                // handle error
-                                console.log('failure reason', error);
-                            },
-                        };
-                        initSendOTP(configuration);
-                    } else {
-                        $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
-                    }
+                    console.log(result);
+                    // window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    // if (result.status === 1) {
+                    //     var mobileNumber = result.result.mobile;
+                    //     var configuration = {
+                    //         widgetId: "336776706f44343133353038",
+                    //         tokenAuth: "401998T8dXEwkg64bbb368P1",
+                    //         // identifier: mobileNumber,
+                    //         identifier: "",
+                    //         success: (data) => {                              
+                    //             if (data.type = "success") {
+                    //                 window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    //             }
+                    //         },
+                    //         failure: (error) => {
+                    //             // handle error
+                    //             console.log('failure reason', error);
+                    //         },
+                    //     };
+                    //     initSendOTP(configuration);
+                    // } else if (result.status === 2) {
+                    //     $('#membership_noError').html('Please Pay for subscription.');
+                    // } else {
+                    //     $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
+                    // }
                 },
                 error: function () {
                     // Handle error
@@ -193,8 +194,9 @@
                 data: { membership_no: membership_no },
                 success: function (response) {
                     var result = JSON.parse(response);
-                    console.log(result);
                     if (result.status === 1) {
+                        $('#membership_noError').html('Please login and submit the Abstract.');
+                    } else if (result.status === 2) {
                         window.location.href = 'registration.php?id=' + result.encryptedID;
                     } else {
                         $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
@@ -218,5 +220,172 @@
         else
             $('#has_workshop').val('0');
     });
+
+
+    $('#upload-form').submit(function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // If client-side validation passes, perform AJAX request
+        if (valid) {
+            $.ajax({
+                url: 'check.php', // PHP script to handle validation and database operations
+                method: 'POST',
+                data: { membership_no: membership_no },
+                success: function (response) {
+                    var result = JSON.parse(response);
+                    // console.log(result);
+                    window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    // if (result.status === 1) {
+                    //     var mobileNumber = result.result.mobile;
+                    //     var configuration = {
+                    //         widgetId: "336776706f44343133353038",
+                    //         tokenAuth: "401998T8dXEwkg64bbb368P1",
+                    //         // identifier: mobileNumber,
+                    //         identifier: "",
+                    //         success: (data) => {                              
+                    //             if (data.type = "success") {
+                    //                 window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    //             }
+                    //         },
+                    //         failure: (error) => {
+                    //             // handle error
+                    //             console.log('failure reason', error);
+                    //         },
+                    //     };
+                    //     initSendOTP(configuration);
+                    // } else if (result.status === 2) {
+                    //     $('#membership_noError').html('Please Pay for subscription.');
+                    // } else {
+                    //     $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
+                    // }
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        }
+    });
+
+
+
+    $("#uploadForm").on('submit', function (e) {
+        e.preventDefault();
+        var id = $('#id').val();
+        var fileInput = $('#fileInput').val();
+        if (fileInput !== "") {
+            e.preventDefault();
+            $.ajax({
+                xhr: function () {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function (evt) {
+                        if (evt.lengthComputable) {
+                            var percentComplete = ((evt.loaded / evt.total) * 100);
+                            $(".progress-bar").width(percentComplete + '%');
+                            $(".progress-bar").html(percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                type: 'POST',
+                url: 'upload.php',
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function () {
+                    $(".progress-bar").width('0%');
+                    // $('#uploadStatus').html('<img src="images/loading.gif"/>');
+                },
+                error: function () {
+                    $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
+                },
+                success: function (resp) {
+                    var result = JSON.parse(resp);
+                    setTimeout(function () {
+                        $('#fileInput').attr('disbaled', 'true');
+                        if (result.msg == 'ok') {
+                            $('#uploadForm')[0].reset();
+                            $('#uploadStatus').html('<p style="color:#28A74B;">File has uploaded successfully!</p>');
+                        } else if (result.msg == 'err') {
+                            $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
+                        }
+                        window.location.href = 'abstract_submition.php?id=' + id;
+                    }, 3000);
+
+                }
+            });
+        } else {
+            alert("Please select a valid file (PDF/DOC/DOCX).")
+        }
+        console.log(fileInput);
+
+    });
+
+    // File type validation
+    $("#fileInput").change(function () {
+        var allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.ms-office', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
+        var file = this.files[0];
+        var fileType = file.type;
+        if (!allowedTypes.includes(fileType)) {
+            alert('Please select a valid file (PDF/DOC/DOCX/XLX/XLXS).');
+            $("#fileInput").val('');
+            return false;
+        }
+    });
+
+
+
+
+    $(".btn-pay").click(function () {
+        var jsonData;
+        var access_code = "AVZT92KG93CE22TZEC"; //But access code here
+        var amount = "10.00";
+        var currency = "INR";
+        var url = 'https://test.ccavenue.com/transaction/transaction.do?command-getJsonData&access_code=' + access_code + '&currency=' + currency + '&amount = ' + amount;
+        console.log(url);
+        $.ajax({
+            url: url,
+            dataType: 'jsonp',
+            jsonp: true,
+            jsonpCallback: 'processData',
+            success: function (data) {
+                jsonData = data;
+                console.log(jsonData);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log('An error occurred!' + (errorThrown ? errorThrown : xhr.status));
+            }
+        });
+    });
+
+
+    $(".payOption").click(function () {
+        $("#card_name").children().remove(); // remove old card names from old one
+        $("#card_name").append("<option value=''>Select</option>");
+        var paymentOption = $(this).val();
+        $("#card_type").val(paymentOption.replace("OPT", ""));
+
+        $.each(jsonData, function (index, value) {
+            if (value.payOpt == paymentOption) {
+                var payoptJSONArray = $.parseJSON(value[paymentOption]);
+                $.each(payOptJSONArray, function () {
+                    $("#card_name").find("option: Last").after("<option class=" + this['dataAcceptedAt'] + " " + this['status'] + " value=" + this['cardName'] + "'>" + this['cardName'] + "</option>");
+                });
+
+            }
+        });
+    });
+
+    $("#card_name").click(function () {
+        if ($(this).find(":selected").hasClass("DOWN")) {
+            alert("Selected option is currently unavailable. Select another payment option or try again later.");
+        }
+        if ($(this).find("selected").hasClass("CCAvenue")) {
+            $("#data_accept").val("Y");
+        } else {
+            $("#data_accept").val("N");
+        }
+    });
+
 
 })(jQuery);

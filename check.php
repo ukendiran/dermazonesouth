@@ -11,12 +11,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Suppose you have an ID you want to encrypt
         $idToEncrypt = $row['id'];
         $encryptedID = encryptID($idToEncrypt, $secretKey);
-        $data = array(
-            'result' => $row,
-            'status' => 1,
-            'msg' => 'Success',
-            'encryptedID' => $encryptedID,
-        );
+        if ($row['payment_status'] == "unpaid") {
+            $data = array(
+                'result' => $row,
+                'status' => 2,
+                'msg' => 'Unpaid',
+                'encryptedID' => $encryptedID,
+            );
+        } else {
+            $data = array(
+                'result' => $row,
+                'status' => 1,
+                'msg' => 'Success',
+                'encryptedID' => $encryptedID,
+            );
+        }
     } else {
         $data = array(
             'result' => [],
