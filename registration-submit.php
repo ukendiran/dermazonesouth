@@ -4,108 +4,24 @@ include_once 'include/navbar.php';
 include_once('./include/connection.php');
 session_start();
 $data = array();
+// echo 'test';
+// exit;
 
 if (isset($_POST['proceed'])) {
     $membership_no = $_POST['membership_no'];
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        $data = $result->fetch_assoc();
-
-        if ($data['payment_status'] == "paid") {
-            header("Location: login.php");
-            $_SESSION["login_error"] = "Please login and Submit the Abstract";
-        }
-
-
-        $id = $data['id'];
-        $membership_no = $data['membership_no'];
-        $first_name = $data['first_name'];
-        $last_name = $data['last_name'];
-        $email = $data['email'];
-        $mobile = $data['mobile'];
-        $age = $data['age'];
-        $registration_no = $data['registration_no'];
-        $council_state = $data['council_state'];
-        $workshop = $data['workshop'];
-        $food = $data['food'];
-        $co_delegates = $data['co_delegates'];
-        $institution = $data['institution'];
-        $member_type = $data['member_type'];
-        $designation = $data['designation'];
-        $gender = $data['gender'];
-        $address_line1 = $data['address_line1'];
-        $address_line2 = $data['address_line2'];
-        $pincode = $data['pincode'];
-        $city = $data['city'];
-        $state = $data['state'];
-
-
-        $today = strtotime(date('Y-m-d'));
-        // $today = strtotime(date('2023-08-16'));
-        $earlyBird  = strtotime('2023-08-15');
-        $regular  = strtotime('2023-09-15');
-        $sport  = strtotime('2023-09-16');
-
-        $alm_member_amount  = 0;
-        $plm_member_amount  = 0;
-        $person_amount = 0;
-        $workshop_amount = 0;
-        $amount = isset($data['amount']) ? $data['amount'] : 0;
-
-        if ($today <= $earlyBird) {
-            $alm_member_amount = 7000;
-            $plm_member_amount = 5000;
-            $person_amount = $co_delegates * 5000;
-            if ($workshop == 'None')
-                $workshop_amount = 0;
-            else
-                $workshop_amount = 2000;
-        }
-
-        if ($today > $earlyBird && $today <= $sport) {
-            $alm_member_amount = 8200;
-            $plm_member_amount = 5300;
-            $person_amount = $co_delegates * 6000;
-            if ($workshop == 'None')
-                $workshop_amount = 0;
-            else
-                $workshop_amount = 2500;
-        }
-
-        if ($today >= $sport) {
-            $alm_member_amount = 11000;
-            $plm_member_amount = 8000;
-            $person_amount = $co_delegates * 7000;
-            if ($workshop == 'None')
-                $workshop_amount = 0;
-            else
-                $workshop_amount = 3000;
-        }
-
-        $amount = $alm_member_amount + $plm_member_amount + $person_amount + $workshop_amount;
-
-        $sql = "UPDATE users "
-            . " SET  membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
-            . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', council_state = '$council_state', age = $age,"
-            . "workshop = '$workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
-            . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
-            . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
-            . "alm_member_amount = $alm_member_amount, plm_member_amount = $plm_member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-            . "amount = $amount"
-            . " WHERE id = '$id'";
-
-
-        if ($conn->query($sql) === TRUE) {
-        } else {
-            // echo '<script> window.location.href = "login.php" </script>';
-        }
-    } else {
-        header("Location: registration.php");
-        $_SESSION["login_error"] = "There is no registration on this membership number. Make sure the membership number you entered is correct.";
+    $data = $result->fetch_assoc();
+    if($data['payment_status'] == 'paid'){
+        header("Location: login.php");
+        $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";
     }
-} else {
-    header("Location: registration.php");
+    
+        // header("Location: registration.php");
+        // $_SESSION["login_error"] = "There is no registration on this membership number. Make sure the membership number you entered is correct.";
+    
+}else{
+    // header("Location: registration.php");
 }
 ?>
 
@@ -216,6 +132,10 @@ if (isset($_POST['proceed'])) {
                                             <option value="" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "") ? 'selected' : '' ?>>Select</option>
                                             <option value="0" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "0") ? 'selected' : '' ?>>0</option>
                                             <option value="1" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "1") ? 'selected' : '' ?>>1</option>
+                                            <option value="2" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "2") ? 'selected' : '' ?>>2</option>
+                                            <option value="3" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "3") ? 'selected' : '' ?>>3</option>
+                                            <option value="4" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "4") ? 'selected' : '' ?>>4</option>
+                                            <option value="5" <?= (isset($data['co_delegates']) && $data['co_delegates']  == "5") ? 'selected' : '' ?>>5</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-6 mt-3 mt-sm-0"> <label>Meal preference</label>
