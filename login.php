@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        print_r($row);
+      
         if ($row['payment_status'] == 'paid') {
             $id = $row['id'];
             $encryptedID = encryptID($id, $secretKey);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </script>';
 <?php
         } else {
-            $_SESSION["login_error"] = "Please subscribeand come back";
+            $_SESSION["login_error"] = "Please subscribe and  come back";
         }
     } else {
         $_SESSION["login_error"] = "There is no registration on this membership number. Make sure the membership number you entered is correct.";

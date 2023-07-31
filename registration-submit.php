@@ -12,9 +12,11 @@ if (isset($_POST['proceed'])) {
     if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();
 
-        header("Location: login.php");
-        $_SESSION["login_error"] = "Please login and Submit the Abstract";
-   
+        if ($data['payment_status'] == "paid") {
+            header("Location: login.php");
+            $_SESSION["login_error"] = "Please login and Submit the Abstract";
+        }
+
 
         $id = $data['id'];
         $membership_no = $data['membership_no'];
