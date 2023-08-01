@@ -117,7 +117,7 @@ if (isset($_POST['update'])) {
                 <div class="card">
                     <div class="card-body">
                         <div class="form-s1">
-                            <form id="payment-form" method="post" action="payment.php">
+                            <form id="payment-form" method="post" action="<?= $base_url ?>ccavRequestHandler.php">
                                 <div class="form-group">
                                     <div>
                                         <label class="small">IADVL Number</label>
@@ -138,8 +138,15 @@ if (isset($_POST['update'])) {
                                             <option value="razor-pay" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "RAZOR PAY") ? 'selected' : '' ?>>RAZOR PAY</option>
                                         </select>
                                     </div>
+                                    <input type="hidden" name="tid" id="tid" readonly="">
+                                    <input type="hidden" name="merchant_id" value="2701346">
+                                    <input type="hidden" name="language" value="EN">
+                                    <input type="hidden" name="order_id" value="123654789">                                   
+                                    <input type="hidden" name="currency" value="INR">
+                                    <input type="hidden" name="redirect_url" value="<?= $base_url ?>ccavResponseHandler.php">
+                                    <input type="hidden" name="cancel_url" value="<?= $base_url ?>ccavResponseHandler.php">
                                 </div>
-                                <a href="javascript: void(0)" class="btn btn-dark btn-pay mt-3 px-4" id="pay-btn">Pay</a>
+                                <button type="submit" href="javascript: void(0)" class="btn btn-dark btn-pay mt-3 px-4" id="pay-btn">Pay</button>
                                 <input type="hidden" name="id" value="<?= $id ?>" />
                                 <button onclick="history.back()" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</button>
 
