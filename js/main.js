@@ -348,6 +348,7 @@
             dataType: 'jsonp',
             jsonp: true,
             jsonpCallback: 'processData',
+            processData: true,
             success: function (data) {
                 jsonData = data;
                 console.log(jsonData);
