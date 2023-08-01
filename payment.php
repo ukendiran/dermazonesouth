@@ -129,7 +129,7 @@ if (isset($_POST['update'])) {
                                     </div>
                                     <div>
                                         <label class="small">Amount</label>
-                                        <input type="text" readonly value="<?= $amount ?>" class="form-control amount" name="amount" required="">
+                                        <input type="text" id="amount" readonly value="<?= $amount ?>" class="form-control amount" name="amount" required="">
                                     </div>
                                     <div class=" mt-3  member-auto-fill"> <label>Payment Type</label>
                                         <select class="form-control payment_type" required="" name="payment_type">

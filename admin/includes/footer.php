@@ -45,6 +45,12 @@
                     "data": "mobile"
                 },
                 {
+                    "data": "amount"
+                },
+                {
+                    "data": "payment_status"
+                },
+                {
                     "data": null,
                     "orderable": false,
                     "searchable": false,

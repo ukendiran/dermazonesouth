@@ -341,7 +341,7 @@
         var access_code = "AVZT92KG93CE22TZEC"; //But access code here
         var amount = "10.00";
         var currency = "INR";
-        var url = 'https://test.ccavenue.com/transaction/transaction.do?command-getJsonData&access_code=' + access_code + '&currency=' + currency + '&amount = ' + amount;
+        var url = 'https://test.ccavenue.com/transaction/transaction.do?command-getJsonData&access_code=' + access_code + '&currency=' + currency + '&amount=' + amount;
         console.log(url);
         $.ajax({
             url: url,

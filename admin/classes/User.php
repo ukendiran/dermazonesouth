@@ -59,6 +59,7 @@ class User
             $whereClause = "WHERE membership_no LIKE '%$searchValue%'";
             $whereClause .= " OR first_name LIKE '%$searchValue%' OR last_name LIKE '%$searchValue%'";
             $whereClause .= " OR email LIKE '%$searchValue%' OR mobile LIKE '%$searchValue%'";
+            $whereClause .= " OR payment_status LIKE '$searchValue' OR payment_status LIKE '$searchValue'";
         }
 
         $sql = "SELECT * FROM users $whereClause LIMIT $start, $length";
