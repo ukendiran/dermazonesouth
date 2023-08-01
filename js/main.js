@@ -336,7 +336,7 @@
 
 
 
-    $(".btn-pay").click(function () {
+    $(".btn-pay1").click(function () {
         var jsonData;
         var access_code = "AVZT92KG93CE22TZEC"; //But access code here
         var amount = "10.00";
@@ -390,3 +390,8 @@
 
 
 })(jQuery);
+
+window.onload = function () {
+    var d = new Date().getTime();
+    document.getElementById("tid").value = d;
+};
