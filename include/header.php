@@ -6,9 +6,9 @@ header("Access-Control-Allow-Headers: *");
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 $hostname = $_SERVER['HTTP_HOST'];
 if ($hostname == "localhost")
-    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/dev/';
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
 else
-    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 ?>
 
 <head>
