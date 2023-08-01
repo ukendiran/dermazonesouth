@@ -60,19 +60,25 @@
                     }
                 }
             ],
-            "lengthMenu": [5, 10, 20, 50], // Choose the number of records to display per page
-            "pageLength": 10, // Default number of records to display per page
+            responsive: true,
+            "lengthMenu": [
+                [100, 200, 300, 500, -1],
+                [100, 200, 300, 500, "All"]
+            ],
+            "pageLength": 100,
             "order": [
                 [0, "asc"]
-            ], // Sort by the first column (ID) in ascending order
+            ],
+            "scrollY": 400,
+            "scrollX": true,
             dom: 'Bfrtip',
-            buttons: [
-                'copyHtml5',
-                'excelHtml5',
-                'csvHtml5',
-                'pdfHtml5'
+            buttons: [               
+                'excel',
+                'csvHtml5',            
+                'pageLength'
             ], // Add export buttons
-            "searching": true
+            "searching": true,
+            "sorting": true
         });
     });
 </script>
