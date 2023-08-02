@@ -97,8 +97,8 @@ $dataSize = sizeof($decryptValues);
 					$last_id = $conn->insert_id;
 					$update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
 					if ($conn->query($update_user_sql) === TRUE) {
-						echo '
-						<table cellpadding="5" cellspacing="5" style=" width: 300px; text-align: left; font-size: 18px;">
+						echo '<div class="col-md-4"><div class="card"><div class="card-body">
+						<table cellpadding="5" cellspacing="5" style=" width: 100%; text-align: left; font-size: 18px;">
                         <tr>
                             <th>IADVL Number :</th>
                             <td>' . $membership_no . '</td>
@@ -133,7 +133,7 @@ $dataSize = sizeof($decryptValues);
                         </tr>
 
 
-                    </table>
+                    </table></div></div></div>
 						';
 					}
 

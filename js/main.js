@@ -146,7 +146,7 @@
                     console.log(result);
                     // window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
                     if (result.status === 1) {
-                        var mobileNumber = result.result.mobile;
+                        var mobileNumber = "91" + result.result.mobile;
                         var configuration = {
                             widgetId: "336776706f44343133353038",
                             tokenAuth: "401998T8dXEwkg64bbb368P1",
