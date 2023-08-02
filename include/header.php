@@ -10,7 +10,7 @@ if ($hostname == "localhost")
 else
     $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
-
+session_start();
 ?>
 
 <head>

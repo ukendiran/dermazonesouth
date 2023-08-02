@@ -2,7 +2,7 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
-session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $membership_no = $_POST['membership_no'];
     $data = array();
@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-      
         if ($row['payment_status'] == 'paid') {
             $id = $row['id'];
             $encryptedID = encryptID($id, $secretKey);

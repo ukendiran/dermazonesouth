@@ -2,27 +2,26 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
-session_start();
+
 $data = array();
-$id =0;
+$id = 0;
 
 
 if (isset($_POST['proceed'])) {
     $membership_no = $_POST['membership_no'];
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);
-    $data = $result->fetch_assoc();
-    $id = $data['id'];
-    if($data['payment_status'] == 'paid'){
-        header("Location: login.php");
-        $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";
+    if ($result->num_rows > 0) {
+        $data = $result->fetch_assoc();
+        $id = $data['id'];
+        if ($data['payment_status'] == 'paid') {
+            echo '<script>window.location.href="login.php"</script>';
+            $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";
+        }
+    } else {
+        echo '<script>window.location.href="registration.php"</script>';
+        $_SESSION["login_error"] = "There is no registration on this membership number. Make sure the membership number you entered is correct.";
     }
-    
-        // header("Location: registration.php");
-        // $_SESSION["login_error"] = "There is no registration on this membership number. Make sure the membership number you entered is correct.";
-    
-}else{
-    // header("Location: registration.php");
 }
 ?>
 

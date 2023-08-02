@@ -40,6 +40,7 @@ include_once('./include/connection.php');
                                     unset($_SESSION["login_error"]);
                                 }
                                 ?>
+
                             </div>
                         </div>
                         <input type="hidden" name="encryptedID" id="encryptedID" />
