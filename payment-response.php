@@ -84,6 +84,11 @@ $dataSize = sizeof($decryptValues);
 				$order_id = $row['order_id'];
 			}
 
+			$userData = $userResult->fetch_assoc();
+			$to = $userData['email'];
+			$membership_no = $userData['membership_no'];
+			$name = $userData['first_name'] . " " . $userData['last_name'];
+
 			$sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
 			$orderResult = $conn->query($sql);
 			if ($orderResult->num_rows == 0) {
@@ -93,21 +98,48 @@ $dataSize = sizeof($decryptValues);
 					$last_id = $conn->insert_id;
 					$update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
 					if ($conn->query($update_user_sql) === TRUE) {
-						echo '<div class="col-md-4"><div class="card"><div class="card-body">';
-						echo '<p> Order Id  : ' . $order_id . '</p>';
-						echo '<p> Tracking Id  : ' . $tracking_id . '</p>';
-						echo '<p> Bank Referance No  : ' . $bank_ref_no . '</p>';
-						echo '<p> Status  : ' . $order_status . '</p>';
-						echo '<p> Payment Mode  : ' . $payment_mode . '</p>';
-						echo '<p> Amount Paid  : ' . $amount . '</p>';
-						echo '</div></div></div>';
+						echo '
+						<table cellpadding="5" cellspacing="5" style=" width: 100%; text-align: left; font-size: 18px;">
+                        <tr>
+                            <th>IADVL Number :</th>
+                            <td>' . $membership_no . '</td>
+                        </tr>
+                        <tr>
+                            <th>Name:</th>
+                            <td>' . $name . '</td>
+                        </tr>
+                        <tr>
+                            <th>Order Id:</th>
+                            <td>' . $order_id . '</td>
+                        </tr>
+                        <tr>
+                            <th>Tracking Id:</th>
+                            <td>' . $tracking_id . '</td>
+                        </tr>
+                        <tr>
+                            <th>Bank Referance No:</th>
+                            <td>' . $bank_ref_no . '</td>
+                        </tr>
+                        <tr>
+                            <th>Status:</th>
+                            <td>' . $order_status . '</td>
+                        </tr>
+                        <tr>
+                            <th>Payment Mode:</th>
+                            <td>' . $payment_mode . '</td>
+                        </tr>
+                        <tr>
+                            <th>Amount Paid:</th>
+                            <td>' . $amount . '</td>
+                        </tr>
+
+
+                    </table>
+						';
 					}
 
 
-					$userData = $userResult->fetch_assoc();
-					$to = $userData['email'];
-					$membership_no = $userData['membership_no'];
-					$name = $userData['first_name'] . " " . $userData['last_name'];
+
 					$from = "dermazonesouth2023@gmail.com";
 					$fromName = "Dermazone South 2023";
 					$subject = "Dermazone South 2023 Payment Confirmation";
@@ -260,14 +292,14 @@ $dataSize = sizeof($decryptValues);
 
 					// Additional headers
 					$headers .= 'From: ' . $fromName . '<' . $from . '>' . "\r\n";
-					$headers .= 'Cc: ukendiran@gmail.com' . "\r\n";
+					$headers .= 'Cc: dermazonesouth2023@gmail.com' . "\r\n";
 					$headers .= 'Bcc: ukendiran@gmail.com' . "\r\n";
 
 					// Send email
 					if (mail($to, $subject, $htmlContent, $headers)) {
-						echo 'Email has sent successfully.';
+						// echo 'Email has sent successfully.';
 					} else {
-						echo 'Email sending failed.';
+						// echo 'Email sending failed.';
 					}
 				}
 			}
