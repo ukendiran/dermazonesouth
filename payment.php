@@ -87,13 +87,12 @@ if (isset($_POST['update'])) {
 
     $amount = $member_amount + $person_amount + $workshop_amount;
 
-    $sql = "SELECT id,order_id FROM users WHERE order_id = (SELECT MAX(order_id) FROM users) AND payment_status = 'paid'";
-
+    $sql = "SELECT MAX(id) as id FROM orders";
+    $orderMaxId = 1;
     $orderResult = $conn->query($sql);
     if ($orderResult->num_rows > 0) {
         $row = $orderResult->fetch_assoc();
-        $orderMaxId = $row['order_id'] + 1;
-        $max_id = $row['id'];
+        $orderMaxId = $row['id'] + 1;
     }
 
     $sql = "UPDATE users "
@@ -103,7 +102,7 @@ if (isset($_POST['update'])) {
         . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
         . "member_amount = $member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-        . "amount = $amount ,order_id = $orderMaxId"
+        . "amount = $amount,"
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
     } else {
@@ -192,15 +191,14 @@ if (isset($_POST['submit'])) {
                                             <option value="hdfc" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "HDFC BANK") ? 'selected' : '' ?>>HDFC BANK</option>
                                             <option value="razor-pay" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "RAZOR PAY") ? 'selected' : '' ?>>RAZOR PAY</option>
                                         </select>
-                                    </div>
-                                    <input type="hidden" name="user_id" value="<?= $max_id; ?>">
+                                    </div>                                 
                                     <input type="hidden" name="tid" id="tid">
                                     <input type="hidden" name="merchant_id" value="2701346">
                                     <input type="hidden" name="language" value="EN">
                                     <input type="hidden" name="order_id" value="<?= $orderMaxId ?>">
                                     <input type="hidden" name="currency" value="INR">
-                                    <input type="hidden" name="redirect_url" value="<?= $base_url; ?>/payment-response.php?id=<?= $id ?>">
-                                    <input type="hidden" name="cancel_url" value="<?= $base_url; ?>/payment-response.php?id=<?= $id ?>">
+                                    <input type="hidden" name="redirect_url" value="<?= $base_url; ?>payment-response.php?id=<?= $id ?>">
+                                    <input type="hidden" name="cancel_url" value="<?= $base_url; ?>payment-response.php?id=<?= $id ?>">
                                 </div>
 
                                 <button name="submit" type="submit" class="btn btn-dark  mt-3 px-4" id="pay-btn">Pay</button>
