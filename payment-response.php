@@ -64,8 +64,6 @@ $dataSize = sizeof($decryptValues);
 			}
 
 			include_once('./include/connection.php');
-
-			$user_id = isset($result['user_id']) ? $result['user_id'] : '0';
 			$tid = isset($result['tid']) ? $result['tid'] : '0';
 			$tracking_id = $result['tracking_id'];
 			$bank_ref_no = $result['bank_ref_no'];
@@ -76,19 +74,19 @@ $dataSize = sizeof($decryptValues);
 
 			$user_id = $_GET['id'];
 			$order_id = 1;
+			$to = '';
+			$membership_no = '';
+			$name = '';
 			$sql = "SELECT * FROM users WHERE id = $user_id";
 			$userResult = $conn->query($sql);
 
 			if ($userResult->num_rows > 0) {
 				$row = $userResult->fetch_assoc();
 				$order_id = $row['order_id'];
+				$to = $row['email'];
+				$membership_no = $row['membership_no'];
+				$name = $row['first_name'] . " " . $row['last_name'];
 			}
-
-			$userData = $userResult->fetch_assoc();
-			print_r($userData);
-			$to = $userData['email'];
-			$membership_no = $userData['membership_no'];
-			$name = $userData['first_name'] . " " . $userData['last_name'];
 
 			$sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
 			$orderResult = $conn->query($sql);
