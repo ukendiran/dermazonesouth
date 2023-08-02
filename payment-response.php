@@ -2,11 +2,15 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include('Crypto.php');
+include_once './config.php';
+$dotenv->load();
+
 $status = 0;
 error_reporting(0);
-$workingKey = '4F917B59C4F22F5B040290A13F4B25B5';		//Working Key should be provided here.
-$encResponse = $_POST["encResp"];			//This is the response sent by the CCAvenue Server
-$rcvdString = decrypt($encResponse, $workingKey);		//Crypto Decryption used as per the specified working key.
+
+$workingKey = $_ENV['WORKING_KEY'];	
+$encResponse = $_POST["encResp"];			
+$rcvdString = decrypt($encResponse, $workingKey);		
 $order_status = "";
 $decryptValues = explode('&', $rcvdString);
 $dataSize = sizeof($decryptValues);

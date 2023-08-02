@@ -37,7 +37,7 @@ include_once 'include/navbar.php';
                     <i>2. Hair Transplantation – This session will include basics of FUE, step by step FUE, body hair transplant, facial hair transplant etc</i> </br></br>
                     <i class="mb-10">Both sessions will have talks with video demonstrations, panel discussions and Q&A sessions.</i></br>
 
-                    <i><b>Workshop on LASER</b> in Dermatology will be conducted with live patient demonstrations by the IADVL SIG LASER team led by Dr. David Paul Pudukadan.
+                    <i><b>Workshop on LASER</b> in Dermatology will be conducted with live patient demonstrations by the IADVL SIG LASER team led by Dr. David Paul Pudukadan.</i>
 
                         <p  style="margin-top: 20px;"><i class="fa fa-check text-primary me-2"></i>CME on PROCEDURAL DERMATOLOGY on 13th October</p>
 

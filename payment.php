@@ -2,6 +2,8 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
+include_once './config.php';
+$dotenv->load();
 
 $amount = 0;
 $id = 0;
@@ -9,7 +11,6 @@ $orderMaxId = 1;
 $max_id = 0;
 $orderID = 1;
 if (isset($_POST['update'])) {
-
     $id = $_POST['id'];
     $membership_no = $_POST['membership_no'];
     $first_name = $_POST['first_name'];
@@ -32,7 +33,6 @@ if (isset($_POST['update'])) {
     $city = $_POST['city'];
     $state = $_POST['state'];
 
-
     $today = strtotime(date('Y-m-d'));
     // $today = strtotime(date('2023-08-16'));
     $earlyBird  = strtotime('2023-08-15');
@@ -44,15 +44,12 @@ if (isset($_POST['update'])) {
     $workshop_amount = 0;
     $amount = 0;
 
-
-
     if ($today <= $earlyBird) {
         if ($member_type == "IADVL_MEMBER") {
             $member_amount = 7000;
         } else {
             $member_amount = 5000;
         }
-
 
         $person_amount = $co_delegates * 5000;
         if ($workshop == 'None')
@@ -118,8 +115,8 @@ if (isset($_POST['submit'])) {
     include('Crypto.php');
     error_reporting(0);
     $merchant_data = '';
-    $working_key = '4F917B59C4F22F5B040290A13F4B25B5'; //Shared by CCAVENUES
-    $access_code = 'AVZT92KG93CE22TZEC'; //Shared by CCAVENUES
+    $working_key = $_ENV['WORKING_KEY'];
+    $access_code = $_ENV['ACCESS_KEY'];
 
     foreach ($_POST as $key => $value) {
         $merchant_data .= $key . '=' . $value . '&';
@@ -127,7 +124,7 @@ if (isset($_POST['submit'])) {
     $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
 
 ?>
-    <form method="post" name="redirect" action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction">
+    <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
         <?php
         echo "<input type=hidden name=encRequest value=$encrypted_data>";
         echo "<input type=hidden name=access_code value=$access_code>";
