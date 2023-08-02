@@ -2,7 +2,7 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
-session_start();
+
 ?>
 
 <!-- Page Header Start -->
