@@ -202,14 +202,16 @@ if (isset($_POST['submit'])) {
                                     <input type="hidden" name="language" value="EN">
                                     <input type="hidden" name="order_id" value="<?= $orderMaxId ?>">
                                     <input type="hidden" name="currency" value="INR">
-                                    <input type="hidden" name="redirect_url" value="<?= $base_url ?>dev/payment-response.php?id=<?= $id ?>">
-                                    <input type="hidden" name="cancel_url" value="<?= $base_url ?>dev/payment-response.php?id=<?= $id ?>">
+                                    <input type="hidden" name="redirect_url" value="https://dermazonesouth2023.com/dev/payment-response.php?id=<?= $id ?>">
+                                    <input type="hidden" name="cancel_url" value="https://dermazonesouth2023.com/dev/payment-response.php?id=<?= $id ?>">
                                 </div>
+
                                 <button name="submit" type="submit" class="btn btn-dark  mt-3 px-4" id="pay-btn">Pay</button>
                                 <input type="hidden" name="id" value="<?= $id ?>" />
                                 <button onclick="history.back()" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</button>
 
                                 <div id="message"></div>
+
                             </form>
 
                         </div>
