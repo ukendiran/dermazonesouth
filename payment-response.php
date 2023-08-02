@@ -8,9 +8,9 @@ $dotenv->load();
 $status = 0;
 error_reporting(0);
 
-$workingKey = $_ENV['WORKING_KEY'];	
-$encResponse = $_POST["encResp"];			
-$rcvdString = decrypt($encResponse, $workingKey);		
+$workingKey = $_ENV['WORKING_KEY'];
+$encResponse = $_POST["encResp"];
+$rcvdString = decrypt($encResponse, $workingKey);
 $order_status = "";
 $decryptValues = explode('&', $rcvdString);
 $dataSize = sizeof($decryptValues);
@@ -69,9 +69,6 @@ $dataSize = sizeof($decryptValues);
 
 						$user_id = isset($result['user_id']) ? $result['user_id'] : '0';
 						$tid = isset($result['tid']) ? $result['tid'] : '0';
-						$payment_status = $result['payment_status'];
-						$payment_type = $result['payment_type'];
-						$order_id = $result['order_id'];
 						$tracking_id = $result['tracking_id'];
 						$bank_ref_no = $result['bank_ref_no'];
 						$order_status = $result['order_status'];
@@ -80,10 +77,11 @@ $dataSize = sizeof($decryptValues);
 
 
 						$user_id = $_GET['id'];
-						$order_id = 0;
+						$order_id = 1;
 						$sql = "SELECT order_id FROM users WHERE id = $user_id";
 						$userResult = $conn->query($sql);
-						if ($userResult->num_rows == 0) {
+
+						if ($userResult->num_rows > 0) {
 							$row = $userResult->fetch_assoc();
 							$order_id = $row['order_id'];
 						}
@@ -91,12 +89,12 @@ $dataSize = sizeof($decryptValues);
 						$sql = "SELECT * FROM orders WHERE order_id = $order_id AND order_status = 'Success'";
 						$orderResult = $conn->query($sql);
 						if ($orderResult->num_rows == 0) {
-							$sql = "INSERT INTO orders (user_id,tid,amount,payment_status,payment_type,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
-							$sql .= " VALUES ($user_id, $tid, $amount,'$payment_status', '$payment_type',$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
-
-							if ($conn->query($sql) === TRUE) {
-							} else {
-								echo "Error: " . $sql . "<br>" . $conn->error;
+							$update_user_sql = "UPDATE users SET  payment_status = 'paid' WHERE id = $user_id";
+							if ($conn->query($update_user_sql) === TRUE) {
+								$insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
+								$insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
+								if ($conn->query($insert_order_sql) === TRUE) {
+								}
 							}
 						}
 
