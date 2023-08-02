@@ -336,7 +336,8 @@
 
 
 
-    $(".btn-pay1").click(function () {
+    $(".btn-pay").click(function (e) {
+        e.preventDefault();
         var jsonData;
         var access_code = "AVZT92KG93CE22TZEC"; //But access code here
         var amount = "10.00";
@@ -354,7 +355,7 @@
                 console.log(jsonData);
             },
             error: function (xhr, textStatus, errorThrown) {
-                console.log('An error occurred!' + (errorThrown ? errorThrown : xhr.status));
+                console.log('An error occurred!' + errorThrown);
             }
         });
     });

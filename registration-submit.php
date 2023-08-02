@@ -4,14 +4,15 @@ include_once 'include/navbar.php';
 include_once('./include/connection.php');
 session_start();
 $data = array();
-// echo 'test';
-// exit;
+$id =0;
+
 
 if (isset($_POST['proceed'])) {
     $membership_no = $_POST['membership_no'];
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);
     $data = $result->fetch_assoc();
+    $id = $data['id'];
     if($data['payment_status'] == 'paid'){
         header("Location: login.php");
         $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";

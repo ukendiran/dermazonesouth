@@ -1268,3 +1268,9 @@ h6,
 input[type='radio'] {
     margin-left: 20px !important;
 }
+
+.mb-10 {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}

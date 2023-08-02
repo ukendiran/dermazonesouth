@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
+<?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
@@ -9,6 +9,8 @@ if ($hostname == "localhost")
     $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
 else
     $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+
+
 ?>
 
 <head>

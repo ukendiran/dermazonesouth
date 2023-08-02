@@ -4,7 +4,12 @@ include_once 'include/navbar.php';
 include_once('./include/connection.php');
 
 $amount = 0;
+$id = 0;
+$orderMaxId = 1;
+$max_id = 0;
+$orderID = 1;
 if (isset($_POST['update'])) {
+
     $id = $_POST['id'];
     $membership_no = $_POST['membership_no'];
     $first_name = $_POST['first_name'];
@@ -72,6 +77,15 @@ if (isset($_POST['update'])) {
 
     $amount = $alm_member_amount + $plm_member_amount + $person_amount + $workshop_amount;
 
+    $sql = "SELECT id,order_id FROM users WHERE order_id = (SELECT MAX(order_id) FROM users) AND payment_status = 'paid'";
+
+    $orderResult = $conn->query($sql);
+    if ($orderResult->num_rows > 0) {
+        $row = $orderResult->fetch_assoc();
+        $orderMaxId = $row['order_id'] + 1;
+        $max_id = $row['id'];        
+    }
+
     $sql = "UPDATE users "
         . " SET  membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
         . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', council_state = '$council_state', age = $age,"
@@ -79,16 +93,41 @@ if (isset($_POST['update'])) {
         . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
         . "alm_member_amount = $alm_member_amount, plm_member_amount = $plm_member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-        . "amount = $amount"
-        . " WHERE id = '$id'";
-
-
+        . "amount = $amount ,order_id = $orderMaxId"
+        . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
     } else {
         // echo '<script> window.location.href = "login.php" </script>';
     }
 }
 
+if (isset($_POST['submit'])) {
+    include('Crypto.php');
+    error_reporting(0);
+    $merchant_data = '';
+    $working_key = '4F917B59C4F22F5B040290A13F4B25B5'; //Shared by CCAVENUES
+    $access_code = 'AVZT92KG93CE22TZEC'; //Shared by CCAVENUES
+
+    foreach ($_POST as $key => $value) {
+        $merchant_data .= $key . '=' . $value . '&';
+    }
+    $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
+
+?>
+    <form method="post" name="redirect" action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction">
+        <?php
+        echo "<input type=hidden name=encRequest value=$encrypted_data>";
+        echo "<input type=hidden name=access_code value=$access_code>";
+        ?>
+    </form>
+
+    <script language='javascript'>
+        document.redirect.submit();
+    </script>
+
+<?php
+
+}
 ?>
 
 <!-- Page Header Start -->
@@ -117,15 +156,21 @@ if (isset($_POST['update'])) {
                 <div class="card">
                     <div class="card-body">
                         <div class="form-s1">
-                            <form id="payment-form" method="post" action="<?= $base_url ?>dev/ccavRequestHandler.php">
+                            <form id="payment-form" method="post" action="payment.php">
                                 <div class="form-group">
                                     <div>
                                         <label class="small">IADVL Number</label>
                                         <input type="text" readonly value="<?= (isset($_POST['membership_no'])) ? $_POST['membership_no'] : '' ?>" class="form-control member-no" name="membership_no" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
                                     </div>
                                     <div>
+                                        <?php
+
+                                        $name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
+                                        $name .= isset($_POST['last_name']) ? " " . $_POST['last_name'] : '';
+
+                                        ?>
                                         <label class="small">Full Name</label>
-                                        <input type="text" readonly value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] . " " . $_POST['last_name'] : '' ?>" class="form-control first_name" name="first_name" required="" minlength="6" maxlength="20" placeholder="Enter IADVL Number">
+                                        <input type="text" readonly value="<?= $name ?>" class="form-control name" name="name">
                                     </div>
                                     <div>
                                         <label class="small">Amount</label>
@@ -138,15 +183,16 @@ if (isset($_POST['update'])) {
                                             <option value="razor-pay" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "RAZOR PAY") ? 'selected' : '' ?>>RAZOR PAY</option>
                                         </select>
                                     </div>
-                                    <input type="hidden" name="tid" id="tid" readonly="">
+                                    <input type="hidden" name="user_id" value="<?= $max_id; ?>">
+                                    <input type="hidden" name="tid" id="tid">
                                     <input type="hidden" name="merchant_id" value="2701346">
                                     <input type="hidden" name="language" value="EN">
-                                    <input type="hidden" name="order_id" value="123654789">
+                                    <input type="hidden" name="order_id" value="<?= $orderMaxId ?>">
                                     <input type="hidden" name="currency" value="INR">
-                                    <input type="hidden" name="redirect_url" value="<?= $base_url ?>dev/ccavResponseHandler.php">
-                                    <input type="hidden" name="cancel_url" value="<?= $base_url ?>dev/ccavResponseHandler.php">
+                                    <input type="hidden" name="redirect_url" value="<?= $base_url ?>payment-response.php?id=<?= $id ?>">
+                                    <input type="hidden" name="cancel_url" value="<?= $base_url ?>payment-response.php?id=<?= $id ?>">
                                 </div>
-                                <button type="submit" href="javascript: void(0)" class="btn btn-dark btn-pay mt-3 px-4" id="pay-btn">Pay</button>
+                                <button name="submit" type="submit" class="btn btn-dark  mt-3 px-4" id="pay-btn">Pay</button>
                                 <input type="hidden" name="id" value="<?= $id ?>" />
                                 <button onclick="history.back()" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</button>
 
