@@ -2,7 +2,6 @@
 include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
-
 ?>
 
 <!-- Page Header Start -->
@@ -44,7 +43,7 @@ include_once('./include/connection.php');
                             </div>
                         </div>
                         <input type="hidden" name="encryptedID" id="encryptedID" />
-                        <button name="proceed" type="submit" class="btn btn-dark mt-3 px-4" id="btn-submit">Proceed</button>
+                        <button name="proceed" type="submit" class="btn btn-dark mt-3 px-4" id="btn-procced">Proceed</button>
                     </div>
                 </form>
             </div>
@@ -53,7 +52,7 @@ include_once('./include/connection.php');
     </div>
 </div>
 
-<?php include_once 'include/fee.php'; ?>
-
-
-<?php include_once 'include/footer.php'; ?>
+<?php
+include_once 'include/fee.php';
+include_once 'include/footer.php';
+?>

@@ -56,14 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row justify-content-center text-center" id="regform">
             <div class="col-md-9">
                 <h2 class="mb-4">Registered members login</h2>
-                <form action="login.php" method="POST">
+                <form id="login-form" action="javascript:;" method="POST">
                     <div class="form-s1">
                         <div class="form-group row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-6"> <label class="small">IADVL Number</label>
                                 <!-- <input data-url="<?php echo $base_url; ?>check.php" type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number"> -->
                                 <input type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number" required>
-
+                                <p id="membership_noError"></p>
                                 <?php
                                 if (isset($_SESSION["login_error"]) && $_SESSION["login_error"] != "") {
                                     $myMessage = addslashes($_SESSION["login_error"]);
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         </div>
                         <input type="hidden" name="encryptedID" id="encryptedID" />
-                        <button type="submit" class="btn btn-dark mt-3 px-4" id="btn-submit">Proceed</button>
+                        <button type="button" class="btn btn-dark mt-3 px-4" id="btn-submit">Proceed</button>
                     </div>
                 </form>
             </div>

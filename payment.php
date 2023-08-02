@@ -86,9 +86,8 @@ if (isset($_POST['update'])) {
     }
 
     $amount = $member_amount + $person_amount + $workshop_amount;
-
-    $sql = "SELECT MAX(id) as id FROM orders";
     $orderMaxId = 1;
+    $sql = "SELECT MAX(id) as id FROM orders";
     $orderResult = $conn->query($sql);
     if ($orderResult->num_rows > 0) {
         $row = $orderResult->fetch_assoc();
@@ -102,7 +101,7 @@ if (isset($_POST['update'])) {
         . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
         . "member_amount = $member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-        . "amount = $amount,"
+        . "amount = $amount, order_id = $orderMaxId"
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
     } else {
@@ -191,7 +190,7 @@ if (isset($_POST['submit'])) {
                                             <option value="hdfc" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "HDFC BANK") ? 'selected' : '' ?>>HDFC BANK</option>
                                             <option value="razor-pay" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "RAZOR PAY") ? 'selected' : '' ?>>RAZOR PAY</option>
                                         </select>
-                                    </div>                                 
+                                    </div>
                                     <input type="hidden" name="tid" id="tid">
                                     <input type="hidden" name="merchant_id" value="2701346">
                                     <input type="hidden" name="language" value="EN">

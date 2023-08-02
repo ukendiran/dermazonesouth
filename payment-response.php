@@ -41,11 +41,11 @@ $dataSize = sizeof($decryptValues);
 					if ($i == 3) $order_status = $information[1];
 				}
 				if ($order_status === "Success") {
-					echo "Thank you for shopping with us. Your credit card has been charged and your transaction is successful. Please login to submit Abstract.";
+					echo "Thank you for order with us. Your has been charged and your transaction is successful. Please login to submit Abstract.";
 				} else if ($order_status === "Aborted") {
-					echo "Thank you for shopping with us.We will keep you posted regarding the status of your order through e-mail";
+					echo "Thank you for order with us.We will keep you posted regarding the status of your order through e-mail";
 				} else if ($order_status === "Failure") {
-					echo "Thank you for shopping with us.However,the transaction has been declined.";
+					echo "Thank you for order with us.However,the transaction has been declined.";
 				} else {
 					echo "Security Error. Illegal access detected";
 				}
@@ -53,62 +53,60 @@ $dataSize = sizeof($decryptValues);
 			</h3>
 			<div class="col-md-4">
 			</div>
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<?php
-						$result = array();
-						for ($i = 0; $i < $dataSize; $i++) {
-							$information = explode('=', $decryptValues[$i]);
-							$key = $information[0];
-							$value = $information[1];
-							$result[$key] = $value;
-						}
 
-						include_once('./include/connection.php');
+			<?php
+			$result = array();
+			for ($i = 0; $i < $dataSize; $i++) {
+				$information = explode('=', $decryptValues[$i]);
+				$key = $information[0];
+				$value = $information[1];
+				$result[$key] = $value;
+			}
 
-						$user_id = isset($result['user_id']) ? $result['user_id'] : '0';
-						$tid = isset($result['tid']) ? $result['tid'] : '0';
-						$tracking_id = $result['tracking_id'];
-						$bank_ref_no = $result['bank_ref_no'];
-						$order_status = $result['order_status'];
-						$payment_mode = $result['payment_mode'];
-						$amount = $result['amount'];
+			include_once('./include/connection.php');
+
+			$user_id = isset($result['user_id']) ? $result['user_id'] : '0';
+			$tid = isset($result['tid']) ? $result['tid'] : '0';
+			$tracking_id = $result['tracking_id'];
+			$bank_ref_no = $result['bank_ref_no'];
+			$order_status = $result['order_status'];
+			$payment_mode = $result['payment_mode'];
+			$amount = $result['amount'];
 
 
-						$user_id = $_GET['id'];
-						$order_id = 1;
-						$sql = "SELECT order_id FROM users WHERE id = $user_id";
-						$userResult = $conn->query($sql);
+			$user_id = $_GET['id'];
+			$order_id = 1;
+			$sql = "SELECT order_id FROM users WHERE id = $user_id";
+			$userResult = $conn->query($sql);
 
-						if ($userResult->num_rows > 0) {
-							$row = $userResult->fetch_assoc();
-							$order_id = $row['order_id'];
-						}
+			if ($userResult->num_rows > 0) {
+				$row = $userResult->fetch_assoc();
+				$order_id = $row['order_id'];
+			}
 
-						$sql = "SELECT * FROM orders WHERE order_id = $order_id AND order_status = 'Success'";
-						$orderResult = $conn->query($sql);
-						if ($orderResult->num_rows == 0) {
-							$update_user_sql = "UPDATE users SET  payment_status = 'paid' WHERE id = $user_id";
-							if ($conn->query($update_user_sql) === TRUE) {
-								$insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
-								$insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
-								if ($conn->query($insert_order_sql) === TRUE) {
-								}
-							}
-						}
-
+			$sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
+			$orderResult = $conn->query($sql);
+			if ($orderResult->num_rows == 0) {
+				$insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
+				$insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
+				if ($conn->query($insert_order_sql) === TRUE) {
+					$last_id = $conn->insert_id;
+					$update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
+					if ($conn->query($update_user_sql) === TRUE) {
+						echo '<div class="col-md-4"><div class="card"><div class="card-body">';
 						echo '<p> Order Id  : ' . $order_id . '</p>';
 						echo '<p> Tracking Id  : ' . $tracking_id . '</p>';
 						echo '<p> Bank Referance No  : ' . $bank_ref_no . '</p>';
 						echo '<p> Status  : ' . $order_status . '</p>';
 						echo '<p> Payment Mode  : ' . $payment_mode . '</p>';
 						echo '<p> Amount Paid  : ' . $amount . '</p>';
+						echo '</div></div></div>';
+					}
+				}
+			} 
 
-						?>
-					</div>
-				</div>
-			</div>
+			?>
+
 			<a href="login.php" class="text-center">Click here to Login</a>
 		</div>
 	</div>

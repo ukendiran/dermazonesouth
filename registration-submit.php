@@ -8,12 +8,11 @@ if (isset($_POST['proceed'])) {
     $membership_no = $_POST['membership_no'];
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
     $result = $conn->query($sql);
-    
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();   
-        $id = $row['id'];
-        if ($row['payment_status'] == 'paid') {
-            echo '<script>window.location.href="login.php"</script>';
+        $data = $result->fetch_assoc();
+        $id = $data['id'];
+        if ($data['payment_status'] == 'paid') {
+            echo '<script>window.location.href="registration.php"</script>';
             $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";
         }
     } else {
@@ -91,7 +90,7 @@ if (isset($_POST['proceed'])) {
                                         <input type="text" value="<?= (isset($data['registration_no'])) ? $data['registration_no'] : '' ?>" class="form-control" name="registration_no" required="" maxlength="5" placeholder="Enter Medical Council Number.">
                                     </div>
                                     <div class="col-sm-6 mt-3 mt-sm-0">
-                                        <label>Medical Council State</label>
+                                        <label>Medical Council State</label>
                                         <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" required="" maxlength="5" placeholder="Enter Medical Council State.">
                                     </div>
                                 </div>
