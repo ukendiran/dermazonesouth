@@ -105,8 +105,7 @@ $dataSize = sizeof($decryptValues);
 
 
 					$userData = $userResult->fetch_assoc();
-					// $to = $userData['email'];
-					$to = "ukendiran@gmail.com";
+					$to = $userData['email'];
 					$membership_no = $userData['membership_no'];
 					$name = $userData['first_name'] . " " . $userData['last_name'];
 					$from = "dermazonesouth2023@gmail.com";
