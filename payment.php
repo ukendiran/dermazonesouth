@@ -39,15 +39,21 @@ if (isset($_POST['update'])) {
     $regular  = strtotime('2023-09-15');
     $sport  = strtotime('2023-09-16');
 
-    $alm_member_amount  = 0;
-    $plm_member_amount  = 0;
+    $member_amount  = 0;
     $person_amount = 0;
     $workshop_amount = 0;
     $amount = 0;
 
+
+
     if ($today <= $earlyBird) {
-        $alm_member_amount = 7000;
-        $plm_member_amount = 5000;
+        if ($member_type == "IADVL_MEMBER") {
+            $member_amount = 7000;
+        } else {
+            $member_amount = 5000;
+        }
+
+
         $person_amount = $co_delegates * 5000;
         if ($workshop == 'None')
             $workshop_amount = 0;
@@ -56,8 +62,12 @@ if (isset($_POST['update'])) {
     }
 
     if ($today > $earlyBird && $today <= $sport) {
-        $alm_member_amount = 8200;
-        $plm_member_amount = 5300;
+        if ($member_type == "IADVL_MEMBER") {
+            $member_amount = 8200;
+        } else {
+            $member_amount = 5300;
+        }
+
         $person_amount = $co_delegates * 6000;
         if ($workshop == 'None')
             $workshop_amount = 0;
@@ -66,8 +76,11 @@ if (isset($_POST['update'])) {
     }
 
     if ($today >= $sport) {
-        $alm_member_amount = 11000;
-        $plm_member_amount = 8000;
+        if ($member_type == "IADVL_MEMBER") {
+            $member_amount = 11000;
+        } else {
+            $member_amount = 8000;
+        }
         $person_amount = $co_delegates * 7000;
         if ($workshop == 'None')
             $workshop_amount = 0;
@@ -75,7 +88,7 @@ if (isset($_POST['update'])) {
             $workshop_amount = 3000;
     }
 
-    $amount = $alm_member_amount + $plm_member_amount + $person_amount + $workshop_amount;
+    $amount = $member_amount + $person_amount + $workshop_amount;
 
     $sql = "SELECT id,order_id FROM users WHERE order_id = (SELECT MAX(order_id) FROM users) AND payment_status = 'paid'";
 
@@ -83,7 +96,7 @@ if (isset($_POST['update'])) {
     if ($orderResult->num_rows > 0) {
         $row = $orderResult->fetch_assoc();
         $orderMaxId = $row['order_id'] + 1;
-        $max_id = $row['id'];        
+        $max_id = $row['id'];
     }
 
     $sql = "UPDATE users "
@@ -92,7 +105,7 @@ if (isset($_POST['update'])) {
         . "workshop = '$workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
         . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
-        . "alm_member_amount = $alm_member_amount, plm_member_amount = $plm_member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
+        . "member_amount = $member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
         . "amount = $amount ,order_id = $orderMaxId"
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
