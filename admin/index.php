@@ -2,7 +2,7 @@
 // login.php
 require_once 'config.php';
 $user = new Admin();
-
+session_start();
 
 // Check if a user session exists (user is logged in)
 if (isset($_SESSION['user_id'])) {
