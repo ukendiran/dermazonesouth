@@ -84,7 +84,7 @@ $dataSize = sizeof($decryptValues);
 						$sql = "SELECT order_id FROM users WHERE id = $user_id";
 						$userResult = $conn->query($sql);
 						if ($userResult->num_rows == 0) {
-							$row = $orderResult->fetch_assoc();
+							$row = $userResult->fetch_assoc();
 							$order_id = $row['order_id'];
 						}
 
