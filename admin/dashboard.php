@@ -33,7 +33,6 @@
                             <td><?php echo $user['mobile']; ?></td>
                             <td><?php echo $user['amount']; ?></td>
                             <td><?php echo $user['payment_status']; ?></td>
-                            <td><?php //echo '<a href="edit_user.php?id=' . $user['id'] . '">Edit</a>'; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
