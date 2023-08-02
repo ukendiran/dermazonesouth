@@ -7,7 +7,6 @@ $subject = "Dermazone South 2023 Payment Confirmation";
 
 $htmlContent = '
 <html>
-
 <head>
     <title>Welcome to Dermazone South 2023</title>
 </head>
@@ -145,7 +144,6 @@ $htmlContent = '
     </tbody>
     </table>
 </body>
-
 
 </html>';
 
