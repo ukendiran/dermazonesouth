@@ -1,11 +1,3 @@
-<?php
-$to = $_GET['to'];
-$from = $_GET['from'];
-$fromName = $_GET['name'];
-
-$subject = "Dermazone South 2023 Payment Confirmation";
-
-$htmlContent = '
 <html>
 
 <head>
@@ -120,7 +112,7 @@ $htmlContent = '
                 </td>
             </tr>
             <tr>
-                <td style="font-family:"Open Sans", Arial, sans-serif;font-size:11px; line-height:18px;color:#999999;"
+                <td style="font-family:'Open Sans', Arial, sans-serif;font-size:11px; line-height:18px;color:#999999;"
                     valign="top" align="center">
                     <a href="#" target="_blank" style="color:#999999;text-decoration:underline;">PRIVACY STATEMENT</a>
                     | <a href="#" target="_blank" style="color:#999999; text-decoration:underline;">TERMS OF SERVICE</a>
@@ -147,20 +139,4 @@ $htmlContent = '
 </body>
 
 
-</html>';
-
-// Set content-type header for sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// Additional headers
-$headers .= 'From: ' . $fromName . '<' . $from . '>' . "\r\n";
-$headers .= 'Cc: ukendiran@gmail.com' . "\r\n";
-$headers .= 'Bcc: ukendiran@gmail.com' . "\r\n";
-
-// Send email
-if (mail($to, $subject, $htmlContent, $headers)) {
-    echo 'Email has sent successfully.';
-} else {
-    echo 'Email sending failed.';
-}
+</html>
