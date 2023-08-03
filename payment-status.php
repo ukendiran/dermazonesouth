@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     error_reporting(0);
     $working_key = $_ENV['WORKING_KEY'];
     $access_code = $_ENV['ACCESS_KEY'];
-    exit;
+
     $merchant_json_data =
         array(
             'order_no' => $_POST['order_no'],
@@ -41,10 +41,6 @@ if (isset($_POST['submit'])) {
             $status = decrypt(trim($info_value[1]), $working_key);
         }
     }
-
-    echo 'Status revert is: ' . $status . '<pre>';
-    $obj = json_decode($status);
-    print_r($obj);
 }
 
 ?>
@@ -69,10 +65,10 @@ if (isset($_POST['submit'])) {
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-2">
-            <h2 class="mb-4 text-center"> Dermazone South 2023 Payment</h2>
-            <div class="col-md-4">
+            <h2 class="mb-4 text-center"> Dermazone South 2023 Payment Status</h2>
+            <div class="col-md-3">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
 
                 <div class="card">
                     <div class="card-body">
@@ -92,6 +88,13 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </form>
 
+                        </div>
+                        <div class="">
+                            <?php
+                            echo 'Status revert is: ' . $status . '<pre>';
+                            $obj = json_decode($status);
+                            print_r($obj);
+                            ?>
                         </div>
                     </div>
                 </div>
