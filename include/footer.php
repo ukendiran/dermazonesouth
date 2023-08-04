@@ -55,7 +55,7 @@
 <!-- Copyright Start -->
 <div class="container-fluid copyright bg-dark py-4">
     <div class="container text-center">
-        <p class="mb-2">Designed by Incredible events foundation</p>
+        <p class="mb-2">Powered by Incredible Events Foundation</p>
         <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Dermazonesouth2023</a>, All Right Reserved.</p>
         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
         <!-- <p class="mb-0">Designed By 
