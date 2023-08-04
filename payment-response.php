@@ -139,8 +139,6 @@ $dataSize = sizeof($decryptValues);
 						';
 					}
 
-
-
 					$from = "dermazonesouth2023@gmail.com";
 					$fromName = "Dermazone South 2023";
 					$subject = "Dermazone South 2023 Payment Confirmation";
@@ -261,9 +259,9 @@ $dataSize = sizeof($decryptValues);
             <tr>
                 <td style="font-family:"Open Sans", Arial, sans-serif;font-size:11px; line-height:18px;color:#999999;"
                     valign="top" align="center">
-                    <a href="#" target="_blank" style="color:#999999;text-decoration:underline;">PRIVACY STATEMENT</a>
-                    | <a href="#" target="_blank" style="color:#999999; text-decoration:underline;">TERMS OF SERVICE</a>
-                    | <a href="#" target="_blank" style="color:#999999; text-decoration:underline;">RETURNS</a><br>
+                    <a href="'.$base_url.'privacy-policy.php" target="_blank" style="color:#999999;text-decoration:underline;">PRIVACY STATEMENT</a>
+                    | <a href="'.$base_url.'terms-and-conditions.php" target="_blank" style="color:#999999; text-decoration:underline;">TERMS OF SERVICE</a>
+                    | <a href="'.$base_url.'cancellation-refund-policy.php" target="_blank" style="color:#999999; text-decoration:underline;">RETURNS</a><br>
                     &copy; 2023 DermazoneSouth. All Rights Reserved.<br>
                     If you do not wish to receive any further
                     emails from us, please <a href="#" target="_blank"
