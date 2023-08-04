@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="">
                             <?php
-                            echo 'Status revert is: ' . $status . '<pre>';
+                            echo 'Status revert is: ' . $status ;
                             $obj = json_decode($status);
                             print_r($obj);
                             ?>
