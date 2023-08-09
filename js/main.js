@@ -137,6 +137,9 @@
 
         // If client-side validation passes, perform AJAX request
         if (valid) {
+
+
+
             $.ajax({
                 url: 'check.php', // PHP script to handle validation and database operations
                 method: 'POST',
@@ -161,7 +164,8 @@
                                 console.log('failure reason', error);
                             },
                         };
-                        initSendOTP(configuration);
+                        window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                        // initSendOTP(configuration);
                     } else if (result.status === 2) {
                         $('#membership_noError').html('Please Pay for subscription.');
                     } else {

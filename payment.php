@@ -10,6 +10,13 @@ $id = 0;
 $orderMaxId = 1;
 $max_id = 0;
 $orderID = 1;
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+?>
+    <script language='javascript'>
+        document.location.href = "registration.php";
+    </script>
+    <?php
+}
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $membership_no = $_POST['membership_no'];
@@ -110,31 +117,32 @@ if (isset($_POST['update'])) {
 }
 
 if (isset($_POST['submit'])) {
-    include('Crypto.php');
-    error_reporting(0);
-    $merchant_data = '';
-    $working_key = $_ENV['WORKING_KEY'];
-    $access_code = $_ENV['ACCESS_KEY'];
+    if ($_POST['amount'] !== 0) {
+        include('Crypto.php');
+        error_reporting(0);
+        $merchant_data = '';
+        $working_key = $_ENV['WORKING_KEY'];
+        $access_code = $_ENV['ACCESS_KEY'];
 
-    foreach ($_POST as $key => $value) {
-        $merchant_data .= $key . '=' . $value . '&';
-    }
-    $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
+        foreach ($_POST as $key => $value) {
+            $merchant_data .= $key . '=' . $value . '&';
+        }
+        $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
 
-?>
-    <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
-        <?php
-        echo "<input type=hidden name=encRequest value=$encrypted_data>";
-        echo "<input type=hidden name=access_code value=$access_code>";
-        ?>
-    </form>
+    ?>
+        <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
+            <?php
+            echo "<input type=hidden name=encRequest value=$encrypted_data>";
+            echo "<input type=hidden name=access_code value=$access_code>";
+            ?>
+        </form>
 
-    <script language='javascript'>
-        document.redirect.submit();
-    </script>
+        <script language='javascript'>
+            document.redirect.submit();
+        </script>
 
 <?php
-
+    }
 }
 ?>
 
@@ -202,7 +210,7 @@ if (isset($_POST['submit'])) {
 
                                 <button name="submit" type="submit" class="btn btn-dark  mt-3 px-4" id="pay-btn">Pay</button>
                                 <input type="hidden" name="id" value="<?= $id ?>" />
-                                <button onclick="history.back()" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</button>
+                                <a href="registration.php" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</a>
 
                                 <div id="message"></div>
 
