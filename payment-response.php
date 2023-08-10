@@ -18,86 +18,74 @@ $dataSize = sizeof($decryptValues);
 ?>
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-1 mb-5 wow fadeIn" _POST-wow-delay="0.1s">
-	<div class="container py-5">
-		<h1 class="display-5 text-white animated slideInRight">Payment Confirmation</h1>
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb animated slideInRight mb-0">
-				<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-				<!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
-				<li class="breadcrumb-item active" aria-current="page">Payment Confirmation</li>
-			</ol>
-		</nav>
-	</div>
+    <div class="container py-5">
+        <h1 class="display-5 text-white animated slideInRight">Payment Confirmation</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb animated slideInRight mb-0">
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                <li class="breadcrumb-item active" aria-current="page">Payment Confirmation</li>
+            </ol>
+        </nav>
+    </div>
 </div>
 <!-- Page Header End -->
 
 <div class="container-xxl py-5">
-	<div class="container">
-		<div class="row g-2">
-			<h3 class="mb-4 text-center">
-				<?php
-				for ($i = 0; $i < $dataSize; $i++) {
-					$information = explode('=', $decryptValues[$i]);
-					if ($i == 3) $order_status = $information[1];
-				}
-				if ($order_status === "Success") {
-					echo "Thank you for order with us. Your has been charged and your transaction is successful. Please login to submit Abstract.";
-				} else if ($order_status === "Aborted") {
-					echo "Thank you for order with us.We will keep you posted regarding the status of your order through e-mail";
-				} else if ($order_status === "Failure") {
-					echo "Thank you for order with us.However,the transaction has been declined.";
-				} else {
-					echo "Security Error. Illegal access detected";
-				}
-				?>
-			</h3>
-			<div class="col-md-4">
-			</div>
+    <div class="container">
+        <div class="row g-2">
+            <h3 class="mb-4 text-center">
+                <?php
+                for ($i = 0; $i < $dataSize; $i++) {
+                    $information = explode('=', $decryptValues[$i]);
+                    if ($i == 3) $order_status = $information[1];
+                }
+                if ($order_status === "Success") {
+                ?>
+                    <?php
+                    $result = array();
+                    for ($i = 0; $i < $dataSize; $i++) {
+                        $information = explode('=', $decryptValues[$i]);
+                        $key = $information[0];
+                        $value = $information[1];
+                        $result[$key] = $value;
+                    }
 
-			<?php
-			$result = array();
-			for ($i = 0; $i < $dataSize; $i++) {
-				$information = explode('=', $decryptValues[$i]);
-				$key = $information[0];
-				$value = $information[1];
-				$result[$key] = $value;
-			}
-
-			include_once('./include/connection.php');
-			$tid = isset($result['tid']) ? $result['tid'] : '0';
-			$tracking_id = $result['tracking_id'];
-			$bank_ref_no = $result['bank_ref_no'];
-			$order_status = $result['order_status'];
-			$payment_mode = $result['payment_mode'];
-			$amount = $result['amount'];
+                    include_once('./include/connection.php');
+                    $tid = isset($result['tid']) ? $result['tid'] : '0';
+                    $tracking_id = $result['tracking_id'];
+                    $bank_ref_no = $result['bank_ref_no'];
+                    $order_status = $result['order_status'];
+                    $payment_mode = $result['payment_mode'];
+                    $amount = $result['amount'];
 
 
-			$user_id = $_GET['id'];
-			$order_id = 1;
-			$to = '';
-			$membership_no = '';
-			$name = '';
-			$sql = "SELECT * FROM users WHERE id = $user_id";
-			$userResult = $conn->query($sql);
+                    $user_id = $_GET['id'];
+                    $order_id = 1;
+                    $to = '';
+                    $membership_no = '';
+                    $name = '';
+                    $sql = "SELECT * FROM users WHERE id = $user_id";
+                    $userResult = $conn->query($sql);
 
-			if ($userResult->num_rows > 0) {
-				$row = $userResult->fetch_assoc();
-				$order_id = $row['order_id'];
-				$to = $row['email'];
-				$membership_no = $row['membership_no'];
-				$name = $row['first_name'] . " " . $row['last_name'];
-			}
+                    if ($userResult->num_rows > 0) {
+                        $row = $userResult->fetch_assoc();
+                        $order_id = $row['order_id'];
+                        $to = $row['email'];
+                        $membership_no = $row['membership_no'];
+                        $name = $row['first_name'] . " " . $row['last_name'];
+                    }
 
-			$sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
-			$orderResult = $conn->query($sql);
-			if ($orderResult->num_rows == 0) {
-				$insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
-				$insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
-				if ($conn->query($insert_order_sql) === TRUE) {
-					$last_id = $conn->insert_id;
-					$update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
-					if ($conn->query($update_user_sql) === TRUE) {
-						echo '
+                    $sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
+                    $orderResult = $conn->query($sql);
+                    if ($orderResult->num_rows == 0) {
+                        $insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
+                        $insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
+                        if ($conn->query($insert_order_sql) === TRUE) {
+                            $last_id = $conn->insert_id;
+                            $update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
+                            if ($conn->query($update_user_sql) === TRUE) {
+                                echo '
 						<div class="col-md-4"><div class="card"><div class="card-body">
 						<table cellpadding="5" cellspacing="5" style=" width: 100%; text-align: left; font-size: 18px;">
                         <tr>
@@ -137,13 +125,13 @@ $dataSize = sizeof($decryptValues);
                     </table>
 					</div></div></div>
 						';
-					}
+                            }
 
-					$from = "dermazonesouth2023@gmail.com";
-					$fromName = "Dermazone South 2023";
-					$subject = "Dermazone South 2023 Payment Confirmation";
+                            $from = "dermazonesouth2023@gmail.com";
+                            $fromName = "Dermazone South 2023";
+                            $subject = "Dermazone South 2023 Payment Confirmation";
 
-					$htmlContent = '
+                            $htmlContent = '
 <html>
 <head>
     <title>Welcome to Dermazone South 2023</title>
@@ -259,9 +247,9 @@ $dataSize = sizeof($decryptValues);
             <tr>
                 <td style="font-family:"Open Sans", Arial, sans-serif;font-size:11px; line-height:18px;color:#999999;"
                     valign="top" align="center">
-                    <a href="'.$base_url.'privacy-policy.php" target="_blank" style="color:#999999;text-decoration:underline;">PRIVACY STATEMENT</a>
-                    | <a href="'.$base_url.'terms-and-conditions.php" target="_blank" style="color:#999999; text-decoration:underline;">TERMS OF SERVICE</a>
-                    | <a href="'.$base_url.'cancellation-refund-policy.php" target="_blank" style="color:#999999; text-decoration:underline;">RETURNS</a><br>
+                    <a href="' . $base_url . 'privacy-policy.php" target="_blank" style="color:#999999;text-decoration:underline;">PRIVACY STATEMENT</a>
+                    | <a href="' . $base_url . 'terms-and-conditions.php" target="_blank" style="color:#999999; text-decoration:underline;">TERMS OF SERVICE</a>
+                    | <a href="' . $base_url . 'cancellation-refund-policy.php" target="_blank" style="color:#999999; text-decoration:underline;">RETURNS</a><br>
                     &copy; 2023 DermazoneSouth. All Rights Reserved.<br>
                     If you do not wish to receive any further
                     emails from us, please <a href="#" target="_blank"
@@ -282,32 +270,46 @@ $dataSize = sizeof($decryptValues);
     </tbody>
     </table>
 </body>
-
 </html>';
 
-					// Set content-type header for sending HTML email
-					$headers = "MIME-Version: 1.0" . "\r\n";
-					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                            // Set content-type header for sending HTML email
+                            $headers = "MIME-Version: 1.0" . "\r\n";
+                            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-					// Additional headers
-					$headers .= 'From: ' . $fromName . '<' . $from . '>' . "\r\n";
-					$headers .= 'Cc: dermazonesouth2023@gmail.com' . "\r\n";
-					$headers .= 'Bcc: ukendiran@gmail.com' . "\r\n";
+                            // Additional headers
+                            $headers .= 'From: ' . $fromName . '<' . $from . '>' . "\r\n";
+                            $headers .= 'Cc: dermazonesouth2023@gmail.com' . "\r\n";
+                            $headers .= 'Bcc: ukendiran@gmail.com' . "\r\n";
 
-					// Send email
-					if (mail($to, $subject, $htmlContent, $headers)) {
-						// echo 'Email has sent successfully.';
-					} else {
-						// echo 'Email sending failed.';
-					}
-				}
-			}
+                            // Send email
+                            if (mail($to, $subject, $htmlContent, $headers)) {
+                                // echo 'Email has sent successfully.';
+                            } else {
+                                // echo 'Email sending failed.';
+                            }
+                        }
+                    }
 
-			?>
+                    ?>
 
-			<a href="login.php" class="text-center">Click here to Login</a>
-		</div>
-	</div>
+                    <a href="login.php" class="text-center">Click here to Login</a>
+                <?php
+                    echo "Thank you for order with us. Your has been charged and your transaction is successful. Please login to submit Abstract.";
+                } else if ($order_status === "Aborted") {
+                    echo "Thank you for order with us.We will keep you posted regarding the status of your order through e-mail";
+                } else if ($order_status === "Failure") {
+                    echo "Thank you for order with us.However,the transaction has been declined.";
+                } else {
+                    echo "Security Error. Illegal access detected";
+                }
+                ?>
+            </h3>
+            <div class="col-md-4">
+            </div>
+
+
+        </div>
+    </div>
 </div>
 
 <?php include_once 'include/footer.php';  ?>
