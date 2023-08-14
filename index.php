@@ -42,7 +42,7 @@ include_once 'include/slider.php';
                     <div class="flex-shrink-0   col-md-4  mt-2">
                         <div class="col-md-12 p-4 bg-primary">
                             <h5 class="text-white">Abstract submission closes on</h5>
-                            <h4 class="display-6">August 20<sup>th</sup></h4>
+                            <h4 class="display-6">September 15<sup>th</sup></h4>
                         </div>
                     </div>
                     <div class="flex-shrink-0  col-md-4  mt-2">
