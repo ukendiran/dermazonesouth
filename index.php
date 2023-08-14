@@ -36,7 +36,7 @@ include_once 'include/slider.php';
                     <div class="flex-shrink-0 col-md-4  mt-2">
                         <div class="col-md-12  p-4 bg-primary">
                             <h5 class="text-white">Early bird registration closes on</h5>
-                            <h4 class="display-6">August 15<sup>th</sup></h4>
+                            <h4 class="display-6">August 31<sup>st</sup></h4>
                         </div>
                     </div>
                     <div class="flex-shrink-0   col-md-4  mt-2">
@@ -51,7 +51,6 @@ include_once 'include/slider.php';
                             <h4 class="display-6">October 12<sup>th</sup></h4>
                         </div>
                     </div>
-
                 </div>
                 
             </div>
