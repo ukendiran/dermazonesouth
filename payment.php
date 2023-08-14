@@ -42,7 +42,7 @@ if (isset($_POST['update'])) {
 
     $today = strtotime(date('Y-m-d'));
     // $today = strtotime(date('2023-08-16'));
-    $earlyBird  = strtotime('2023-08-15');
+    $earlyBird  = strtotime('2023-08-31');
     $regular  = strtotime('2023-09-15');
     $sport  = strtotime('2023-09-16');
 
