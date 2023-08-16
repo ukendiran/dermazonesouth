@@ -400,7 +400,7 @@
 
 })(jQuery);
 
-window.onload = function () {
-    var d = new Date().getTime();
-    document.getElementById("tid").value = d;
-};
+// window.onload = function () {
+//     var d = new Date().getTime();
+//     document.getElementById("tid").value = d;
+// };

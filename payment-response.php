@@ -1,6 +1,9 @@
 <?php
+include_once 'include/connection.php';
 include_once 'include/header.php';
+
 include_once 'include/navbar.php';
+
 include('Crypto.php');
 include_once './config.php';
 $dotenv->load();
@@ -14,6 +17,8 @@ $rcvdString = decrypt($encResponse, $workingKey);
 $order_status = "";
 $decryptValues = explode('&', $rcvdString);
 $dataSize = sizeof($decryptValues);
+
+
 
 ?>
 <!-- Page Header Start -->
@@ -51,8 +56,10 @@ $dataSize = sizeof($decryptValues);
                         $result[$key] = $value;
                     }
 
-                    include_once('./include/connection.php');
-                    $tid = isset($result['tid']) ? $result['tid'] : '0';
+                   
+                    // $tid = isset($result['tid']) ? $result['tid'] : '0';
+
+                    // $tid = $result['tid'];
                     $tracking_id = $result['tracking_id'];
                     $bank_ref_no = $result['bank_ref_no'];
                     $order_status = $result['order_status'];
@@ -79,11 +86,10 @@ $dataSize = sizeof($decryptValues);
                     $sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
                     $orderResult = $conn->query($sql);
                     if ($orderResult->num_rows == 0) {
-                        $insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id,tracking_id,bank_ref_no,order_status,payment_mode) ";
-                        $insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id,$tracking_id,'$bank_ref_no','$order_status','$payment_mode')";
-                        if ($conn->query($insert_order_sql) === TRUE) {
+                        $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,order_id=$order_id,tracking_id=$tracking_id,bank_ref_no=$bank_ref_no,order_status='$order_status',payment_mode='$payment_mode' WHERE id=$order_id";
+                        if ($conn->query($updated_order_sql) === TRUE) {
                             $last_id = $conn->insert_id;
-                            $update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$last_id WHERE id = $user_id";
+                            $update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$order_id WHERE id = $user_id";
                             if ($conn->query($update_user_sql) === TRUE) {
                                 echo '
 						<div class="col-md-4"><div class="card"><div class="card-body">
@@ -283,9 +289,9 @@ $dataSize = sizeof($decryptValues);
 
                             // Send email
                             if (mail($to, $subject, $htmlContent, $headers)) {
-                                // echo 'Email has sent successfully.';
+                                echo 'Email has sent successfully.';
                             } else {
-                                // echo 'Email sending failed.';
+                                echo 'Email sending failed.';
                             }
                         }
                     }
