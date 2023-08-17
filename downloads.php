@@ -23,7 +23,7 @@ include_once 'include/navbar.php';
 <div class="container-xxl py-1">
     <div class="container">
         <p class="fw-medium text-uppercase text-primary mb-2 mt-20 ">BROUCHURE</p>
-        <p><a class="text-dark" href="uploads/DERMAZONE-SOUTH 2023.pdf" target="_new" download>DERMAZONE-SOUTH 2023 BROUCHURE</a></p>
+        <p><a class="text-dark" href="uploads/DERMAZONE-SOUTH-2023.pdf" target="_new" download>DERMAZONE-SOUTH 2023 BROUCHURE</a></p>
         <p><a class="text-dark" href="#" target="_new">SCIENTIFIC PROGRAM BROUCHURE</a></p>
     </div>
 </div>
