@@ -136,7 +136,7 @@ if (isset($_POST['submit'])) {
         $orderResult = $conn->query($sql);
         if ($orderResult->num_rows == 0 && $user_id != 0) {
             $insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id) ";
-            $insert_order_sql .= " VALUES ($user_id, $tid, $amount,$order_id)";
+            $insert_order_sql .= " VALUES ($user_id, '$tid', $amount,$order_id)";
             if ($conn->query($insert_order_sql) === TRUE) {
                 $last_id = $conn->insert_id;
                 $update_user_sql = "UPDATE users SET order_id=$last_id WHERE id = $user_id";

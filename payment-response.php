@@ -57,7 +57,7 @@ $user_id = $_GET['id'];
                 $order_status = $result['order_status'];
                 $payment_mode = $result['payment_mode'];
                 $amount = $result['amount'];
-
+print_r($result);
                 $order_id = $result['order_id'];
                 $to = '';
                 $membership_no = '';
@@ -310,7 +310,7 @@ $user_id = $_GET['id'];
                 } else if ($order_status === "Failure") {
                     echo "<p>Thank you for order with us.</p><p>However,the transaction has been declined.</p>";
                 } else if ($order_status === "Timeout") {
-                    echo "<p>Thank you for order with us</p>.<p>However,the transaction has been declined due to timeout.</p>";
+                    echo "<p>Thank you for order with us.</p><p>However,the transaction has been declined due to timeout.</p>";
                 } else {
                     echo "<p>Security Error. Illegal access detected</p>";
                 }
