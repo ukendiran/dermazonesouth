@@ -43,7 +43,7 @@ include_once('./include/connection.php');
                             </div>
                         </div>
                         <input type="hidden" name="encryptedID" id="encryptedID" />
-                        <button name="proceed" type="submit" class="btn btn-dark mt-3 px-4" id="btn-procced">Proceed</button>
+                        <button name="registration-submit" type="submit" class="btn btn-dark mt-3 px-4" id="btn-procced">Proceed</button>
                     </div>
                 </form>
             </div>

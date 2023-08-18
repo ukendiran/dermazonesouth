@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <?php
 }
 if (isset($_POST['update'])) {
+
     $id = $_POST['id'];
     $tid = $_POST['tid'];
     $membership_no = $_POST['membership_no'];
@@ -63,10 +64,11 @@ if (isset($_POST['update'])) {
         }
 
         $person_amount = $co_delegates * 5000;
-        if ($workshop == 'None')
+        if ($workshop == 'None') {
             $workshop_amount = 0;
-        else
+        } else {
             $workshop_amount = 2000;
+        }
     }
 
     if ($today > $earlyBird && $today <= $sport) {
@@ -97,6 +99,7 @@ if (isset($_POST['update'])) {
     }
 
     $amount = $member_amount + $person_amount + $workshop_amount;
+
     $orderMaxId = 1;
     $sql = "SELECT MAX(id) as id FROM orders";
     $orderResult = $conn->query($sql);
@@ -108,11 +111,11 @@ if (isset($_POST['update'])) {
     $sql = "UPDATE users "
         . " SET  membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
         . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', council_state = '$council_state', age = $age,"
-        . "workshop = '$workshop', food = '$food', co_delegates	 = '$co_delegates	', institution = '$institution',"
-        . "member_type = '$member_type', designation = '$designation', gender	 = '$gender', address_line1 = '$address_line1',"
+        . "workshop = '$workshop', food = '$food', co_delegates	 = '$co_delegates', institution = '$institution',"
+        . "member_type = '$member_type', designation = '$designation', gender = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
         . "member_amount = $member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-        . "amount = $amount, order_id = $orderMaxId, tid = $tid "
+        . "amount = $amount, order_id = $orderMaxId, tid = '$tid' "
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
     } else {
@@ -121,12 +124,13 @@ if (isset($_POST['update'])) {
 }
 
 if (isset($_POST['submit'])) {
+    print_r("Submit");
+    print_r($_POST);
     if ($_POST['amount'] !== 0) {
         $user_id = $_POST['id'];
         $tid = $_POST['tid'];
         $amount = $_POST['amount'];
         $order_id = $_POST['order_id'];
-
 
         $sql = "SELECT * FROM orders WHERE user_id = $user_id AND order_status = 'Success'";
         $orderResult = $conn->query($sql);
@@ -150,7 +154,7 @@ if (isset($_POST['submit'])) {
                 $merchant_data .= $key . '=' . $value . '&';
             }
             $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
-
+            
     ?>
             <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
                 <?php
@@ -164,14 +168,11 @@ if (isset($_POST['submit'])) {
             </script>
 
 <?php
+        } else {
+
+            echo '<script>window.location.href="registration.php"</script>';
+            $_SESSION["login_error"] = "Something went Wrong. Try again";
         }
-        else{
-
-            echo '<script>window.location.href="login.php"</script>';
-            $_SESSION["login_error"] = "Thank you Your already paid.";
-       
-
-         }
     }
 }
 ?>
