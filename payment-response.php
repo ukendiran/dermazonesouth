@@ -86,7 +86,7 @@ $dataSize = sizeof($decryptValues);
                     $sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id AND order_status = 'Success'";
                     $orderResult = $conn->query($sql);
                     if ($orderResult->num_rows == 0) {
-                        $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,order_id=$order_id,tracking_id=$tracking_id,bank_ref_no=$bank_ref_no,order_status='$order_status',payment_mode='$payment_mode' WHERE id=$order_id";
+                        $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,order_status='$order_status',payment_mode='$payment_mode' WHERE id=$order_id";
                         if ($conn->query($updated_order_sql) === TRUE) {
                             $last_id = $conn->insert_id;
                             $update_user_sql = "UPDATE users SET payment_status = 'paid', order_id=$order_id WHERE id = $user_id";
