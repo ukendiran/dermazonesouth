@@ -5,7 +5,6 @@ include_once('./include/connection.php');
 $data = array();
 $id = 0;
 $tid = time();
-echo $tid;
 if (isset($_POST['proceed'])) {
     $membership_no = $_POST['membership_no'];
     $sql = "SELECT * FROM users WHERE membership_no = '$membership_no'";
