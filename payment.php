@@ -238,6 +238,7 @@ if (isset($_POST['submit'])) {
                                 </div>
 
                                 <button name="submit" type="submit" class="btn btn-dark  mt-3 px-4" id="pay-btn">Pay</button>
+                                <input type="hidden" name="user_id" value="<?= $id ?>" />
                                 <input type="hidden" name="id" value="<?= $id ?>" />
                                 <a href="registration.php" class="btn btn-secondary mt-3 px-4" id="cancel-btn">Cancel</a>
 
