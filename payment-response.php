@@ -57,13 +57,12 @@ $user_id = $_GET['id'];
                 $order_status = $result['order_status'];
                 $payment_mode = $result['payment_mode'];
                 $amount = $result['amount'];
-print_r($result);
                 $order_id = $result['order_id'];
                 $to = '';
                 $membership_no = '';
                 $name = '';
 
-                if ($order_status === "Success") {
+                if ($order_status === "Success" || $order_status === "Shipped") {
                     $sql = "SELECT * FROM users WHERE id = $user_id";
                     $userResult = $conn->query($sql);
                     if ($userResult->num_rows > 0) {
@@ -74,11 +73,12 @@ print_r($result);
                         $name = $row['first_name'] . " " . $row['last_name'];
                     }
                     $sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id";
-                    $sql .= " AND order_status = 'Success'";
+                    $sql .= " AND order_status = '$order_status'";
                     $orderResult = $conn->query($sql);
                     if ($orderResult->num_rows == 0) {
                         $orderRow = $orderResult->fetch_assoc();
-                        if ($result['amount'] == $orderRow['amount'] && $order_id !== 0) {
+                        $userRow = $userResult->fetch_assoc();
+                        if ($result['amount'] == $orderRow['amount'] && $order_id !== 0 && $orderRow['tid'] == $userRow['tid'] ) {
                             $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,";
                             $updated_order_sql .= "order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,";
                             $updated_order_sql .= "order_status='$order_status',payment_mode='$payment_mode' ";
@@ -295,7 +295,7 @@ print_r($result);
                             $updated_order_sql .= " WHERE id=$order_id";
                             if ($conn->query($updated_order_sql) === TRUE) {
                                 $update_user_sql = "UPDATE users SET payment_status = 'unpaid', order_id = $order_id";
-                                $update_user_sql .= " WHERE id = $user_id"; 
+                                $update_user_sql .= " WHERE id = $user_id";
                                 if ($conn->query($update_user_sql) === TRUE) {
                                 }
                             }
@@ -318,7 +318,7 @@ print_r($result);
                 $updated_order_sql .= "order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,";
                 $updated_order_sql .= "order_status='$order_status'";
                 $updated_order_sql .= " WHERE id=$order_id";
-              
+
                 if ($conn->query($updated_order_sql) === TRUE) {
                     $update_user_sql = "UPDATE users SET payment_status = 'unpaid', order_id=$order_id";
                     $update_user_sql .= " WHERE id = $user_id";

@@ -124,8 +124,7 @@ if (isset($_POST['update'])) {
 }
 
 if (isset($_POST['submit'])) {
-    print_r("Submit");
-    print_r($_POST);
+  
     if ($_POST['amount'] !== 0) {
         $user_id = $_POST['id'];
         $tid = $_POST['tid'];
@@ -139,7 +138,7 @@ if (isset($_POST['submit'])) {
             $insert_order_sql .= " VALUES ($user_id, '$tid', $amount,$order_id)";
             if ($conn->query($insert_order_sql) === TRUE) {
                 $last_id = $conn->insert_id;
-                $update_user_sql = "UPDATE users SET order_id=$last_id WHERE id = $user_id";
+                $update_user_sql = "UPDATE users SET order_id=$last_id,tid='$tid' WHERE id = $user_id";
                 if ($conn->query($update_user_sql) === TRUE) {
                 }
             }
