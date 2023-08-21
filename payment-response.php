@@ -62,23 +62,27 @@ $user_id = $_GET['id'];
                 $membership_no = '';
                 $name = '';
 
-                if ($order_status === "Success" || $order_status === "Shipped") {
-                    $sql = "SELECT * FROM users WHERE id = $user_id";
-                    $userResult = $conn->query($sql);
-                    if ($userResult->num_rows > 0) {
-                        $row = $userResult->fetch_assoc();
-                        $order_id = $row['order_id'];
-                        $to = $row['email'];
-                        $membership_no = $row['membership_no'];
-                        $name = $row['first_name'] . " " . $row['last_name'];
-                    }
-                    $sql = "SELECT * FROM orders WHERE order_id = $order_id AND user_id = $user_id";
+                $sql = "SELECT * FROM users WHERE id = $user_id";
+                $userResult = $conn->query($sql);
+                if ($userResult->num_rows > 0) {
+                    $row = $userResult->fetch_assoc();
+                    $order_id = $row['order_id'];
+                    $tid = $row['tid'];
+                    $to = $row['email'];
+                    $membership_no = $row['membership_no'];
+                    $name = $row['first_name'] . " " . $row['last_name'];
+                }        
+
+
+
+                if ($order_status === "Success") {
+                    $sql = "SELECT * FROM orders WHERE id = $order_id AND user_id = $user_id AND tid = '$tid'";
                     $sql .= " AND order_status = '$order_status'";
                     $orderResult = $conn->query($sql);
                     if ($orderResult->num_rows == 0) {
                         $orderRow = $orderResult->fetch_assoc();
                         $userRow = $userResult->fetch_assoc();
-                        if ($result['amount'] == $orderRow['amount'] && $order_id !== 0 && $orderRow['tid'] == $userRow['tid'] ) {
+                        if ($result['amount'] == $orderRow['amount'] && $order_id !== 0 && $orderRow['tid'] == $userRow['tid']) {
                             $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,";
                             $updated_order_sql .= "order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,";
                             $updated_order_sql .= "order_status='$order_status',payment_mode='$payment_mode' ";
@@ -291,9 +295,9 @@ $user_id = $_GET['id'];
                         } else {
                             $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,";
                             $updated_order_sql .= "order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,";
-                            $updated_order_sql .= "order_status='$order_status'";
+                            $updated_order_sql .= "order_status='$order_status',payment_mode='$payment_mode' ";
                             $updated_order_sql .= " WHERE id=$order_id";
-                            if ($conn->query($updated_order_sql) === TRUE) {
+                            if ($conn->query($insert_order_sql) === TRUE) {
                                 $update_user_sql = "UPDATE users SET payment_status = 'unpaid', order_id = $order_id";
                                 $update_user_sql .= " WHERE id = $user_id";
                                 if ($conn->query($update_user_sql) === TRUE) {
@@ -314,6 +318,7 @@ $user_id = $_GET['id'];
                 } else {
                     echo "<p>Security Error. Illegal access detected</p>";
                 }
+
                 $updated_order_sql = "UPDATE orders SET user_id = $user_id,amount=$amount,";
                 $updated_order_sql .= "order_id=$order_id,tracking_id='$tracking_id',bank_ref_no=$bank_ref_no,";
                 $updated_order_sql .= "order_status='$order_status'";
@@ -325,6 +330,7 @@ $user_id = $_GET['id'];
                     if ($conn->query($update_user_sql) === TRUE) {
                     }
                 }
+
                 ?>
             </h3>
             <div class="col-md-4">

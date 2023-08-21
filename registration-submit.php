@@ -4,7 +4,6 @@ include_once 'include/navbar.php';
 include_once('./include/connection.php');
 $data = array();
 $id = 0;
-$tid = time();
 ?>
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -30,6 +29,7 @@ if (isset($_POST['registration-submit'])) {
     if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();
         $id = $data['id'];
+
         if ($data['payment_status'] == 'paid') {
             echo '<script>window.location.href="registration.php"</script>';
             $_SESSION["login_error"] = "Your already Subscribed Please Login to Submit Abstract";
@@ -150,9 +150,8 @@ if (isset($_POST['registration-submit'])) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-dark submit-btn mt-3" name="update">Submit</button>
+                                        <button type="submit" class="btn btn-dark submit-btn mt-3" name="update-registration">Submit</button>
                                         <input type="hidden" name="id" value="<?= $id ?>" />
-                                        <input type="hidden" name="tid" value="<?= $tid ?>" />
                                         <input type="hidden" name="amount" value="<?= (isset($data['amount'])) ? $data['amount'] : '' ?>" />
                                     </div>
                                     <div id="message"></div>

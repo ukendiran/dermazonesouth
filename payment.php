@@ -3,11 +3,10 @@ include_once 'include/header.php';
 include_once 'include/navbar.php';
 include_once('./include/connection.php');
 include_once './config.php';
+include('Crypto.php');
+
 $dotenv->load();
 // $tid = generateUniqueID();
-
-
-
 $amount = 0;
 $id = 0;
 $orderMaxId = 1;
@@ -20,10 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     </script>
     <?php
 }
-if (isset($_POST['update'])) {
-
+if (isset($_POST['update-registration'])) {
     $id = $_POST['id'];
-    $tid = $_POST['tid'];
     $membership_no = $_POST['membership_no'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -92,21 +89,14 @@ if (isset($_POST['update'])) {
             $member_amount = 8000;
         }
         $person_amount = $co_delegates * 7000;
-        if ($workshop == 'None')
+        if ($workshop == 'None') {
             $workshop_amount = 0;
-        else
+        } else {
             $workshop_amount = 3000;
+        }
     }
 
     $amount = $member_amount + $person_amount + $workshop_amount;
-
-    $orderMaxId = 1;
-    $sql = "SELECT MAX(id) as id FROM orders";
-    $orderResult = $conn->query($sql);
-    if ($orderResult->num_rows > 0) {
-        $row = $orderResult->fetch_assoc();
-        $orderMaxId = $row['id'] + 1;
-    }
 
     $sql = "UPDATE users "
         . " SET  membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
@@ -115,45 +105,46 @@ if (isset($_POST['update'])) {
         . "member_type = '$member_type', designation = '$designation', gender = '$gender', address_line1 = '$address_line1',"
         . "address_line2 = '$address_line2', pincode = '$pincode', city	 = '$city', state = '$state', "
         . "member_amount = $member_amount, person_amount = $person_amount, workshop_amount = $workshop_amount , "
-        . "amount = $amount, order_id = $orderMaxId, tid = '$tid' "
+        . "amount = $amount "
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
-    } else {
-        // echo '<script> window.location.href = "login.php" </script>';
     }
 }
 
 if (isset($_POST['submit'])) {
-  
-    if ($_POST['amount'] !== 0) {
-        $user_id = $_POST['id'];
-        $tid = $_POST['tid'];
-        $amount = $_POST['amount'];
-        $order_id = $_POST['order_id'];
+    $tid = time();
+    $orderMaxId = 1;
+    $sql = "SELECT MAX(id) as id FROM orders";
+    $orderResult = $conn->query($sql);
+    if ($orderResult->num_rows > 0) {
+        $row = $orderResult->fetch_assoc();
+        $orderMaxId = $row['id'] + 1;
+    }
 
+    if ($_POST['amount'] !== 0) {
+        $user_id = $_POST['id'];   
+        $amount = $_POST['amount'];
         $sql = "SELECT * FROM orders WHERE user_id = $user_id AND order_status = 'Success'";
         $orderResult = $conn->query($sql);
         if ($orderResult->num_rows == 0 && $user_id != 0) {
-            $insert_order_sql = "INSERT INTO orders (user_id,tid,amount,order_id) ";
-            $insert_order_sql .= " VALUES ($user_id, '$tid', $amount,$order_id)";
+            $insert_order_sql = "INSERT INTO orders (user_id,tid,amount) ";
+            $insert_order_sql .= " VALUES ($user_id, '$tid', $amount)";
+            $merchant_data = '';
             if ($conn->query($insert_order_sql) === TRUE) {
                 $last_id = $conn->insert_id;
+                $merchant_data .= 'order_id=' . $last_id . '&';
                 $update_user_sql = "UPDATE users SET order_id=$last_id,tid='$tid' WHERE id = $user_id";
                 if ($conn->query($update_user_sql) === TRUE) {
                 }
             }
-
-            include('Crypto.php');
             error_reporting(0);
-            $merchant_data = '';
             $working_key = $_ENV['WORKING_KEY'];
             $access_code = $_ENV['ACCESS_KEY'];
 
             foreach ($_POST as $key => $value) {
                 $merchant_data .= $key . '=' . $value . '&';
-            }
+            }        
             $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
-            
     ?>
             <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
                 <?php
@@ -161,14 +152,11 @@ if (isset($_POST['submit'])) {
                 echo "<input type=hidden name=access_code value=$access_code>";
                 ?>
             </form>
-
             <script language='javascript'>
-                document.redirect.submit();
+                //document.redirect.submit();
             </script>
-
 <?php
         } else {
-
             echo '<script>window.location.href="registration.php"</script>';
             $_SESSION["login_error"] = "Something went Wrong. Try again";
         }
@@ -230,7 +218,6 @@ if (isset($_POST['submit'])) {
                                     <input type="hidden" name="tid" id="tid" value="<?= $tid ?>">
                                     <input type="hidden" name="merchant_id" value="2701346">
                                     <input type="hidden" name="language" value="EN">
-                                    <input type="hidden" name="order_id" value="<?= $orderMaxId ?>">
                                     <input type="hidden" name="currency" value="INR">
                                     <input type="hidden" name="redirect_url" value="<?= $base_url; ?>payment-response.php?id=<?= $id ?>">
                                     <input type="hidden" name="cancel_url" value="<?= $base_url; ?>payment-response.php?id=<?= $id ?>">
