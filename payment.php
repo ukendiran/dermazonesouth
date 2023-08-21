@@ -153,7 +153,7 @@ if (isset($_POST['submit'])) {
                 ?>
             </form>
             <script language='javascript'>
-                //document.redirect.submit();
+                document.redirect.submit();
             </script>
 <?php
         } else {
