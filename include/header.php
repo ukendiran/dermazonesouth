@@ -6,9 +6,9 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 if ($_SERVER['HTTP_HOST'] == "localhost") {
-    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 } else {
-    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 }
 ?>
 
