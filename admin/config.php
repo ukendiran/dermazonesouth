@@ -6,7 +6,7 @@ include_once '../config.php';
 $dotenv->load();
 
 
-if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
+if ($_SERVER['HTTP_HOST'] == "localhost") {
     $servername = $_ENV['LOCAL_SERVERNAME'];
     $username = $_ENV['LOCAL_USERNAME'];
     $password = $_ENV['LOCAL_PASSWORD'];
@@ -22,7 +22,7 @@ if ($_SERVER['HTTP_HOST'] == "localhost:8000") {
 define('DB_HOST', $servername);
 define('DB_USER', $username);
 define('DB_PASS', $password);
-define('DB_NAME', $dbname);
+define('DB_NAME', $database);
 
 // Autoload classes
 spl_autoload_register(function ($class_name) {

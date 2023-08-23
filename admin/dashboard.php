@@ -15,11 +15,15 @@
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Mobile</th>
+                        <th>Amount</th>
+                        <th>Payment Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($users as $user) { ?>
+                    <?php foreach ($users as $user) { 
+                  
+                        ?>
                         <tr>
                             <td><?php echo $user['id']; ?></td>
                             <td><?php echo $user['membership_no']; ?></td>
@@ -27,7 +31,8 @@
                             <td><?php echo $user['last_name']; ?></td>
                             <td><?php echo $user['email']; ?></td>
                             <td><?php echo $user['mobile']; ?></td>
-                            <td><?php //echo '<a href="edit_user.php?id=' . $user['id'] . '">Edit</a>'; ?></td>
+                            <td><?php echo $user['amount']; ?></td>
+                            <td><?php echo $user['payment_status']; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

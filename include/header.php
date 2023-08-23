@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php $activePage = basename($_SERVER['PHP_SELF'], ".php");
-$hostname = $_SERVER['HTTP_HOST'];
-if ($hostname == "localhost")
-    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/dev/';
-else
-    $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+<?php
+session_start();
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+$activePage = basename($_SERVER['PHP_SELF'], ".php");
+if ($_SERVER['HTTP_HOST'] == "localhost") {
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
+} else {
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/dev/';
+}
 ?>
 
 <head>

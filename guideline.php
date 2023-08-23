@@ -97,7 +97,7 @@ include_once 'include/navbar.php';
                 <p>• For abstract submission, Please visit www.dermazonesouth2023.com</p>
                 <p>• Once uploaded successfully, you will duly receive an acknowledgment</p>
                 <p>• Please check the conference website for regular updates. </p>
-                <p class="mb-4"> <strong>Abstract submission closes on 20.08.2023 </strong> </p>
+                <p class="mb-4"> <strong>Abstract submission closes on 15.09.2023 </strong> </p>
 
 
             </div>

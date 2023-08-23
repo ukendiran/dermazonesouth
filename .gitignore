@@ -1,6 +1,6 @@
 .history/
 .history
-/vendor/
 .scannerwork
 composer.lock
 .scannerwork/
+uploads/

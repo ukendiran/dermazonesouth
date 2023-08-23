@@ -18,7 +18,7 @@
                 </div>
             </div>
             <a href="committee.php" class="nav-item nav-link <?= ($activePage == 'committee') ? 'active' : ''; ?>">Committee</a>
-            <a href="#" class="nav-item nav-link <?= ($activePage == 'downloads') ? 'active' : ''; ?>">Downloads</a>
+            <a href="downloads.php" class="nav-item nav-link <?= ($activePage == 'downloads') ? 'active' : ''; ?>">Downloads</a>
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle <?= ($activePage == 'guideline' || $activePage == 'login') ? 'active' : ''; ?>" data-bs-toggle="dropdown">Abstract</a>
                 <div class="dropdown-menu bg-light m-0">
