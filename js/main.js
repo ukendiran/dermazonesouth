@@ -165,7 +165,7 @@
                             },
                         };
                         window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
-                        // initSendOTP(configuration);
+                        initSendOTP(configuration);
                     } else if (result.status === 2) {
                         $('#membership_noError').html('Please Pay for subscription.');
                     } else {
@@ -242,30 +242,30 @@
                 success: function (response) {
                     var result = JSON.parse(response);
                     // console.log(result);
-                    // window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
-                    if (result.status === 1) {
-                        var mobileNumber = result.result.mobile;
-                        var configuration = {
-                            widgetId: "336776706f44343133353038",
-                            tokenAuth: "401998T8dXEwkg64bbb368P1",
-                            identifier: mobileNumber,
-                            identifier: "",
-                            success: (data) => {                              
-                                if (data.type = "success") {
-                                    window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
-                                }
-                            },
-                            failure: (error) => {
-                                // handle error
-                                console.log('failure reason', error);
-                            },
-                        };
-                        initSendOTP(configuration);
-                    } else if (result.status === 2) {
-                        $('#membership_noError').html('Please Pay for subscription.');
-                    } else {
-                        $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
-                    }
+                    window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    // if (result.status === 1) {
+                    //     var mobileNumber = result.result.mobile;
+                    //     var configuration = {
+                    //         widgetId: "336776706f44343133353038",
+                    //         tokenAuth: "401998T8dXEwkg64bbb368P1",
+                    //         // identifier: mobileNumber,
+                    //         identifier: "",
+                    //         success: (data) => {                              
+                    //             if (data.type = "success") {
+                    //                 window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                    //             }
+                    //         },
+                    //         failure: (error) => {
+                    //             // handle error
+                    //             console.log('failure reason', error);
+                    //         },
+                    //     };
+                    //     initSendOTP(configuration);
+                    // } else if (result.status === 2) {
+                    //     $('#membership_noError').html('Please Pay for subscription.');
+                    // } else {
+                    //     $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
+                    // }
                 },
                 error: function () {
                     // Handle error
