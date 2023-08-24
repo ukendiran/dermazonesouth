@@ -164,7 +164,7 @@
                                 console.log('failure reason', error);
                             },
                         };
-                        window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
+                        // window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
                         initSendOTP(configuration);
                     } else if (result.status === 2) {
                         $('#membership_noError').html('Please Pay for subscription.');
