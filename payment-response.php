@@ -4,6 +4,16 @@ include_once './include/header.php';
 include_once './include/navbar.php';
 include_once './Crypto.php';
 include_once './config.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$mail = new PHPMailer(true);
+
+// Create a new PHPMailer instance
+$mail = new PHPMailer(true);
+
+
 $dotenv->load();
 $user_id = $_GET['id'];
 $status = 0;
@@ -300,22 +310,29 @@ if ($_POST) {
                                           </table>
                                       </body>
                                 </html>';
-
-                            // Set content-type header for sending HTML email
-                            $headers = "MIME-Version: 1.0" . "\r\n";
-                            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-                            // Additional headers
-                            $headers .= 'From: ' . $fromName . '<' . $from . '>' . "\r\n";
-                            // $headers .= 'Cc: dermazonesouth2023@gmail.com' . "\r\n";
-                            // $headers .= 'Bcc: ukendiran@gmail.com' . "\r\n";
-
-                            // Send email                       
-                            if (mail($to, $subject, $htmlContent, $headers)) {
-                                //echo 'Email has sent successfully.';
-                            } else {
-                                //echo 'Email sending failed.';
-                            }
+                                
+                                
+                           $mail->isSMTP();
+                        //   $mail->SMTPDebug = 2;
+                           $mail->Host = 'smtp.hostinger.com';
+                           $mail->Port = 587;
+                           $mail->SMTPAuth = true;
+                           $mail->Username = 'info@dermazonesouth2023.com';
+                           $mail->Password = 'Crution@123';
+                        
+                           $mail->Subject = 'Dermazone South 2023 Payment Confirmation';
+                           
+                           $mail->Body = $htmlContent;
+                            
+                            // Sender and recipient
+                            $mail->setFrom('info@dermazonesouth2023.com', 'Dermazone South 2023');
+                            $mail->addAddress($userRow['email'], $name);
+                        
+                            // Email content
+                            $mail->isHTML(true);                      // Set email format to HTML
+                            // Send the email
+                            $mail->send();
+                            
                         } 
                     }
                 }

@@ -137,9 +137,6 @@
 
         // If client-side validation passes, perform AJAX request
         if (valid) {
-
-
-
             $.ajax({
                 url: 'check.php', // PHP script to handle validation and database operations
                 method: 'POST',
@@ -229,53 +226,6 @@
             $('#has_workshop').val('0');
     });
 
-
-    $('#upload-form').submit(function (event) {
-        event.preventDefault(); // Prevent form submission
-
-        // If client-side validation passes, perform AJAX request
-        if (valid) {
-            $.ajax({
-                url: 'check.php', // PHP script to handle validation and database operations
-                method: 'POST',
-                data: { membership_no: membership_no },
-                success: function (response) {
-                    var result = JSON.parse(response);
-                    // console.log(result);
-                    window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
-                    // if (result.status === 1) {
-                    //     var mobileNumber = result.result.mobile;
-                    //     var configuration = {
-                    //         widgetId: "336776706f44343133353038",
-                    //         tokenAuth: "401998T8dXEwkg64bbb368P1",
-                    //         // identifier: mobileNumber,
-                    //         identifier: "",
-                    //         success: (data) => {                              
-                    //             if (data.type = "success") {
-                    //                 window.location.href = 'abstract_submition.php?id=' + result.encryptedID;
-                    //             }
-                    //         },
-                    //         failure: (error) => {
-                    //             // handle error
-                    //             console.log('failure reason', error);
-                    //         },
-                    //     };
-                    //     initSendOTP(configuration);
-                    // } else if (result.status === 2) {
-                    //     $('#membership_noError').html('Please Pay for subscription.');
-                    // } else {
-                    //     $('#membership_noError').html('There is no registration on this membership number. Make sure the membership number you entered is correct.');
-                    // }
-                },
-                error: function () {
-                    // Handle error
-                }
-            });
-        }
-    });
-
-
-
     $("#uploadForm").on('submit', function (e) {
         e.preventDefault();
         var id = $('#id').val();
@@ -324,8 +274,7 @@
             });
         } else {
             alert("Please select a valid file (PDF/DOC/DOCX).")
-        }
-        console.log(fileInput);
+        } 
 
     });
 
@@ -344,6 +293,30 @@
 
 
 
+    $("#btn-abstract-submition").click(function (e) {
+        var url = $(this).data('url');
+        var redirect_url = $(this).data('redirect-url');
+        var base_url = $(this).data('base_url');
+        var id = $('#id').val();
+        var table = $('#table tbody tr').length;
+        if (table == 0) {
+            alert("Please upload Abstract Submition");
+        } else {
+            $.ajax({
+                url: url,
+                method: 'POST',
+                data: { id: id, redirect_url: redirect_url, base_url: base_url },
+                success: function (data) {     
+                    alert("Abstract Submitted Successfully!") 
+                    // $('#result').html(data);
+                },
+                error: function (errorThrown) {
+                    console.log(errorThrown);
+                }
+            });
+        }
+    });
+
     $(".btn-pay").click(function (e) {
         e.preventDefault();
         var jsonData;
@@ -351,7 +324,6 @@
         var amount = "10.00";
         var currency = "INR";
         var url = 'https://test.ccavenue.com/transaction/transaction.do?command-getJsonData&access_code=' + access_code + '&currency=' + currency + '&amount=' + amount;
-        console.log(url);
         $.ajax({
             url: url,
             dataType: 'jsonp',
@@ -360,7 +332,6 @@
             processData: true,
             success: function (data) {
                 jsonData = data;
-                console.log(jsonData);
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.log('An error occurred!' + errorThrown);
@@ -400,7 +371,3 @@
 
 })(jQuery);
 
-// window.onload = function () {
-//     var d = new Date().getTime();
-//     document.getElementById("tid").value = d;
-// };
