@@ -306,8 +306,9 @@
                 url: url,
                 method: 'POST',
                 data: { id: id, redirect_url: redirect_url, base_url: base_url },
-                success: function (data) {      
-                    $('#result').html(data);
+                success: function (data) {     
+                    alert("Abstract Submitted Successfully!") 
+                    // $('#result').html(data);
                 },
                 error: function (errorThrown) {
                     console.log(errorThrown);

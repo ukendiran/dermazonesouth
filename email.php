@@ -166,26 +166,18 @@ if ($_POST) {
                     </table>
                 </body>
           </html>';
-
-
-
-
-
-
-
-
       // Sender and recipient
       $mail->setFrom('info@dermazonesouth2023.com', 'Dermazone South 2023');
       $mail->addAddress($to, $name);
       // Email content
       $mail->isHTML(true);
-      echo $mail->Body;
-      // Send the email
-      // if ($mail->send()) {
-      //   echo "Success";
-      // } else {
-      //   echo "Failed";
-      // }
+      // echo $mail->Body;
+
+      if ($mail->send()) {
+        echo "Success";
+      } else {
+        echo "Failed";
+      }
     } catch (Exception $e) {
       echo "Email could not be sent. Error: {$mail->ErrorInfo}";
     }
