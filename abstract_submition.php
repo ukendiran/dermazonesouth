@@ -56,11 +56,10 @@ if (isset($_GET['id'])) {
                 <div class="col-md-12">
                     <h2 class="mb-4">
                         Dermazone South 2023 Abstract Submition</h2>
+                    <?php $link = 'abstract_submition.php?id=' . $_GET['id']; ?>
+                    <!-- <form action="<?= $link ?>" method="post"> -->
                     <div class="form-s1">
-                        <?php
-                        $link = 'abstract_submition.php?id=' . $_GET['id'];
 
-                        ?>
                         <!-- <form id="abstract-form" method="post" action="<?= $link ?>"> -->
                         <div class="form-group row">
                             <div class="col-sm-6">
@@ -98,15 +97,11 @@ if (isset($_GET['id'])) {
                                 <form id="uploadForm" enctype="multipart/form-data" class=" mt-10">
                                     <input type="hidden" name="id" value="<?= $_GET['id'] ?>" id="id" />
                                     <input type="file" name="file" id="fileInput" accept=".pdf,.xls,.xlsx" require>
-                                    <input type="submit" name="submit" value="UPLOAD" class="btn btn-dark" />
+                                    <input type="submit" name="submit" value="UPLOAD" class="btn btn-primary" />
                                 </form>
                             </div>
 
-                            <div class="member-auto-fill pull-right">
-                                <!-- <button type="submit" class="btn btn-dark submit-btn mt-3" name="submit">Submit</button> -->
 
-                                <input type="hidden" name="amount" value="<?= (isset($data['amount'])) ? $data['amount'] : '' ?>" />
-                            </div>
                         </div>
 
                         <?php
@@ -115,7 +110,7 @@ if (isset($_GET['id'])) {
                         if ($tableData->num_rows > 0) {    ?>
                             <div class="form-group row mt-10">
                                 <h3>File List</h3>
-                                <table class="table table-borderd">
+                                <table class="table table-borderd" id="table">
                                     <thead>
                                         <tr>
                                             <td>S.No</td>
@@ -124,6 +119,7 @@ if (isset($_GET['id'])) {
                                             <td>Created Date</td>
                                         </tr>
                                     </thead>
+                                    <tbody>
                                     <?php
                                     $count = 1;
                                     while ($row = $tableData->fetch_assoc()) {
@@ -135,16 +131,28 @@ if (isset($_GET['id'])) {
                                         echo '<td>' . $row['created_at'] . '</td>';
                                         echo '<tr>';
                                     }
-
                                     ?>
+                                    </thead>
                                 </table>
                             </div>
                         <?php } ?>
-
-
                         <!-- </form> -->
 
+                        <div class="member-auto-fill" style="text-align: center;">
+                            <input type="hidden" name="id" value="<?= $_GET['id'] ?>" id="id" />
+                            <button id="btn-abstract-submition" type="button" 
+                            class="btn btn-dark submit-btn mt-3 text-center" name="abstract-submition" 
+                            data-url="<?= $base_url ?>email.php" 
+                            data-base_url="<?= $base_url ?>" 
+                            data-redirect-url="<?= $link ?>">Abstract Submition </button>
+                            <input type="hidden" name="amount" value="<?= (isset($data['amount'])) ? $data['amount'] : '' ?>" />
+                        </div>
+
+                        <div id="result"></div>
+
                     </div>
+                    <!-- </form> -->
+
                 </div>
             </div>
         </div>
