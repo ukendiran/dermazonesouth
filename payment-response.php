@@ -13,12 +13,10 @@ $mail = new PHPMailer(true);
 // Create a new PHPMailer instance
 $mail = new PHPMailer(true);
 
-
 $dotenv->load();
 $user_id = $_GET['id'];
 $status = 0;
 error_reporting(0);
-
 $workingKey = $_ENV['WORKING_KEY'];
 // print_r($_POST); exit();
 ?>
@@ -91,7 +89,6 @@ if ($_POST) {
                 $orderResult = $conn->query($sql);
                 $orderRow = $orderResult->fetch_assoc();
 
-
                 $sql = "SELECT * FROM users WHERE id = $user_id";
                 $userResult = $conn->query($sql);
                 $userRow = $userResult->fetch_assoc();
@@ -102,7 +99,6 @@ if ($_POST) {
                     $payment_status = "unpaid";
                     $order_status = "Failure";
                 }
-
 
                 if ($order_status === "Success") {
                     echo "<p>Thank you for order with us.</p><p>We will keep you posted regarding the status of your order through e-mail.</p>";
@@ -327,7 +323,7 @@ if ($_POST) {
                             // Sender and recipient
                             $mail->setFrom('info@dermazonesouth2023.com', 'Dermazone South 2023');
                             $mail->addAddress($userRow['email'], $name);
-                        
+                            $mail->AddCC("info@dermazonesouth2023.com", $name);
                             // Email content
                             $mail->isHTML(true);                      // Set email format to HTML
                             // Send the email

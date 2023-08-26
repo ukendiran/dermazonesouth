@@ -11,7 +11,10 @@
                      <a class="nav-link text-white " href="<?php echo $adminurl; ?>">Home</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link text-white" href="<?php echo $adminurl; ?>users.php">Users</a>
+                     <a class="nav-link text-white" href="<?php echo $adminurl; ?>allusers.php">Users</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-white" href="<?php echo $adminurl; ?>users.php">Paid</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link text-white" href="<?php echo $baseurl; ?>">Site</a>

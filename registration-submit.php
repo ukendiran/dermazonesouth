@@ -84,11 +84,11 @@ if (isset($_POST['registration-submit'])) {
                                         <div class="form-group mt-3 row">
                                             <div class="col-sm-6">
                                                 <label>Medical Council No</label>
-                                                <input type="text" value="<?= (isset($data['registration_no'])) ? $data['registration_no'] : '' ?>" class="form-control" name="registration_no" maxlength="5" placeholder="Enter Medical Council Number.">
+                                                <input type="text" value="<?= (isset($data['registration_no'])) ? $data['registration_no'] : '' ?>" class="form-control" name="registration_no" maxlength="10" placeholder="Enter Medical Council Number.">
                                             </div>
                                             <div class="col-sm-6 mt-3 mt-sm-0">
                                                 <label>Medical Council State</label>
-                                                <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" maxlength="5" placeholder="Enter Medical Council State.">
+                                                <input type="text" value="<?= (isset($data['council_state'])) ? $data['council_state'] : '' ?>" class="form-control" name="council_state" maxlength="10" placeholder="Enter Medical Council State.">
                                             </div>
                                         </div>
                                         <div class="form-group mt-3 row">

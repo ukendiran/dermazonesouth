@@ -39,6 +39,9 @@
                     "data": "last_name"
                 },
                 {
+                    "data": "food"
+                },
+                {
                     "data": "email"
                 },
                 {
@@ -52,8 +55,69 @@
                 },
                 {
                     "data": null,
-                    "orderable": false,
-                    "searchable": false,
+                    "orderable": true,
+                    "searchable": true,
+                    "render": function(data, type, row, meta) {
+                        // Generate the "Edit" link with the user ID as a parameter
+                        return '<a href="edit_user.php?id=' + row.id + '">Edit</a>';
+                    }
+                }
+            ],
+            responsive: true,
+            "lengthMenu": [
+                [100, 200, 300, 500, -1],
+                [100, 200, 300, 500, "All"]
+            ],
+            "pageLength": 100,
+            "order": [
+                [0, "asc"]
+            ],
+            "scrollY": 400,
+            "scrollX": true,
+            dom: 'Bfrtip',
+            buttons: [               
+                'excel',
+                'csvHtml5',            
+                'pageLength'
+            ], // Add export buttons
+            "searching": true,
+            "sorting": true
+        });
+        $('#paid-table').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": "get_paid.php", // This PHP file will handle the server-side processing
+            "columns": [{
+                    "data": "id"
+                },
+                {
+                    "data": "membership_no"
+                },
+                {
+                    "data": "first_name"
+                },
+                {
+                    "data": "last_name"
+                },
+                {
+                    "data": "food"
+                },
+                {
+                    "data": "email"
+                },
+                {
+                    "data": "mobile"
+                },
+                {
+                    "data": "amount"
+                },
+                {
+                    "data": "payment_status"
+                },
+                {
+                    "data": null,
+                    "orderable": true,
+                    "searchable": true,
                     "render": function(data, type, row, meta) {
                         // Generate the "Edit" link with the user ID as a parameter
                         return '<a href="edit_user.php?id=' + row.id + '">Edit</a>';

@@ -169,6 +169,7 @@ if ($_POST) {
       // Sender and recipient
       $mail->setFrom('info@dermazonesouth2023.com', 'Dermazone South 2023');
       $mail->addAddress($to, $name);
+      $mail->AddCC("info@dermazonesouth2023.com", $name);
       // Email content
       $mail->isHTML(true);
       // echo $mail->Body;
