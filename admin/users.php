@@ -6,28 +6,35 @@
     <div class="card">
         <div class="card-header"><h4>Registered User List</h4></div>
         <div class="card-body">
-            <table id="user-table" class="table table-light table-striped ">
+            <table id="paid-table" class="table table-light table-striped ">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>IADVL Number</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Food</th>
                         <th>Email</th>
                         <th>Mobile</th>
+                        <th>Amount</th>
+                        <th>Payment Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($users as $user) { ?>
+                    <?php foreach ($users as $user) { 
+                  
+                        ?>
                         <tr>
                             <td><?php echo $user['id']; ?></td>
                             <td><?php echo $user['membership_no']; ?></td>
                             <td><?php echo $user['first_name']; ?></td>
                             <td><?php echo $user['last_name']; ?></td>
+                            <td><?php echo $user['food']; ?></td>
                             <td><?php echo $user['email']; ?></td>
                             <td><?php echo $user['mobile']; ?></td>
-                            <td><?php //echo '<a href="edit_user.php?id=' . $user['id'] . '">Edit</a>'; ?></td>
+                            <td><?php echo $user['amount']; ?></td>
+                            <td><?php echo $user['payment_status']; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -7,6 +7,18 @@ class User
     {
         $this->db = new Database();
     }   
+    
+    
+    
+
+    public function getDashboard()
+    {
+        $data['total_users'] = $this->db->query('SELECT * FROM users')->num_rows;
+        $data['paid_users'] = $this->db->query('SELECT * FROM users WHERE payment_status="paid"')->num_rows;
+        $data['unpaid_users'] = $this->db->query('SELECT * FROM users WHERE payment_status="unpaid"')->num_rows;
+        $data['paid_amount'] = $this->db->query('SELECT sum(amount) as amount FROM users WHERE payment_status="paid"')->fetch_assoc();
+        return $data;
+    }
 
     public function getUserById($id = NULL)
     {
@@ -48,6 +60,18 @@ class User
             return 0;
         }
     }
+    public function getTotalCount($field,$value)
+    {
+        $sql = "SELECT COUNT(*) AS total FROM users WHERE $field='$value'";
+        $result = $this->db->query($sql);
+
+        if ($result) {
+            $row = $result->fetch_assoc();
+            return intval($row['total']);
+        } else {
+            return 0;
+        }
+    }
 
     public function getUsersByFilter($start, $length, $searchValue)
     {
@@ -74,10 +98,35 @@ class User
 
         return $users;
     }
+    public function getPaid($start, $length, $searchValue)
+    {
+
+        $whereClause = "WHERE payment_status ='paid'";
+
+        // Apply search filter if searchValue is provided
+        if (!empty($searchValue)) {
+            $whereClause = " AND membership_no LIKE '%$searchValue%'";
+            $whereClause .= " OR first_name LIKE '%$searchValue%' OR last_name LIKE '%$searchValue%'";
+            $whereClause .= " OR email LIKE '%$searchValue%' OR mobile LIKE '%$searchValue%'";
+            $whereClause .= "";
+        }
+
+        $sql = "SELECT * FROM users $whereClause LIMIT $start, $length";
+        $result = $this->db->query($sql);
+
+        $users = array();
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $users[] = $row;
+            }
+        }
+
+        return $users;
+    }
 
     public function getUsers($start, $length)
     {
-        $sql = "SELECT * FROM users LIMIT $start, $length";
+        $sql = "SELECT * FROM users LIMIT $start, $length WHERE payment_status = 'paid'";
         $result = $this->db->query($sql);
 
         $users = array();

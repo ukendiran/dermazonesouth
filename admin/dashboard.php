@@ -1,44 +1,61 @@
 <?php include_once './includes/header.php'; ?>
 
 <!-- Content -->
+<?php
 
+require_once 'config.php';
+$user = new User();
+
+// Fetch user data for the current page
+$users = $user->getDashboard();
+?>
 <div class="container">
-    <div class="card">
-        <div class="card-header"><h4>Registered User List</h4></div>
-        <div class="card-body">
-            <table id="user-table" class="table table-light table-striped ">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>IADVL Number</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                        <th>Amount</th>
-                        <th>Payment Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($users as $user) { 
-                  
-                        ?>
-                        <tr>
-                            <td><?php echo $user['id']; ?></td>
-                            <td><?php echo $user['membership_no']; ?></td>
-                            <td><?php echo $user['first_name']; ?></td>
-                            <td><?php echo $user['last_name']; ?></td>
-                            <td><?php echo $user['email']; ?></td>
-                            <td><?php echo $user['mobile']; ?></td>
-                            <td><?php echo $user['amount']; ?></td>
-                            <td><?php echo $user['payment_status']; ?></td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+  <div class="row" style="margin-top:20px;">
+          <div class="col-lg-3 col-md-3 col-sm-12 pr-0 mb-3">
+            <div class="card text-white bg-primary">
+              <div class="card-header"><i class="fa fa-shopping-bag"></i> Total Users</div>
+              <div class="card-body">
+                <h3 class="card-title"><?php echo $users['total_users']; ?></h3>
+              </div>
+              <a class="card-footer text-right" href="users.php">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 pr-0 mb-3">
+            <div class="card text-white bg-success">
+              <div class="card-header"><i class="fa fa-bar-chart"></i> Paid Users</div>
+              <div class="card-body">
+                <h3 class="card-title"><?php echo $users['paid_users']; ?></h3>
+              </div>
+              <a class="card-footer text-right" href="users.php?status=paid">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 pr-0 mb-3">
+            <div class="card text-white bg-warning">
+              <div class="card-header"><i class="fa fa-user-plus"></i> Unpaid Users</div>
+              <div class="card-body">
+                <h3 class="card-title"><?php echo $users['unpaid_users']; ?></h3>
+              </div>
+              <a class="card-footer text-right" href="users.php?status=unpaid">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 pr-0 mb-3">
+            <div class="card text-white bg-danger">
+              <div class="card-header"><i class="fa fa-pie-chart"></i> Paid Amount</div>
+              <div class="card-body">
+                <h3 class="card-title"><?php echo $users['paid_amount']['amount']; ?></h3>
+              </div>
+              <a class="card-footer text-right" href="users.php?status=paid">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
 </div>
 
 

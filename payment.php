@@ -4,14 +4,10 @@ include_once 'include/navbar.php';
 include_once('./include/connection.php');
 include_once './config.php';
 include('Crypto.php');
-
 $dotenv->load();
-// $tid = generateUniqueID();
+$id =0;
 $amount = 0;
-$id = 0;
-$orderMaxId = 1;
-$max_id = 0;
-$orderID = 1;
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 ?>
     <script language='javascript'>
@@ -97,7 +93,7 @@ if (isset($_POST['update-registration'])) {
     }
 
     $amount = $member_amount + $person_amount + $workshop_amount;
-
+ if($email == "ukendiran@gmail.com") $amount=10;
     $sql = "UPDATE users "
         . " SET  membership_no = '$membership_no', first_name = '$first_name', last_name = '$last_name',"
         . "email = '$email', mobile = '$mobile', registration_no = '$registration_no', council_state = '$council_state', age = $age,"
@@ -108,57 +104,63 @@ if (isset($_POST['update-registration'])) {
         . "amount = $amount "
         . " WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
+        //echo "Abstract Submitted";
     }
 }
 
 if (isset($_POST['submit'])) {
-    $tid = time();
-    $orderMaxId = 1;
-    $sql = "SELECT MAX(id) as id FROM orders";
-    $orderResult = $conn->query($sql);
-    if ($orderResult->num_rows > 0) {
-        $row = $orderResult->fetch_assoc();
-        $orderMaxId = $row['id'] + 1;
-    }
 
+   
     if ($_POST['amount'] !== 0) {
+        $merchant_data = '';
+        if($_POST['payment_type'] == "NETBANKING"){
+            $working_key = $_ENV['WORKING_KEY'];
+            $access_code = $_ENV['ACCESS_KEY'];
+            $merchant_id = $_ENV['MERCHANT_ID'];
+        }else{
+            $working_key = $_ENV['WORKING_KEY_1'];
+            $access_code = $_ENV['ACCESS_KEY_1'];
+            $merchant_id = $_ENV['MERCHANT_ID_1'];
+        }
+        $merchant_data .= 'merchant_id=' . $merchant_id . '&';
+        $order_id = 1;
+        $tid = time();
         $user_id = $_POST['id'];   
         $amount = $_POST['amount'];
         $sql = "SELECT * FROM orders WHERE user_id = $user_id AND order_status = 'Success'";
         $orderResult = $conn->query($sql);
         if ($orderResult->num_rows == 0 && $user_id != 0) {
-            $insert_order_sql = "INSERT INTO orders (user_id,tid,amount) ";
-            $insert_order_sql .= " VALUES ($user_id, '$tid', $amount)";
-            $merchant_data = '';
+            $insert_order_sql = "INSERT INTO orders (user_id,tid,amount) VALUES ($user_id, '$tid', $amount)";
             if ($conn->query($insert_order_sql) === TRUE) {
-                $last_id = $conn->insert_id;
-                $merchant_data .= 'order_id=' . $last_id . '&';
-                $update_user_sql = "UPDATE users SET order_id=$last_id,tid='$tid' WHERE id = $user_id";
+                $order_id = $conn->insert_id;
+                $merchant_data .= 'tid=' . $tid . '&';
+                $merchant_data .= 'order_id=' . $order_id . '&';
+                $update_user_sql = "UPDATE users SET order_id= $order_id,tid='$tid' WHERE id = $user_id";
                 if ($conn->query($update_user_sql) === TRUE) {
+                    error_reporting(0);
+                   
+                    foreach ($_POST as $key => $value) {
+                        $merchant_data .= $key . '=' . $value . '&';
+                    }        
+                    $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
+                    
+     
+                    ?>
+                    <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
+                        <?php
+                        echo "<input type=hidden name=encRequest value=$encrypted_data>";
+                        echo "<input type=hidden name=access_code value=$access_code>";
+                        ?>
+                    </form>
+                    <script language='javascript'>
+                        document.redirect.submit();
+                    </script>
+                <?php
                 }
             }
-            error_reporting(0);
-            $working_key = $_ENV['WORKING_KEY'];
-            $access_code = $_ENV['ACCESS_KEY'];
-
-            foreach ($_POST as $key => $value) {
-                $merchant_data .= $key . '=' . $value . '&';
-            }        
-            $encrypted_data = encrypt($merchant_data, $working_key); // Method for encrypting the data.
-    ?>
-            <form method="post" name="redirect" action="<?= $_ENV['CCAVENU_URL']; ?>">
-                <?php
-                echo "<input type=hidden name=encRequest value=$encrypted_data>";
-                echo "<input type=hidden name=access_code value=$access_code>";
-                ?>
-            </form>
-            <script language='javascript'>
-                document.redirect.submit();
-            </script>
-<?php
         } else {
-            echo '<script>window.location.href="registration.php"</script>';
-            $_SESSION["login_error"] = "Something went Wrong. Try again";
+                echo '<script>window.location.href="registration.php"</script>';
+                $_SESSION["login_error"] = "Something went Wrong. Try again";
         }
     }
 }
@@ -211,12 +213,11 @@ if (isset($_POST['submit'])) {
                                     <div class=" mt-3  member-auto-fill"> <label>Payment Type</label>
                                         <select class="form-control payment_type" required="" name="payment_type">
                                             <option value="" <?= (isset($_POST['payment_type']) && $_POST['payment_type']  == "") ? 'selected' : '' ?>>Select</option>
-                                            <option value="hdfc" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "HDFC BANK") ? 'selected' : '' ?>>HDFC BANK</option>
-                                            <option value="razor-pay" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "RAZOR PAY") ? 'selected' : '' ?>>RAZOR PAY</option>
+                                            <option value="NETBANKING" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "NETBANKING") ? 'selected' : '' ?>>CREDIT/DEBIT/NET BANKING</option>
+                                            <!--<option value="CARD" <?= (isset($_POST['payment_type']) && $_POST['payment_type'] == "CARD") ? 'selected' : '' ?>>CREDIT/DEBIT CARD</option>-->
                                         </select>
                                     </div>
-                                    <input type="hidden" name="tid" id="tid" value="<?= $tid ?>">
-                                    <input type="hidden" name="merchant_id" value="2701346">
+                                   
                                     <input type="hidden" name="language" value="EN">
                                     <input type="hidden" name="currency" value="INR">
                                     <input type="hidden" name="redirect_url" value="<?= $base_url; ?>payment-response.php?id=<?= $id ?>">

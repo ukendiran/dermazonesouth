@@ -177,6 +177,36 @@ include_once 'include/navbar.php';
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="team-item mt-3">
+                                <div class="team-inner-wrap">
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/bhumesh-kumar.png" alt="Team" width="180px"></a> </div>
+                                    <div class="team-content">
+                                        <div class="rs-arrow">
+                                            <div class="curve"></div>
+                                            <div class="point"></div>
+                                        </div>
+                                        <h5 class="title-name"><a href="#">Dr. Bhumesh Kumar K</a></h5>
+                                        <div class="team-title">Secretary General Elect</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mt-5 mb-20">
+                            <div class="team-item mt-3">
+                                <div class="team-inner-wrap">
+                                    <div class="images-wrap"> <a href="#"><img src="img/contact/Dr-S-B-Kavitha.jpeg" alt="Team" width="180px"></a> </div>
+                                    <div class="team-content">
+                                        <div class="rs-arrow">
+                                            <div class="curve"></div>
+                                            <div class="point"></div>
+                                        </div>
+                                        <h5 class="title-name"><a href="#">Dr Kavitha S B</a></h5>
+                                        <div class="team-title">Treasurer Elect</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

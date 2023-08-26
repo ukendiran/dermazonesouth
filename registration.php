@@ -31,7 +31,7 @@ include_once('./include/connection.php');
                             <div class="col-sm-6">
                                 <!-- <label class="">IADVL Number</label> -->
                                 <!-- <input data-url="<?php echo $base_url; ?>check.php" type="text" class="form-control registration-mem-no" id="membership_no" name="membership_no" placeholder="Enter IADVL Number"> -->
-                                <input type="text" class="form-control registration-mem-no" required id="membership_no" name="membership_no" placeholder="Enter IADVL Number">
+                                <input type="text" class="form-control registration-mem-no" required id="membership_no" name="membership_no" placeholder="Enter IADVL Number (eg. LM/AP/1234)">
                                 <?php
                                 if (isset($_SESSION["login_error"]) && $_SESSION["login_error"] != "") {
                                     $myMessage = addslashes($_SESSION["login_error"]);
